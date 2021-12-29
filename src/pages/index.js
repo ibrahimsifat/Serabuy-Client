@@ -12,20 +12,23 @@ import FeatureCard from '@component/feature-card/FeatureCard';
 
 const Home = ({ products }) => {
   const { productData } = useFilter(products);
+  const ProductBg={
+    backgroundColor: '#EAEDED'
+  }
   return (
     <>
-      <Layout>
-        <div className="min-h-screen">
+      <Layout  >
+        <div style={ProductBg} className="min-h-screen">
           <StickyCart />
-          <div className="bg-white">
+          <div className="">
             <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
               <div className="flex w-full">
-                <div className="flex-shrink-0 xl:pr-6 lg:block w-full lg:w-3/5">
+                <div className="flex- lg:block w-full ">
                   <MainCarousel />
                 </div>
-                <div className="w-full hidden lg:flex">
+                {/* <div className="w-full hidden lg:flex">
                   <OfferCard />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="hidden relative lg:block mx-auto max-w-screen-2xl px-3 sm:px-10">
@@ -34,15 +37,15 @@ const Home = ({ products }) => {
           </div>
 
           {/* feature category's */}
-          <div className="bg-white lg:py-20 pb-10 pt-5">
+          <div style={{ProductBg}} className=" lg:py-20 pb-10 pt-5">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
-                  <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
+                  <h2 className="text-xl uppercase lg:text-4xl md:text-2xl text-xl  mb-2 font-serif font-bold">
                     Featured Categories
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
-                    Choose your necessary products from this feature categories.
+                    Choose your necessary products from categories.
                   </p>
                 </div>
               </div>
@@ -51,7 +54,7 @@ const Home = ({ products }) => {
           </div>
 
           {/* popular products */}
-          <div className="bg-gray-50 lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
+          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
@@ -85,7 +88,8 @@ const Home = ({ products }) => {
           </div>
 
           {/* discounted products */}
-          <div className="bg-gray-50 lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
+          
+          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">

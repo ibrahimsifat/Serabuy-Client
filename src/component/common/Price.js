@@ -11,17 +11,17 @@ const Discount = ({ product, card }) => {
               : 'inline-block text-2xl'
           }
         >
-          ${product.price}
+          <span className='text-sm text-red mb-auto '>SAR </span>{product.price}
         </span>
       ) : (
         <span
-          className={
+          className={ 
             card
               ? 'inline-block text-lg font-semibold text-gray-800'
               : 'inline-block text-2xl'
           }
         >
-          ${product.originalPrice}
+           <span className='text-sm text-red mb-auto'>SAR </span> {product.originalPrice}
         </span>
       )}
       {product.discount ? (
@@ -32,7 +32,7 @@ const Discount = ({ product, card }) => {
               : 'text-lg font-normal text-gray-400 ml-1'
           }
         >
-          ${product.originalPrice}
+           <span className='text-sm text-red mb-auto'>SAR </span> {product.originalPrice}
         </del>
       ) : null}
     </div>

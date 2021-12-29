@@ -17,7 +17,7 @@ const FeatureCategory = () => {
           <span> {error}</span>
         </p>
       ) : (
-        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-6">
+        <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5">
           {data?.map((item, i) => (
             <li className="group" key={i + 1}>
               <div
@@ -30,16 +30,16 @@ const FeatureCategory = () => {
                       .join('-')}`
                   )
                 }
-                className="border border-gray-100 bg-white rounded-lg p-4 block cursor-pointer transition duration-200 ease-linear transform group-hover:scale-105"
+                className="border border-gray-200 bg-white  p-4 block cursor-pointer "
               >
-                <div className="flex items-center">
-                  <Image
+                <div className="flex flex-col justify-center items-center transition ">
+                  <Image className=' duration-200 ease-linear transform group-hover:scale-105'
                     src={item.icon}
                     alt={item.parent}
-                    width={35}
-                    height={35}
+                    width={80}
+                    height={80}
                   />
-                  <h3 className="pl-3 lg:pl-4 text-sm text-gray-600 font-serif font-medium leading-tight">
+                  <h3 className="pt-4 lg:pl-4 md:text-md lg:text-xl text-gray-600 font-serif font-medium leading-tight">
                     {item.parent}
                   </h3>
                 </div>
