@@ -21,7 +21,7 @@ const Home = ({ products }) => {
         <div style={ProductBg} className="min-h-screen">
           <StickyCart />
           <div className="">
-            <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
+            <div className="mx-auto py-t max-w-screen-2xl px-3 sm:px-10">
               <div className="flex w-full">
                 <div className="flex- lg:block w-full ">
                   <MainCarousel />
@@ -31,23 +31,23 @@ const Home = ({ products }) => {
                 </div> */}
               </div>
             </div>
-            <div className="hidden relative lg:block mx-auto max-w-screen-2xl px-3 sm:px-10">
+            {/* <div className="hidden relative lg:block mx-auto max-w-screen-2xl px-3 sm:px-10">
               <FeatureCard />
-            </div>
+            </div> */}
           </div>
 
           {/* feature category's */}
-          <div style={{ProductBg}} className=" lg:py-20 pb-10 pt-5">
+          <div style={{ProductBg}} className=" lg:pb-20 -mt-32 pb-10 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <div className="mb-10 flex justify-center">
-                <div className="text-center w-full lg:w-2/5">
+                {/* <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl uppercase lg:text-4xl md:text-2xl text-xl  mb-2 font-serif font-bold">
                     Featured Categories
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
                     Choose your necessary products from categories.
                   </p>
-                </div>
+                </div> */}
               </div>
               <FeatureCategory />
             </div>
