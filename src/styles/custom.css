@@ -328,3 +328,15 @@ p:not(:last-of-type) {
 
 
 /* my custom style */
+
+.bg_dark {
+    background-color: #1C263C;
+}
+
+.bg_green {
+    background-color: #71C42B;
+}
+
+.bg_light {
+    background-color: #313C53;
+}
