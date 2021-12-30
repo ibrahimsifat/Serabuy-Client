@@ -37,34 +37,34 @@ const Home = ({ products }) => {
           </div>
 
           {/* feature category's */}
-          <div style={{ProductBg}} className=" lg:pb-20 -mt-32 pb-10 ">
+          <div style={{ProductBg}} className=" lg:pb-10 -mt-24 pb-6 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-              <div className="mb-10 flex justify-center">
-                {/* <div className="text-center w-full lg:w-2/5">
+              {/* <div className="mb-10 flex justify-center">
+                <div className="text-center w-full lg:w-2/5">
                   <h2 className="text-xl uppercase lg:text-4xl md:text-2xl text-xl  mb-2 font-serif font-bold">
                     Featured Categories
                   </h2>
                   <p className="text-base font-sans text-gray-600 leading-6">
                     Choose your necessary products from categories.
                   </p>
-                </div> */}
-              </div>
+                </div>
+              </div> */}
               <FeatureCategory />
             </div>
           </div>
 
           {/* popular products */}
-          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
+          <div className=" lg:py-10 py-6 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
                   Popular Products for Daily Shopping
                 </h2>
-                <p className="text-base font-sans text-gray-600 leading-6">
+                {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
                   with free shipping.
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="flex">
@@ -95,10 +95,10 @@ const Home = ({ products }) => {
                 <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
                   Latest Discounted Products
                 </h2>
-                <p className="text-base font-sans text-gray-600 leading-6">
+                {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See Our latest discounted products below. Choose your daily
                   needs from here and get a special discount with free shipping.
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="flex">

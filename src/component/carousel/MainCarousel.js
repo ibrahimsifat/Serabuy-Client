@@ -8,10 +8,11 @@ import { sliderData } from '@utils/data';
 
 const MainCarousel = () => {
   return (
-    <Carousel
+    <Carousel 
+    
       additionalTransfrom={0}
       autoPlay="false"
-      autoPlaySpeed={3000}
+      autoPlaySpeed={2000}
       centerMode={false}
       className=""
       containerClass=""
@@ -50,16 +51,16 @@ const MainCarousel = () => {
       swipeable
     >
       {sliderData.map((item, i) => (
-        <div className="h-full relative rounded-lg overflow-hidden" key={i + 1}>
-          <div className="text-sm text-gray-600 hover:text-green-dark">
+        <div className="h-full relative rounded-lg overflow-hidden z-10" key={i + 1}>
+          <div className="text-sm text-gray-600 hover:text-green-dark z-10">
             <Image
               layout="responsive"
               width={950}
-              height={400}
+              height={350}
               src={item.image}
               alt={item.title}
               priority
-              className="object-cover"
+              className="object-cover "
             />
           </div>
           <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
