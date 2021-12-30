@@ -96,7 +96,7 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           </div>
           <button
             type="submit"
-            className="w-full text-center py-3 rounded bg-green-500 text-white hover:bg-green-600 transition-all focus:outline-none my-1"
+            className="w-full text-center py-3 rounded bg_green text-white hover:bg-green-600 transition-all focus:outline-none my-1"
           >
             {onShowRegister ? <span>Login</span> : <span>Register</span>}
           </button>

@@ -12,6 +12,10 @@ import FeatureCard from '@component/feature-card/FeatureCard';
 
 const Home = ({ products }) => {
   const { productData } = useFilter(products);
+  const healthProducts=products.filter(service=>service.type==='Health Care')
+  console.log(healthProducts);
+
+
   const ProductBg={
     backgroundColor: '#EAEDED'
   }
@@ -56,10 +60,12 @@ const Home = ({ products }) => {
           {/* popular products */}
           <div className=" lg:py-10 py-6 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
-              <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
-                  Popular Products for Daily Shopping
+              <div className="text-center w-full lg:w-3/5">
+                <h2 className="text-2xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
+                  Popular Products
                 </h2>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto '></p>
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
@@ -70,7 +76,7 @@ const Home = ({ products }) => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {products?.slice(0, 18).map((product, i) => (
+                  {products?.slice(57, 72).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))}
                 </div>
@@ -104,7 +110,7 @@ const Home = ({ products }) => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
-                  {productData?.slice(0, 18).map((product, i) => (
+                  {products?.slice(90, 120).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))}
                 </div>
@@ -122,7 +128,9 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      products: products.slice(0, 120),
+    
+      products: products.slice(200,300),
+
     },
     revalidate: 20,
   };

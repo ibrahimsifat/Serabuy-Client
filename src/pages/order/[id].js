@@ -47,14 +47,14 @@ const Order = ({ params }) => {
             <div className="bg-white p-8 rounded-b-xl">
               <div className="flex lg:flex-row md:flex-row sm:flex-row flex-col justify-between">
                 <CSVLink data={data.cart} filename={'invoice.csv'}>
-                  <button className="mb-3 sm:mb-0 md:mb-0 lg:mb-0 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
+                  <button className="mb-3 sm:mb-0 md:mb-0 lg:mb-0 flex items-center justify-center bg_green hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
                     Download Invoice
                     <span className="ml-2 text-base">
                       <IoCloudDownloadOutline />
                     </span>
                   </button>
                 </CSVLink>
-                <button className="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
+                <button className="flex items-center justify-center bg_green hover:bg-green-600 text-white transition-all font-serif text-sm font-semibold h-10 py-2 px-5 rounded-md">
                   <ReactToPrint
                     trigger={() => <p>Print Invoice</p>}
                     content={() => componentRef.current}

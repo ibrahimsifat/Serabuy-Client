@@ -56,12 +56,12 @@ const navBerBgColor={
 
       <div className=" sticky top-0 z-20 bg_dark  ">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
-          <div className="top-bar h-12  lg:h-16 flex items-center justify-between py-4 mx-auto">
+          <div className="top-bar h-8  lg:h-16 flex items-center justify-between py-4 mx-auto">
             <Link href="/">
               <a className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block">
                 <Image
-                  width={110}
-                  height={40}
+                  width={150}
+                  height={30}
                   src="/logo/serabuylogo.png"
                   alt="logo"
                 />

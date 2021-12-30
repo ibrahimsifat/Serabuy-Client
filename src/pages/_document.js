@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const APP_NAME =
-  'KachaBazar - React Grocery & Organic Food Store e-commerce Template';
+  'Serabuy - React Grocery & Organic Food Store e-commerce Template';
 const APP_DESCRIPTION =
   'This is React Grocery & Organic Food Store e-commerce Template';
 
@@ -30,12 +30,12 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#fff" />
           <meta
             property="og:title"
-            content="KachaBazar - React Grocery & Organic Food Store e-commerce Template"
+            content="Serabuy - React Grocery & Organic Food Store e-commerce Template"
           />
           <meta property="og:type" content="eCommerce Website" />
           <meta
             property="og:url"
-            content="https://kachabazar-store.vercel.app/"
+            content="https://Serabuy-store.vercel.app/"
           />
           <meta
             property="og:image"

@@ -8,11 +8,11 @@ const FooterTop = () => {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row lg:flex-row lg:items-center">
         <div className="flex-shrink-0 lg:w-2/5 md:w-3/6 py-10 lg:py-0">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3">
-            Get Your Daily Needs From Our KachaBazar Store
+            Get Your Daily Needs From Our Serabuy Store
           </h3>
           <p className="text-base opacity-90 leading-7">
             There are many products you will find our shop, Choose your daily
-            necessary product from our KachaBazar shop and get some special
+            necessary product from our Serabuy shop and get some special
             offer.
           </p>
           <div className="mt-8">

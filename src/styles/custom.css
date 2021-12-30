@@ -340,3 +340,7 @@ p:not(:last-of-type) {
 .bg_light {
     background-color: #313C53;
 }
+
+.icon-font {
+    font-size: 20px;
+}

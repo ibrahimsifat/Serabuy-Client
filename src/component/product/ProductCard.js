@@ -6,7 +6,8 @@ import { IoBagAddSharp, IoAdd, IoRemove } from 'react-icons/io5';
 import Price from '@component/common/Price';
 import Discount from '@component/common/Discount';
 import ProductModal from '@component/modal/ProductModal';
-
+import Link from 'next/link';
+import { AiFillEye } from "react-icons/ai";
 const ProductCard = ({ product }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const { items, addItem, updateItemQuantity, inCart } = useCart();
@@ -28,8 +29,9 @@ const ProductCard = ({ product }) => {
       />
 
       <div className="group box-border overflow-hidden flex rounded shadow-sm pe-0 flex-col items-center bg-white relative">
+      <Link href={`/product/${product.slug}`} passHref>
         <div
-          onClick={() => setModalOpen(!modalOpen)}
+          
           className="relative flex justify-center w-full cursor-pointer"
         >
           {product.quantity === 0 && (
@@ -47,6 +49,7 @@ const ProductCard = ({ product }) => {
             className="object-cover transition duration-150 ease-linear transform group-hover:scale-105"
           />
         </div>
+        </Link>
         <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
           <div className="relative mb-1">
             <span className="text-gray-400 font-medium text-xs d-block mb-1">
@@ -66,7 +69,7 @@ const ProductCard = ({ product }) => {
                     item.id === product._id && (
                       <div
                         key={item.id}
-                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 bg-green-500 text-white rounded"
+                        className="h-9 w-auto flex flex-wrap items-center justify-evenly py-1 px-2 bg_green text-white rounded"
                       >
                         <button
                           onClick={() =>
@@ -95,17 +98,29 @@ const ProductCard = ({ product }) => {
                 )}{' '}
               </div>
             ) : (
-              <button
-                onClick={() => generateCartItem(product)}
-                disabled={product.quantity < 1}
+            <div className='flex'>
+                <button
+                onClick={() => setModalOpen(!modalOpen)}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-green-500 hover:border-green-500 hover:bg-green-500 hover:text-white transition-all"
+                className="h-9 w-9 flex items-center justify-center text-green-500 hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
               >
                 {' '}
                 <span className="text-xl">
-                  <IoBagAddSharp />
+                 <AiFillEye />
                 </span>{' '}
               </button>
+          <button
+                onClick={() => generateCartItem(product)}
+                disabled={product.quantity < 1}
+                aria-label="cart"
+                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-green-500 hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
+              >
+                {' '}
+                <span className="text-xl">
+                <IoBagAddSharp />
+                </span>{' '}
+              </button>
+            </div>
             )}
           </div>
         </div>

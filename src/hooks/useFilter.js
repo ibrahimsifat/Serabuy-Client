@@ -10,6 +10,10 @@ const useFilter = (data) => {
 
 const productData = useMemo(() => {
     let services = data;
+//  filter Health Care products
+const healthProducts=services.filter(service=>service.type==='Health Care')
+
+
     //filter user order
     if (router.pathname === '/user/dashboard') {
       const orderPending = services.filter(
