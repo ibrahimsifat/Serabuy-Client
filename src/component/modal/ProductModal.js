@@ -23,6 +23,7 @@ const ProductModal = ({ modalOpen, setModalOpen, product }) => {
     notifySuccess(`${item} Item Added To Cart!`);
   };
 
+
   return (
     <MainModal modalOpen={modalOpen} setModalOpen={setModalOpen}>
       <div className="inline-block overflow-y-auto h-full align-middle transition-all transform bg-white shadow-xl rounded-2xl">
@@ -73,7 +74,7 @@ const ProductModal = ({ modalOpen, setModalOpen, product }) => {
                       <FiMinus />
                     </span>
                   </button>
-                  <p className="font-semibold flex items-center justify-center h-full  transition-colors duration-250 ease-in-out cursor-default flex-shrink-0 text-base text-heading w-8  md:w-20 xl:w-24">
+                  <p className="font-semibold flex items-center justify-center h-full  transition-colors duration-250 ease-in-out cursor-default flex-shrink-0 text-base text-heading w-4  md:w-6 xl:w-8">
                     {item}
                   </p>
                   <button
@@ -94,6 +95,16 @@ const ProductModal = ({ modalOpen, setModalOpen, product }) => {
                 </button>
               </div>
             </div>
+                <div className='mt-3'>
+                  <Link  href={`/product/${product.slug}`}>
+                      <button
+                        
+                        className="text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center border-0 border-transparent rounded-md focus-visible:outline-none focus:outline-none text-white px-4  md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white bg-blue-500 hover:bg-blue-600 w-full h-12"
+                      >
+                        Details
+                      </button>
+                  </Link>
+                </div>
             <div className="flex flex-col mt-4">
               <span className="font-serif font-semibold py-1 text-sm d-block">
                 <span className="text-gray-700">Category:</span>{' '}
