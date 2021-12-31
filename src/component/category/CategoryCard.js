@@ -35,6 +35,7 @@ const CategoryCard = ({ title, icon, nested }) => {
         role="button"
       >
         <Image
+        
           src={icon}
           width={18}
           height={18}

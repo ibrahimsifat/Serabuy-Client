@@ -12,7 +12,7 @@ const StickyCart = () => {
   return (totalItems>=1&&
     <button aria-label="Cart" onClick={toggleCartDrawer} className="absolute">
       <div className="right-0 mt-5 w-35 float-right fixed top-1/6 bottom-3/6 align-middle cursor-pointer z-30 hidden lg:block xl:block">
-        <div className="flex flex-col items-center justify-center bg-white rounded-tl-lg p-2 text-gray-700">
+        <div className="flex flex-col items-center justify-center bg-white  p-2 text-gray-700">
           <span className="text-2xl mb-1 text-green-600">
             <IoBagHandleOutline />
           </span>
@@ -20,7 +20,7 @@ const StickyCart = () => {
             {totalItems} Items
           </span>
         </div>
-        <div className="flex flex-col items-center justify-center bg-green-700 p-2 text-white text-base font-serif font-medium rounded-bl-lg mx-auto">
+        <div className="flex flex-col items-center justify-center bg_green p-2 text-white text-base font-serif font-medium rounded-bl-xl mx-auto">
           ${cartTotal.toFixed(2)}
         </div>
       </div>

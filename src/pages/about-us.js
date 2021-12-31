@@ -130,13 +130,13 @@ const AboutUs = () => {
                 <Image
                   width={420}
                   height={420}
-                  src="/team/team-1.jpg"
+                  src="/team/team-1.png"
                   alt="logo"
                   className="block rounded-lg"
                 />
                 <div className="py-4">
                   <h5 className="text-lg font-semibold font-serif">
-                    Niamh Shea
+                    Ibrahim Sifat
                   </h5>
                   <span className="opacity-75 text-sm">
                     Co-founder & Executive

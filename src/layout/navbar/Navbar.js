@@ -94,20 +94,20 @@ const navBerBgColor={
               </div>
             </div>
             <div className="hidden md:hidden md:items-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button
+              {/* <button
                 className="pr-5 text-white text-2xl font-bold"
                 aria-label="Alert"
               >
                 <FiBell className="w-6 h-6 drop-shadow-xl" />
-              </button>
+              </button> */}
               <button
                 aria-label="Total"
                 onClick={toggleCartDrawer}
                 className="relative px-5 text-white text-2xl font-bold"
               >
-                <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
+              { totalItems>=1&& <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
                   {totalItems}
-                </span>
+                </span>}
                 <FiShoppingCart className="w-6 h-6 drop-shadow-xl" />
               </button>
               {/* Profile dropdown */}

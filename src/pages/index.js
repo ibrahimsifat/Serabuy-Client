@@ -58,14 +58,14 @@ const Home = ({ products }) => {
           </div>
 
           {/* popular products */}
-          <div className=" lg:py-10 py-6 mx-auto max-w-screen-2xl px-3 sm:px-10">
+          <div className=" lg:py-6 py-3 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-3/5">
-                <h2 className="text-2xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
+                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
                   Popular Products
                 </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto mt-2'></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto '></p>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto '></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-2'></p>
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
@@ -85,7 +85,7 @@ const Home = ({ products }) => {
           </div>
 
           {/* promotional banner card */}
-          <div className="block">
+          <div className="block mt-10">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2">
                 <Card />
@@ -98,9 +98,11 @@ const Home = ({ products }) => {
           <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
             <div className="mb-10 flex justify-center">
               <div className="text-center w-full lg:w-2/5">
-                <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
+                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
                   Latest Discounted Products
                 </h2>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto '></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-2'></p>
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See Our latest discounted products below. Choose your daily
                   needs from here and get a special discount with free shipping.

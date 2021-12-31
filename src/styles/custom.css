@@ -341,6 +341,10 @@ p:not(:last-of-type) {
     color: #71C42B;
 }
 
+.bg_hover:hover {
+    background-color: #71C42B;
+}
+
 .text_green {
     color: #6be004;
 }
