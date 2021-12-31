@@ -40,14 +40,14 @@ const Footer = () => {
               <ul className="text-sm flex">
                 <li className="flex items-center mr-3 transition ease-in-out duration-500">
                <Link href="https://www.facebook.com/profile.php?id=100015218562560" target='_blank'>
-                  <button title='Follow Us' id="facebook" class="bg-white  sticky duration-500 border-2 border-blue-600 fixed  w-9 transform hover:-translate-y-2   h-9 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 flex justify-center items-center">
+                  <button title='Follow Us' id="facebook"className="bg-white  sticky duration-500 border-2 border-blue-600 fixed  w-9 transform hover:-translate-y-2   h-9 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 flex justify-center items-center">
                   <FaFacebookF className='icon-font'/>
             </button>  
             </Link>     
                 </li>
                 <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="mailto:ibsifat900@gmail.com" target='_blank'>
-                  <button id="linkedin" class="bg-white transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl flex justify-center items-center">
+                  <button id="linkedin"className="bg-white transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl flex justify-center items-center">
                   <IoMdMail className='icon-font'/>
   </button>
 
@@ -55,21 +55,21 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="https://twitter.com/ibsifat900">
-                  <button id="twitter" class="bg-white  transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl flex justify-center items-center">
+                  <button id="twitter"className="bg-white  transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl flex justify-center items-center">
                   <FaTwitter className='icon-font'/>
   </button>
                   </Link>
                 </li>
                 <li className="flex items-center mr-3 transition ease-in-out duration-500">
                   <Link href="https://www.instagram.com/ibsifat900/">
-                  <button id="instagram" class=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-9 h-9  transform hover:-translate-y-2 rounded-full duration-500 flex justify-center items-center ">
+                  <button id="instagram"className=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-9 h-9  transform hover:-translate-y-2 rounded-full duration-500 flex justify-center items-center ">
                   <FaInstagram className='icon-font'/>
   </button>
                   </Link>
                 </li>
                 <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="https://www.linkedin.com/in/ibrahim-sifat-221358200/">
-                  <button id="linkedin" class="bg-white transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl flex justify-center items-center">
+                  <button id="linkedin"className="bg-white transform hover:-translate-y-2  border-2 w-9 h-9 rounded-full duration-500 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl flex justify-center items-center">
                   <FaLinkedinIn className='icon-font'/>
   </button>
 
@@ -77,7 +77,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="https://wa.me/0558845503">
-                      <button id="whatsapp" class="bg-white duration-500    w-9 h-9 border-2 rounded-full border-green-600 transform hover:-translate-y-2  text-2xl text-green-500 hover:bg-green-600 hover:text-white flex justify-center items-center">
+                      <button id="whatsapp"className="bg-white duration-500    w-9 h-9 border-2 rounded-full border-green-600 transform hover:-translate-y-2  text-2xl text-green-500 hover:bg-green-600 hover:text-white flex justify-center items-center">
                   <FaWhatsapp className='icon-font'/>
   </button>
                   </Link>

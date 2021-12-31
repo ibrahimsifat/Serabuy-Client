@@ -62,7 +62,7 @@ const ProductModal = ({ modalOpen, setModalOpen, product }) => {
               <Price product={product} />
             </div>
 
-            <div className="flex items-center mt-4">
+            {/* <div className="flex items-center mt-4">
               <div className="flex items-center justify-between space-s-3 sm:space-s-4 w-full">
                 <div className="group flex items-center justify-between rounded-md overflow-hidden flex-shrink-0 border h-11 md:h-12 border-gray-300">
                   <button
@@ -94,12 +94,12 @@ const ProductModal = ({ modalOpen, setModalOpen, product }) => {
                   Add To Cart
                 </button>
               </div>
-            </div>
+            </div> */}
                 <div className='mt-3'>
                   <Link  href={`/product/${product.slug}`}>
                       <button
                         
-                        className="text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center border-0 border-transparent rounded-md focus-visible:outline-none focus:outline-none text-white px-4  md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white bg-blue-500 hover:bg-blue-600 w-full h-12"
+                        className="text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold font-serif text-center justify-center border-0 border-transparent rounded-md focus-visible:outline-none focus:outline-none text-white px-4  md:px-6 lg:px-8 py-4 md:py-3.5 lg:py-4 hover:text-white bg_green hover:bg-green-400 w-full h-12"
                       >
                         Details
                       </button>

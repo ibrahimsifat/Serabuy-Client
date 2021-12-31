@@ -28,8 +28,9 @@ import ProductServices from '@services/ProductServices';
 import ProductCard from '@component/product/ProductCard';
 
 const ProductScreen = ({ product, relatedProduct }) => {
+ 
   const router = useRouter();
-  const { addItem } = useCart();
+  const { addItem,totalItems } = useCart();
 
   //comment this when using getServerSideProps
   if (router.isFallback) {
@@ -121,6 +122,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                       </p>
                       <button
                         onClick={handleAddItem}
+                        disabled={product.quantity === totalItems }
                         className="leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg_green text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-6 hover:text-white hover:bg-green-600 h-12 text-sm lg:text-base w-full sm:w-auto"
                       >
                         Add to Cart

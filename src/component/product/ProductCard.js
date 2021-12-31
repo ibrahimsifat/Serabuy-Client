@@ -29,6 +29,7 @@ const ProductCard = ({ product }) => {
       />
 
       <div className="group box-border overflow-hidden flex rounded shadow-sm pe-0 flex-col items-center bg-white relative">
+    
       <Link href={`/product/${product.slug}`} passHref>
         <div
           
@@ -48,6 +49,7 @@ const ProductCard = ({ product }) => {
             alt={product.title}
             className="object-cover transition duration-150 ease-linear transform group-hover:scale-105"
           />
+          
         </div>
         </Link>
         <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
@@ -102,7 +104,7 @@ const ProductCard = ({ product }) => {
                 <button
                 onClick={() => setModalOpen(!modalOpen)}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center text-green-500 hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
+                className="h-9 w-9 flex items-center justify-center text_green hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
               >
                 {' '}
                 <span className="text-xl">
@@ -113,7 +115,7 @@ const ProductCard = ({ product }) => {
                 onClick={() => generateCartItem(product)}
                 disabled={product.quantity < 1}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-green-500 hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
+                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text_green hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
               >
                 {' '}
                 <span className="text-xl">
