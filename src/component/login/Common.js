@@ -126,6 +126,7 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           onFailure={handleGoogleSignIn}
           cookiePolicy={'single_host_origin'}
         />
+        
       </div>
     </>
   );

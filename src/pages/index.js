@@ -41,7 +41,7 @@ const Home = ({ products }) => {
           </div>
 
           {/* feature category's */}
-          <div style={{ProductBg}} className=" lg:pb-10 -mt-24 pb-6 ">
+          <div style={{ProductBg}} className=" lg:pb-10 lg:-mt-24 md:-mt-16 -mt-6 pb-6 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               {/* <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">

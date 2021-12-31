@@ -31,21 +31,23 @@ const CategoryCard = ({ title, icon, nested }) => {
     <>
       <a
         onClick={showCategory}
-        className="p-2 flex items-center rounded-md hover:bg-gray-50 w-full hover:text-green-600"
+        className=" "
         role="button"
       >
+        <div className='border flex justify-center items-center p-5 bg-white  '>
         <Image
           src={icon}
-          width={18}
-          height={18}
+          width={60}
+          height={60}
           alt={title}
           aria-hidden="true"
         />
-        <div className="inline-flex items-center justify-between ml-3 text-sm font-medium w-full hover:text-green-600 text-black">
+        <div className=" text-sm hover:text-green-600 text-black w-full  mx-auto ml-2">
           {title}
-          <span className="transition duration-700 ease-in-out inline-flex loading-none items-end text-gray-400">
+          {/* <span className="transition duration-700 ease-in-out inline-flex loading-none items-end text-gray-400">
             {show ? <IoChevronDownOutline /> : <IoChevronForwardOutline />}
-          </span>
+          </span> */}
+        </div>
         </div>
       </a>
       {show ? (
