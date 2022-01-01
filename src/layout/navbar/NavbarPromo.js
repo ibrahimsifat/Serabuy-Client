@@ -5,7 +5,7 @@ import { ChevronDownIcon } from '@heroicons/react/outline';
 
 //internal import
 import { pages } from '@utils/data';
-import NavberCategory from '@component/navberCategory/NavberCategory';
+import Category from '@component/category/Category';
 
 const NavbarPromo = () => {
   return (
@@ -42,7 +42,7 @@ const NavbarPromo = () => {
                       >
                         <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-screen-xl	  bg-white">
                           <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
-                            <NavberCategory />
+                            <Category />
                           </div>
                         </Popover.Panel>
                       </Transition>
