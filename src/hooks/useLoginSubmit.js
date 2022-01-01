@@ -60,7 +60,7 @@ const useLoginSubmit = (setModalOpen) => {
   };
 
   const handleGoogleSignIn = (user) => {
-    console.log(user)
+  
     if (user) {
       UserServices.signUpWithProvider({
         name: user.profileObj.name,

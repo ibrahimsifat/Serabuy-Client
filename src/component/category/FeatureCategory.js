@@ -36,8 +36,8 @@ const FeatureCategory = () => {
                   <Image className=' duration-200 ease-linear transform group-hover:scale-105 w-16 h-16'
                     src={item.icon}
                     alt={item.parent}
-                    width={60}
-                    height={60}
+                    width={100}
+                    height={100}
                   />
                   <h3 className="pt-4 lg:pl-4 md:text-md lg:text-xl text-sm text-gray-600 font-serif font-medium leading-tight h-12">
                     {item.parent}
