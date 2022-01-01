@@ -76,7 +76,7 @@ const NavbarPromo = () => {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1"
                       >
-                        <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-xs bg-white">
+                        <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-xs bg-white text-black">
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
                             <div className="relative grid gap-2 px-6 py-6">
                               {pages.map((item) => (
@@ -85,7 +85,7 @@ const NavbarPromo = () => {
                                   className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full text_hover"
                                 >
                                   <item.icon
-                                    className="flex-shrink-0 h-4 w-4"
+                                    className="flex-shrink-0 h-4 w-4 text-black"
                                     aria-hidden="true"
                                   />
                                   <Link href={item.href}>

@@ -10,7 +10,7 @@ const Uploader = ({ setImageUrl, imageUrl }) => {
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: 'image/*',
-    multiple: false,
+    multiple: true,
     maxSize: 100000, //the size of image,
     onDrop: (acceptedFiles) => {
       setFiles(
@@ -43,6 +43,7 @@ const Uploader = ({ setImageUrl, imageUrl }) => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('upload_preset', uploadPreset);
+        console.log(file)
         axios({
           url: uploadURL,
           method: 'POST',
