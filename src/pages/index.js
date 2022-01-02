@@ -2,13 +2,13 @@
 import Layout from '@layout/Layout';
 import useFilter from '@hooks/useFilter';
 import Card from '@component/cta-card/Card';
-import OfferCard from '@component/offer/OfferCard';
+// import OfferCard from '@component/offer/OfferCard';
 import StickyCart from '@component/cart/StickyCart';
 import ProductServices from '@services/ProductServices';
 import ProductCard from '@component/product/ProductCard';
 import MainCarousel from '@component/carousel/MainCarousel';
 import FeatureCategory from '@component/category/FeatureCategory';
-import FeatureCard from '@component/feature-card/FeatureCard';
+// import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from '@layout/slider/Slider'
 const Home = ({ products }) => {
   const { productData } = useFilter(products);

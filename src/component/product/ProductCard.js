@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import Image from 'next/image';
 import { useCart } from 'react-use-cart';
 import { IoBagAddSharp, IoAdd, IoRemove } from 'react-icons/io5';

@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -35,14 +35,14 @@ const Slider = ({ deviceType ,products}) => {
     >
       {products.map(image => {
         return (
-                   
-            <Link href={`/product/${image.slug}`} > 
+          <Link href={`/product/${image.slug}`} > 
              <Image
+          key={image.slug}
       
-          className="cursor-pointer p-0 m-0 hover:bg-gray-100"
-            width={700}
-            height={700}
-         
+          className="cursor-pointer p-0 m-0 "
+            width={500}
+            height={500}
+            
             src={image.image}
           />
           </Link>
