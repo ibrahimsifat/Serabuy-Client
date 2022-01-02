@@ -29,7 +29,7 @@ const UpdateProfile = () => {
 
   const onSubmit = (data) => {
     if (!imageUrl) {
-      notifyError('Image is required!');
+      notifyError('Disable for testing!');
       return;
     }
     setLoading(true);

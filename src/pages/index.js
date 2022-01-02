@@ -9,7 +9,7 @@ import ProductCard from '@component/product/ProductCard';
 import MainCarousel from '@component/carousel/MainCarousel';
 import FeatureCategory from '@component/category/FeatureCategory';
 import FeatureCard from '@component/feature-card/FeatureCard';
-
+import Slider from '@layout/slider/Slider'
 const Home = ({ products }) => {
   const { productData } = useFilter(products);
   const healthProducts=products.filter(service=>service.type==='Health Care')
@@ -64,8 +64,8 @@ const Home = ({ products }) => {
                 <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
                   Popular Products
                 </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto '></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
@@ -101,8 +101,8 @@ const Home = ({ products }) => {
                 <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
                   Latest Discounted Products
                 </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto '></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See Our latest discounted products below. Choose your daily
                   needs from here and get a special discount with free shipping.
@@ -116,6 +116,28 @@ const Home = ({ products }) => {
                     <ProductCard key={i + 1} product={product} />
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
+            <div className="mb-10 flex justify-center">
+              <div className="text-center w-full lg:w-2/5">
+                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
+                  Latest Products
+                </h2>
+                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
+                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
+                {/* <p className="text-base font-sans text-gray-600 leading-6">
+                  See Our latest discounted products below. Choose your daily
+                  needs from here and get a special discount with free shipping.
+                </p> */}
+              </div>
+            </div>
+            <div className="flex">
+              <div className="w-full">
+                
+                 <Slider products={products}/>
+            
               </div>
             </div>
           </div>
