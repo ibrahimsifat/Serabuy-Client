@@ -1,7 +1,7 @@
 Serabuy Frontend Documentation
 
 
-Site name : Serabuy - Grocery & Organic Food Store React Template with Admin Dashboard
+Site name : Serabuy - Grocery & Organic Food Store with Admin Dashboard
 
 
 Introduction:
@@ -14,10 +14,10 @@ with  node, express, mongoose schema validation and use mongodb for  database.
 
 
 
-Tech and Packages we use in this project:
+Tech and Packages use in this project:
 
     1. React.Js Library Next.js.
-    2. Tailwindcss for all css design.
+    2. Tailwindcss for all CSS designs.
     3. Axios for data fetching.
     4. React-dropzone for image upload.
     5. React Icons for all Icons.
@@ -26,9 +26,14 @@ Tech and Packages we use in this project:
     8. React Spinners for preloader.
     9. React-use-cart for add product to cart.
     10. Tailwind-scrollbar-hide for hide scrollbar.
-    11. Day.js for date validation and data format.
+    11. Day.js for data validation and data format.
     12. Rc Drawer for all Drawer.
-    13. Js Cookie for save require data on Cookie.
+    13. Js Cookie for saving requires data on Cookie.
+    14. Payment gateway using Stripe.
+    ------------------+++----------------
+    15. Admin Dashboard React.js and tailwind 
+    16. Admin can add and update Product, Staff, Category, users, Admin, Costumers, Coupons
+    17. Admin can manage orders processing.
 
 
 
@@ -41,7 +46,7 @@ For getting started with the template you have to follow the below procedure. Fi
 
 Step 1 : Configure your env.local file:
 
-Within the project directory you'll find a .env.example file just rename it as .env.local and paste your api url in NEXT_PUBLIC_API_BASE_URL=https://yourapiserver.com/api and NEXT_PUBLIC_STRIPE_KEY="your stripe key".
+Within the project directory you'll find a .env.example file just rename it as .env.local and paste your api url in NEXT_PUBLIC_API_BASE_URL=https://serabuy.com/api and NEXT_PUBLIC_STRIPE_KEY="your stripe key".
 
 
 Step 2 : Running the project:

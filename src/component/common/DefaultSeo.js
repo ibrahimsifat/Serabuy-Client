@@ -11,7 +11,7 @@ const DefaultSeo = () => {
         locale: 'en_IE',
         url: 'https://serabuy.com/',
         site_name:
-          'Serabuy - Grocery & Organic Food Store e-commerce Template',
+          'Serabuy - Grocery & Organic Food Store',
       }}
       twitter={{
         handle: '@handle',
