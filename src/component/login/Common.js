@@ -45,11 +45,11 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           <div className="form-group">
             <InputArea
               register={register}
-              defaultValue="justin@gmail.com"
+             
               label="Email"
               name="email"
               type="email"
-              placeholder="Email"
+              placeholder="name@example.com"
               Icon={FiMail}
             />
             <Error errorName={errors.email} />
@@ -58,11 +58,11 @@ const Common = ({ onShowRegister, setModalOpen }) => {
           <div className="form-group">
             <InputArea
               register={register}
-              defaultValue="12345678"
+            
               label="Password"
               name="password"
               type="password"
-              placeholder="Password"
+              placeholder="***********"
               Icon={FiLock}
             />
 
