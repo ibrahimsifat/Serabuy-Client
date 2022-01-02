@@ -219,7 +219,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-gray-100">
+      <div className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex flex-col-reverse md:flex-row text-center items-center md:justify-between py-4">
           <p className="text-sm text-gray-500 eading-6">
             Copyright 2021 @{' '}

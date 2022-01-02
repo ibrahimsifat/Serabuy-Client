@@ -12,8 +12,9 @@ import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from '@layout/slider/Slider'
 const Home = ({ products }) => {
   const { productData } = useFilter(products);
-  const healthProducts=products.filter(service=>service.type==='Health Care')
-  console.log(healthProducts);
+  const healthProducts=products.slice(78,100)
+  const latestProducts=products.slice(4,100)
+
 
 
   const ProductBg={
@@ -41,7 +42,7 @@ const Home = ({ products }) => {
           </div>
 
           {/* feature category's */}
-          <div style={{ProductBg}} className=" lg:pb-10 lg:-mt-24 md:-mt-16 -mt-6 pb-6 ">
+          <div style={{ProductBg}} className=" lg:pb-10 lg:-mt-24 md:-mt-16 -mt-6 pb-2 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               {/* <div className="mb-10 flex justify-center">
                 <div className="text-center w-full lg:w-2/5">
@@ -56,16 +57,22 @@ const Home = ({ products }) => {
               <FeatureCategory />
             </div>
           </div>
+          {/* feature category's */}
+          <div style={{ProductBg}} className="  -mt-7">
+            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+            <p className="bg-white px-5 pt-4  md:text-2xl text-xl font-bold ">Best Deals</p>
+              <Slider products={healthProducts}/>
+            </div>
+          </div>
 
           {/* popular products */}
-          <div className=" lg:py-6 py-3 mx-auto max-w-screen-2xl px-3 sm:px-10">
-            <div className="mb-10 flex justify-center">
-              <div className="text-center w-full lg:w-3/5">
-                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
+          <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-3">
+            <div className="mb-10 flex justify- bg-white lg:py-6 py-3">
+              <div className=" w-full lg:w-3/5 -mb-2 lg:px-5 px-4">
+                <h2 className="text-xl lg:text-2xl pb-1 font-serif font-bold text-gray-800">
                   Popular Products
                 </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
+                
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
@@ -75,7 +82,7 @@ const Home = ({ products }) => {
             </div>
             <div className="flex">
               <div className="w-full">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 -mt-6 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 ">
                   {products?.slice(57, 72).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))}
@@ -85,9 +92,9 @@ const Home = ({ products }) => {
           </div>
 
           {/* promotional banner card */}
-          <div className="block mt-10">
-            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-              <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2">
+          <div className="block pt-4  ">
+            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
+              <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 bg-white pb-10">
                 <Card />
               </div>
             </div>
@@ -95,23 +102,22 @@ const Home = ({ products }) => {
 
           {/* discounted products */}
           
-          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
-            <div className="mb-10 flex justify-center">
-              <div className="text-center w-full lg:w-2/5">
-                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
+          <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10">
+            <div className="mb-10 flex bg-white">
+              <div className=" w-full lg:w-2/5 lg:px-5 px-4 pb-3 pt-6 -mt-5 ">
+                <h2 className="text-xl lg:text-2xl pb-1 font-serif font-bold text-gray-800">
                   Latest Discounted Products
                 </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
+              
                 {/* <p className="text-base font-sans text-gray-600 leading-6">
                   See Our latest discounted products below. Choose your daily
                   needs from here and get a special discount with free shipping.
                 </p> */}
               </div>
             </div>
-            <div className="flex">
+            <div className="flex -mt-6">
               <div className="w-full">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-2 md:gap-3 lg:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
                   {products?.slice(90, 120).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))}
@@ -119,26 +125,11 @@ const Home = ({ products }) => {
               </div>
             </div>
           </div>
-          <div className=" lg:py-20 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10">
-            <div className="mb-10 flex justify-center">
-              <div className="text-center w-full lg:w-2/5">
-                <h2 className="md:text-3xl text-xl lg:text-4xl mb-2 font-serif font-bold text-gray-500">
-                  Latest Products
-                </h2>
-                <p className='border-b-2 border-gray-300 lg:w-40 md:w-30 w-20 mx-auto -mt-2'></p>
-                <p className='border-b-2 border-gray-300 lg:w-30 md:w-20 w-10 mx-auto -mt-3'></p>
-                {/* <p className="text-base font-sans text-gray-600 leading-6">
-                  See Our latest discounted products below. Choose your daily
-                  needs from here and get a special discount with free shipping.
-                </p> */}
-              </div>
-            </div>
-            <div className="flex">
-              <div className="w-full">
-                
-                 <Slider products={products}/>
-            
-              </div>
+           {/* feature category's */}
+           <div style={{ProductBg}} className="  mt-4">
+            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+            <p className="bg-white px-5 pt-4  md:text-2xl text-xl font-bold "> Latest Products</p>
+              <Slider products={latestProducts}/>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const Card = () => {
       {ctaCardData.map((item) => (
         <div
           key={item.id}
-          className="mx-auto w-full relative rounded-lg overflow-hidden transition ease-out duration-400 delay-150 transform hover:shadow-xl  shadow-md "
+          className="mx-auto w-full relative overflow-hidden transition ease-out duration-400 delay-150 transform   shadow-md "
         >
           <Link href={item.url}>
             <a className="block border2 shadow-md">

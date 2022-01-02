@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
         product={product}
       />
 
-      <div className="group box-border overflow-hidden flex rounded shadow-sm pe-0 flex-col items-center bg-white relative ">
+      <div className="group box-border overflow-hidden flex   pe-0 flex-col items-center bg-white relative ">
     
       <Link href={`/product/${product.slug}`} passHref>
         <div

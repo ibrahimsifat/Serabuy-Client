@@ -45,7 +45,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
     addItem(newItem);
     notifySuccess(`Added "${product.title}" To Cart!`);
   };
-
+console.log(product);
   return (
     <Layout title={product.title} description={product.description}>
       <div className="px-0 py-10 lg:py-10">

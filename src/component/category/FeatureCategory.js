@@ -30,10 +30,10 @@ const FeatureCategory = () => {
                       .join('-')}`
                   )
                 }
-                className="border border-gray-200 bg-white transform p-4 block cursor-pointer "
+                className="border border-gray-200 bg-white transform p-2 block cursor-pointer "
               >
                 <div className="flex flex-col justify-center items-center transition ">
-                  <Image className=' duration-200 ease-linear transform group-hover:scale-105 w-16 h-16'
+                  <Image className=' duration-200 ease-linear transform group-hover:scale-105 '
                     src={item.icon}
                     alt={item.parent}
                     width={80}
