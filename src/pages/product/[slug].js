@@ -150,7 +150,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                         <ul className="flex mt-4">
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <FacebookShareButton
-                              url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
+                              url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <FacebookIcon size={32} round />
@@ -158,7 +158,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           </li>
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <TwitterShareButton
-                              url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
+                              url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <TwitterIcon size={32} round />
@@ -166,7 +166,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           </li>
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <RedditShareButton
-                              url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
+                              url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <RedditIcon size={32} round />
@@ -174,7 +174,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           </li>
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <WhatsappShareButton
-                              url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
+                              url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <WhatsappIcon size={32} round />
@@ -182,7 +182,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                           </li>
                           <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <LinkedinShareButton
-                              url={`https://supermarket-plum.vercel.app/product/${router.query.slug}`}
+                              url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <LinkedinIcon size={32} round />
