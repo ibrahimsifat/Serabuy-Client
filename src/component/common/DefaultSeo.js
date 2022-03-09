@@ -4,14 +4,14 @@ import { DefaultSeo as NextSeo } from 'next-seo';
 const DefaultSeo = () => {
   return (
     <NextSeo
-      title="Serabuy -  Grocery & Organic Food Store"
+      title="Serabuy Grocery & Organic Food Store"
       description="This is  Grocery & Organic Food Store"
       openGraph={{
         type: 'website',
         locale: 'en_IE',
         url: 'https://serabuy.com/',
         site_name:
-          'Serabuy - Grocery & Organic Food Store',
+          'Serabuy Grocery & Organic Food Store',
       }}
       twitter={{
         handle: '@handle',

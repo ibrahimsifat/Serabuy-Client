@@ -1,17 +1,9 @@
-Serabuy Frontend Documentation
-
-
-Site name : Serabuy - Grocery & Organic Food Store with Admin Dashboard
-
+Site name : Serabuy - Grocery & Organic Food Store 
 
 Introduction:
 
-This is a e-commerce template built with Next.js and Tailwindcss with rest api. This template backend is ready and that is built 
+This is a e-commerce template built with Next.js and Tailwindcss with rest api. This template backend is built 
 with  node, express, mongoose schema validation and use mongodb for  database.
-
-
-
-
 
 
 Tech and Packages use in this project:
@@ -34,61 +26,3 @@ Tech and Packages use in this project:
     15. Admin Dashboard React.js and tailwind 
     16. Admin can add and update Product, Staff, Category, users, Admin, Costumers, Coupons
     17. Admin can manage orders processing.
-
-
-
-
-
-
-Getting Started & Installation:
-
-For getting started with the template you have to follow the below procedure. First navigate to the serabuy-admin directory.
-
-Step 1 : Configure your env.local file:
-
-Within the project directory you'll find a .env.example file just rename it as .env.local and paste your api url in NEXT_PUBLIC_API_BASE_URL=https://serabuy.com/api and NEXT_PUBLIC_STRIPE_KEY="your stripe key".
-
-
-Step 2 : Running the project:
-
-⦁	First npm install for install all packages latest version.
-⦁	then npm run dev for running in development mode
-
-If you want to test your production build in local environment then run the below commands.
-⦁	npm run build then npm run dev
-
-
-
-
-
-Folder Structure & Customization:
-
-⦁   To customize tailwindcss configuration go to -> tailwind.config.js file .
-
-⦁   /public: In this folder all used images have.
-
-⦁   /src/assets: This folder contain custom css(you can write custom css in in file).
-
-⦁   /src/component: This folder contain all the template related ui components.
-
-⦁   /src/layout: This folder contain layout section for all pages and related components.
-
-⦁   /src/contexts: This folder contain all necessary context for this template . Like Mobile-Sidebar and User-Login.
-
-⦁   /src/hooks: This folder contain all custom hooks for data fetching, data filtering, and all Checkout and Login data submit function.
-
-⦁   /src/pages: Here you find all pages that we use in this project.
-
-⦁   /src/services: This folder contain all data fetching function with Axios interface. UserServices for all user ratelated data fetching 
-    functionality, CategoryServices for category related, CouponServices for coupon related, OrderServices for order related, ProductServices for product related and httpService is for common api endpoint with Axios interface.
-
-⦁   /src/utils : This folder contain data.js with pages, userSidebar, sliderData and faqData and  toast.js file use for for notification.
-
-
-
-
-
-
-Configuration & Deployment:
-
-We use Vercel for Development if you use Vercel for development then just follow the Vercel Documentation, You can also deploy this any other hosting services if you want.
