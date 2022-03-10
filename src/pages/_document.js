@@ -1,9 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 const APP_NAME =
-  'Serabuy - React Grocery & Organic Food Store e-commerce Template';
+  'Serabuy Organic Food Store';
 const APP_DESCRIPTION =
-  'This is React Grocery & Organic Food Store e-commerce Template';
+  'This is Grocery & Organic Food Store ';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -30,16 +30,16 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#fff" />
           <meta
             property="og:title"
-            content="Serabuy - React Grocery & Organic Food Store e-commerce Template"
+            content="Serabuy Grocery & Organic Food Store"
           />
           <meta property="og:type" content="eCommerce Website" />
           <meta
             property="og:url"
-            content="https://Serabuy-store.vercel.app/"
+            content="https://Serabuy.com"
           />
           <meta
             property="og:image"
-            content="https://res.cloudinary.com/ahossain/image/upload/v1636729752/facebook-page_j7alju.png"
+            content="https://i.ibb.co/6bWMHFy/Capture.jpg"
           />
         </Head>
         <body>
