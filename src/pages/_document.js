@@ -39,7 +39,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://i.ibb.co/6bWMHFy/Capture.jpg"
+            content="https://i.ibb.co/6rLYMzc/serabuymuckp.jpg"
           />
         </Head>
         <body>

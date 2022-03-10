@@ -5,11 +5,11 @@ const DefaultSeo = () => {
   return (
     <NextSeo
       title="Serabuy Grocery & Organic Food Store"
-      description="This is  Grocery & Organic Food Store"
+      description="Serabuy is your neighborhood organic grocer offering everything from organic produce to free-range eggs to health coaching and more."
       openGraph={{
         type: 'website',
         locale: 'en_IE',
-        url: 'https://serabuy.com/',
+        url: 'https://serabuy.com',
         site_name:
           'Serabuy Grocery & Organic Food Store',
       }}
