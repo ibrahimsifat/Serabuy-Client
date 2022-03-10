@@ -41,33 +41,17 @@ const Home = ({ products }) => {
             </div> */}
           </div>
 
-          {/* feature category's */}
-          <div style={{ProductBg}} className=" lg:pb-10 lg:-mt-24 md:-mt-16 -mt-6 pb-2 ">
+          
+          <div style={{ProductBg}} className=" ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-              {/* <div className="mb-10 flex justify-center">
-                <div className="text-center w-full lg:w-2/5">
-                  <h2 className="text-xl uppercase lg:text-4xl md:text-2xl text-xl  mb-2 font-serif font-bold">
-                    Featured Categories
-                  </h2>
-                  <p className="text-base font-sans text-gray-600 leading-6">
-                    Choose your necessary products from categories.
-                  </p>
-                </div>
-              </div> */}
-              <FeatureCategory />
-            </div>
-          </div>
-          {/* feature category's */}
-          <div style={{ProductBg}} className="  -mt-7">
-            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-            <p className="bg-white px-5 pt-4  md:text-2xl text-xl font-bold ">Best Deals</p>
+            <p className=" px-5 pt-4  md:text-2xl text-xl font-bold "></p>
               <Slider products={healthProducts}/>
             </div>
           </div>
 
           {/* popular products */}
           <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-3">
-            <div className="mb-10 flex justify- bg-white lg:py-6 py-3">
+            <div className="mb-10 flex lg:py-6 py-3">
               <div className=" w-full lg:w-3/5 -mb-2 lg:px-5 px-4">
                 <h2 className="text-xl lg:text-2xl pb-1 font-serif font-bold text-gray-800">
                   Popular Products
@@ -94,7 +78,7 @@ const Home = ({ products }) => {
           {/* promotional banner card */}
           <div className="block pt-4  ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
-              <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 bg-white pb-10">
+              <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 pb-10">
                 <Card />
               </div>
             </div>
@@ -103,7 +87,7 @@ const Home = ({ products }) => {
           {/* discounted products */}
           
           <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10">
-            <div className="mb-10 flex bg-white">
+            <div className="mb-10 flex ">
               <div className=" w-full lg:w-2/5 lg:px-5 px-4 pb-3 pt-6 -mt-5 ">
                 <h2 className="text-xl lg:text-2xl pb-1 font-serif font-bold text-gray-800">
                   Latest Discounted Products
@@ -132,6 +116,24 @@ const Home = ({ products }) => {
               <Slider products={latestProducts}/>
             </div>
           </div>
+
+          {/* feature category's */}
+          <div style={{ProductBg}} className="pb-4 pt-2">
+            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+              {/* <div className="mb-10 flex justify-center">
+                <div className="text-center w-full lg:w-2/5">
+                  <h2 className="text-xl uppercase lg:text-4xl md:text-2xl text-xl  mb-2 font-serif font-bold">
+                    Featured Categories
+                  </h2>
+                  <p className="text-base font-sans text-gray-600 leading-6">
+                    Choose your necessary products from categories.
+                  </p>
+                </div>
+              </div> */}
+              <FeatureCategory />
+            </div>
+          </div>
+          {/* feature category's */}
         </div>
       </Layout>
     </>

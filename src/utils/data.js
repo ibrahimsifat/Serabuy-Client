@@ -120,7 +120,7 @@ const sliderData = [
     title: 'Super Server week!',
     info: 'Intrinsicly fashion performance based products rather than accurate benefits...',
     url: '/search?category=fresh-vegetable',
-    image: '/slider/slider- 4.jpg',
+    image: '/slider/slider-4.jpg',
   }
 ];
 

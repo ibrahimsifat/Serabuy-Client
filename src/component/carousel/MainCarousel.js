@@ -21,6 +21,8 @@ const MainCarousel = () => {
       itemClass=""
       renderButtonGroupOutside={false}
       renderDotsOutside={false}
+      keyBoardControl={true}
+
       responsive={{
         desktop: {
           breakpoint: {
@@ -66,16 +68,16 @@ const MainCarousel = () => {
           <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
             <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
               <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none  lg:line-clamp-none  lg:text-3xl font-bold text-gray-800">
-                {item.title}
+                {/* {item.title} */}
               </h1>
               <p className="text-base leading-6 text-gray-600 font-sans line-clamp-1  md:line-clamp-none lg:line-clamp-none">
-                {item.info}
+                {/* {item.info} */}
               </p>
-              <Link href={item.url}>
+              {/* <Link href={item.url}>
                 <a className="hidden sm:inline-block lg:inline-block text-sm leading-6 font-serif font-medium mt-6 px-6 py-2 bg_green text-center rounded-md text-white hover:bg-green-600">
                   Shop Now
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
