@@ -56,9 +56,9 @@ const Home = ({ products,products2}) => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 ">
-                  {products?.slice(57, 172).map((product, i) => (
+                  {/* {products?.slice(57, 72).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
@@ -91,10 +91,10 @@ const Home = ({ products,products2}) => {
             <div className="flex -mt-6">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
-                  {products?.slice(90, 120).map((product, i) => (
+                  {/* {products?.slice(90, 120).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                     
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
@@ -109,9 +109,9 @@ const Home = ({ products,products2}) => {
             <div className="flex pt-2">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
-                  {products2?.slice(1, 175).map((product, i) => (
+                  {/* {products2?.slice(117, 135).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
-                  ))}
+                  ))} */}
                 </div>
               </div>
             </div>
@@ -120,7 +120,7 @@ const Home = ({ products,products2}) => {
            <div style={{ProductBg}} className="  mt-4">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
             <p className="bg-white px-5 pt-4  md:text-2xl text-xl font-bold "> Latest Products</p>
-              <Slider products={latestProducts}/>
+              {/* <Slider products={latestProducts}/> */}
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export const getStaticProps = async () => {
   return {
     props: {
     
-      products: products.slice(100,300),
+      products: products.slice(200,300),
       products2:products.slice(300,600)
 
     },

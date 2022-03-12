@@ -12,7 +12,7 @@ const MainCarousel = () => {
     
       additionalTransfrom={0}
       autoPlay="false"
-      autoPlaySpeed={2000}
+      autoPlaySpeed={4000}
       centerMode={false}
       className=""
       containerClass=""
@@ -53,7 +53,7 @@ const MainCarousel = () => {
       swipeable
     >
       {sliderData.map((item, i) => (
-        <div className="h-full relative rounded-lg overflow-hidden z-10" key={i + 1}>
+        <div className="h-full relative overflow-hidden z-10" key={i + 1}>
           <div className="text-sm text-gray-600 hover:text-green-dark z-10">
             <Image
               layout="responsive"
