@@ -1,18 +1,18 @@
 //internal import
 import Layout from '@layout/Layout';
-import useFilter from '@hooks/useFilter';
+// import useFilter from '@hooks/useFilter';
 import Card from '@component/cta-card/Card';
 // import OfferCard from '@component/offer/OfferCard';
 import StickyCart from '@component/cart/StickyCart';
 import ProductServices from '@services/ProductServices';
 import ProductCard from '@component/product/ProductCard';
 import MainCarousel from '@component/carousel/MainCarousel';
-import FeatureCategory from '@component/category/FeatureCategory';
+// import FeatureCategory from '@component/category/FeatureCategory';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from '@layout/slider/Slider'
 import HomeCategory from '@component/category/HomeCategory';
-const Home = ({ products }) => {
-  const { productData } = useFilter(products);
+const Home = ({ products,products2}) => {
+  // const { productData } = useFilter(products);
   const healthProducts=products.slice(78,100)
   const latestProducts=products.slice(4,100)
 
@@ -32,19 +32,12 @@ const Home = ({ products }) => {
                 <div className="flex- lg:block w-full ">
                   <MainCarousel />
                 </div>
-                {/* <div className="w-full hidden lg:flex">
-                  <OfferCard />
-                </div> */}
               </div>
             </div>
-            {/* <div className="hidden relative lg:block mx-auto max-w-screen-2xl px-3 sm:px-10">
-              <FeatureCard />
-            </div> */}
           </div>
 
           <div style={{ProductBg}} className="pb-4 pt-6">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-            
               <HomeCategory />
             </div>
           </div>
@@ -62,8 +55,8 @@ const Home = ({ products }) => {
             <h2 className="text-xl lg:text-2xl  font-serif font-bold pt-6 pb-2 text-gray-800">Popular Products</h2>
             <div className="flex">
               <div className="w-full">
-                <div className="grid grid-cols-2 sm:grid-cols-3lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 ">
-                  {products?.slice(57, 72).map((product, i) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 ">
+                  {products?.slice(57, 172).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))}
                 </div>
@@ -72,7 +65,7 @@ const Home = ({ products }) => {
           </div>
 
           {/* promotional banner card */}
-          <div className="block pt-4  ">
+          <div className="block pt-6 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
               <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 pb-10">
                 <Card />
@@ -100,6 +93,24 @@ const Home = ({ products }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
                   {products?.slice(90, 120).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
+                    
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+           {/* feature category's */}
+
+          {/* cosmatics products */}
+          
+          <div className="  mx-auto max-w-screen-2xl px-3 mt-6 sm:px-10">
+                <h2 className="text-xl lg:text-2xl pb-1 font-serif font-bold text-gray-800">Cosmetics & Skin Care</h2>
+            
+            <div className="flex pt-2">
+              <div className="w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
+                  {products2?.slice(1, 175).map((product, i) => (
+                    <ProductCard key={i + 1} product={product} />
                   ))}
                 </div>
               </div>
@@ -112,15 +123,6 @@ const Home = ({ products }) => {
               <Slider products={latestProducts}/>
             </div>
           </div>
-
-          {/* feature category's */}
-          <div style={{ProductBg}} className="pb-4 pt-2">
-            <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
-            
-              <FeatureCategory />
-            </div>
-          </div>
-          {/* feature category's */}
         </div>
       </Layout>
     </>
@@ -133,7 +135,8 @@ export const getStaticProps = async () => {
   return {
     props: {
     
-      products: products.slice(200,300),
+      products: products.slice(100,300),
+      products2:products.slice(300,600)
 
     },
     revalidate: 20,

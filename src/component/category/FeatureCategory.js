@@ -32,14 +32,14 @@ const FeatureCategory = () => {
                 }
                 className="border border-gray-200 bg-white transform p-2 block cursor-pointer "
               >
-                <div className="flex flex-col justify-center items-center transition ">
-                  <Image className=' duration-200 ease-linear transform group-hover:scale-105 '
+                <div className="flex justify-center items-center transition h-20">
+                  <Image className=' duration-200 ease-linear transform group-hover:scale-105'
                     src={item.icon}
                     alt={item.parent}
                     width={80}
                     height={80}
                   />
-                  <h3 className="pt-4 lg:pl-4 md:text-md lg:text-xl text-sm text-gray-600 font-serif font-medium leading-tight h-12">
+                  <h3 className="pl-2 md:text-md lg:text-xl text-sm text-gray-600 font-serif font-medium leading-tight h-12">
                     {item.parent}
                   </h3>
                 </div>

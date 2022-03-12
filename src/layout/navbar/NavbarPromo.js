@@ -6,6 +6,7 @@ import { ChevronDownIcon } from '@heroicons/react/outline';
 //internal import
 import { pages } from '@utils/data';
 import Category from '@component/category/Category';
+import FeatureCategory from '@component/category/FeatureCategory';
 
 const NavbarPromo = () => {
   return (
@@ -14,7 +15,7 @@ const NavbarPromo = () => {
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-12 flex justify-between items-center">
           <div className="inline-flex">
             <Popover className="relative">
-              <div className="max-w-7xl mx-auto">
+              <div className="max-w-7xl mx-auto ">
                 <div className="flex justify-between items-center md:justify-start md:space-x-10">
                   <Popover.Group
                     as="nav"
@@ -41,8 +42,8 @@ const NavbarPromo = () => {
                         leaveTo="opacity-0 translate-y-1"
                       >
                         <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-screen-xl	  bg-white">
-                          <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
-                            <Category />
+                          <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full p-4">
+                          <FeatureCategory />
                           </div>
                         </Popover.Panel>
                       </Transition>

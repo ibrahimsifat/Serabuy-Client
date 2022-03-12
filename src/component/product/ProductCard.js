@@ -48,7 +48,7 @@ const ProductCard = ({ product }) => {
             width={160}
             height={160}
             alt={product.title}
-            className="object-cover transition duration-150 ease-linear transform group-hover:scale-105"
+            className="object-cover transition duration-150 ease-linear transform group-hover:scale-110"
           />
           
         </div>
@@ -79,7 +79,7 @@ const ProductCard = ({ product }) => {
                             updateItemQuantity(item.id, item.quantity - 1)
                           }
                         >
-                          <span className="text-dark text-base">
+                          <span className="text-white hover:color-red-500 text-base">
                             <IoRemove />
                           </span>
                         </button>
@@ -92,7 +92,7 @@ const ProductCard = ({ product }) => {
                           }
                           disabled={product.quantity === item.quantity}
                         >
-                          <span className="text-dark text-base">
+                          <span className="text-white text-base">
                             <IoAdd />
                           </span>
                         </button>
@@ -105,7 +105,7 @@ const ProductCard = ({ product }) => {
                 <button
                 onClick={() => setModalOpen(!modalOpen)}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center text_green hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
+                className="h-9 w-9 flex items-center justify-center text_green  hover:green-500 hover:text-green-700 transition-all"
               >
                 {' '}
                 <span className="text-xl">
@@ -116,7 +116,7 @@ const ProductCard = ({ product }) => {
                 onClick={() => generateCartItem(product)}
                 disabled={product.quantity < 1}
                 aria-label="cart"
-                className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text_green hover:border-green-500 hover:green-500 hover:text-green-700 transition-all"
+                className="h-9 w-9 flex items-center justify-center   rounded text_green hover:green-500 hover:text-green-700 transition-all"
               >
                 {' '}
                 <span className="text-xl">

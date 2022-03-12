@@ -150,7 +150,7 @@ const categoryData = [
     id: 4,
     title: 'Taste of',
     subTitle: 'Bread & Bakery',
-    image: '/cta/jaggery.jpg ',
+    image: '/cta/caldal.jpg',
     url: '/search?Category=biscuits--cakes',
   },
   {
