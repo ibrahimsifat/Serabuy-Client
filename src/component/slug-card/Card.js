@@ -69,8 +69,8 @@ const Card = () => {
           <FiMapPin />
         </span>
         <p className="font-sans leading-5 text-sm text-gray-500">
-          Delivery from our pick point Cecilia Chapman, 561-4535 Nulla LA,
-          United States 96522
+          Delivery from our pick point , 234-234 Jeddah,
+          Saudi Arabia 22233
         </p>
       </li>
     </ul>

@@ -124,6 +124,71 @@ const sliderData = [
   }
 ];
 
+const categoryData = [
+  {
+    id: 1,
+    title: 'Taste of',
+    subTitle: 'Fresh & Natural',
+    image: '/cta/fruitveg.jpg',
+    url: '/search?category=fresh-vegetable',
+  },
+  {
+    id: 2,
+    title: 'Taste of',
+    subTitle: 'Fish & Meat',
+    image: '/cta/Ghee.jpg',
+    url: '/search?category=butter--ghee',
+  },
+  {
+    id: 3,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/a2milk.jpg',
+    url: '/search?category=dairy',
+  },
+  {
+    id: 4,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/jaggery.jpg ',
+    url: '/search?Category=biscuits--cakes',
+  },
+  {
+    id: 5,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/dal.jpg',
+    url: '/search?category=flour',
+  },
+  {
+    id: 6,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/greentea.jpg',
+    url: '/search?Category=biscuits--cakes',
+  },
+  {
+    id: 7,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/oil.jpg',
+    url: '/search?category=oil',
+  },
+  {
+    id: 8,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/imunityboost.jpg',
+    url: '/search?category=honey',
+  },
+  {
+    id: 9,
+    title: 'Taste of',
+    subTitle: 'Bread & Bakery',
+    image: '/cta/cosmetics.jpg',
+    url: '/search?category=cosmetics',
+  },
+];
 const ctaCardData = [
   {
     id: 1,
@@ -213,4 +278,5 @@ export {
   ctaCardData,
   featurePromo,
   contactData,
+  categoryData,
 };

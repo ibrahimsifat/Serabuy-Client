@@ -6,7 +6,7 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    paritialVisibilityGutter: 200
+    paritialVisibilityGutter: 256
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -39,7 +39,7 @@ const Slider = ({ deviceType ,products}) => {
              <Image
           key={image.slug}
       
-          className="cursor-pointer p-0 m-0 "
+          className="cursor-pointer  m-0 px-4"
             width={230}
             height={230}
             
