@@ -123,6 +123,39 @@ const sliderData = [
     image: '/slider/slider-4.jpg',
   }
 ];
+const twoBanner1=[
+  {
+    id: 1,
+    title: 'Taste of',
+    subTitle: 'Fresh & Natural',
+    image: '/cta/drink-banner.jpg',
+    url: '/search?category=energy-drinks',
+  },
+  {
+    id: 1,
+    title: 'Taste of',
+    subTitle: 'Fresh & Natural',
+    image: '/cta/pet-banner.jpg',
+    url: '/search?category=cat-care',
+  },
+]
+const twoBanner2=[
+  {
+    id: 1,
+    title: 'Taste of',
+    subTitle: 'Fresh & Natural',
+    image: '/cta/cleaning-banner.jpg',
+    url: '/search?category=energy-drinks',
+  },
+  {
+    id: 1,
+    title: 'Taste of',
+    subTitle: 'Fresh & Natural',
+    image: '/cta/babyCare-banner.jpg',
+    url: '/search?category=cat-care',
+  },
+]
+
 
 const categoryData = [
   {
@@ -279,4 +312,6 @@ export {
   featurePromo,
   contactData,
   categoryData,
+  twoBanner1,
+  twoBanner2
 };

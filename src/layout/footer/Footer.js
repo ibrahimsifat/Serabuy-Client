@@ -222,7 +222,7 @@ const Footer = () => {
       <div className="border-t border-gray-100 bg-gray-50">
         <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex flex-col-reverse md:flex-row text-center items-center md:justify-between py-4">
           <p className="text-sm text-gray-500 eading-6">
-            Copyright 2021 @{' '}
+            Copyright 2022 @{' '}
             <Link href="https://subah.xyz/">
               <a
                 target="_blank"

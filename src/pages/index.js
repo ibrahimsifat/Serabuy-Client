@@ -11,10 +11,12 @@ import MainCarousel from '@component/carousel/MainCarousel';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from '@layout/slider/Slider'
 import HomeCategory from '@component/category/HomeCategory';
-const Home = ({ products,products2}) => {
+import SingleTwoCategory from '@component/category/SingleTwoCategory';
+import {twoBanner1} from '../utils/data'
+import {twoBanner2} from '../utils/data'
+const Home = ({ popularProduct,products2}) => {
   // const { productData } = useFilter(products);
-  const healthProducts=products.slice(78,100)
-  const latestProducts=products.slice(4,100)
+
 
 
 
@@ -46,7 +48,7 @@ const Home = ({ products,products2}) => {
           <div style={{ProductBg}} className=" ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
             <p className=" px-5 pt-2  md:text-2xl text-xl font-bold "></p>
-              <Slider products={healthProducts}/>
+              {/* <Slider products={healthProducts}/> */}
             </div>
           </div>
 
@@ -56,9 +58,9 @@ const Home = ({ products,products2}) => {
             <div className="flex">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 ">
-                  {/* {products?.slice(57, 72).map((product, i) => (
+                  {popularProduct?.slice(57, 72).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
-                  ))} */}
+                  ))}
                 </div>
               </div>
             </div>
@@ -72,7 +74,14 @@ const Home = ({ products,products2}) => {
               </div>
             </div>
           </div>
-
+{/* single two banner */}
+<div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+<div style={{ProductBg}} className="pb-4 pt-6">
+            <div className="mx-auto max-w-screen-2xl ">
+              <SingleTwoCategory pictures={twoBanner1} />
+            </div>
+          </div>
+          </div>
           {/* discounted products */}
           
           <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10">
@@ -88,10 +97,15 @@ const Home = ({ products,products2}) => {
                 </p> */}
               </div>
             </div>
+
+
+
+
+
             <div className="flex -mt-6">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
-                  {/* {products?.slice(90, 120).map((product, i) => (
+                  {/* {popularProduct?.slice(90, 120).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                     
                   ))} */}
@@ -100,7 +114,13 @@ const Home = ({ products,products2}) => {
             </div>
           </div>
            {/* feature category's */}
-
+           <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+<div style={{ProductBg}} className="pb-4 pt-6">
+            <div className="mx-auto max-w-screen-2xl ">
+              <SingleTwoCategory pictures={twoBanner2} />
+            </div>
+          </div>
+          </div>
           {/* cosmatics products */}
           
           <div className="  mx-auto max-w-screen-2xl px-3 mt-6 sm:px-10">
@@ -135,7 +155,7 @@ export const getStaticProps = async () => {
   return {
     props: {
     
-      products: products.slice(200,300),
+      popularProduct: products.slice(200,300),
       products2:products.slice(300,600)
 
     },
