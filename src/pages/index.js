@@ -14,7 +14,7 @@ import HomeCategory from '@component/category/HomeCategory';
 import SingleTwoCategory from '@component/category/SingleTwoCategory';
 import {twoBanner1} from '../utils/data'
 import {twoBanner2} from '../utils/data'
-const Home = ({ popularProduct,products2}) => {
+const Home = ({ popularProduct,vegetableProducts,breadProducts,glocaryProduct,cleaningProduct}) => {
   // const { productData } = useFilter(products);
 
 
@@ -129,6 +129,42 @@ const Home = ({ popularProduct,products2}) => {
             <div className="flex pt-2">
               <div className="w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
+                  {glocaryProduct?.map((product, i) => (
+                    <ProductCard key={i + 1} product={product} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex pt-2">
+              <div className="w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
+                  {cleaningProduct?.map((product, i) => (
+                    <ProductCard key={i + 1} product={product} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex pt-2">
+              <div className="w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
+                  {breadProducts?.map((product, i) => (
+                    <ProductCard key={i + 1} product={product} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex pt-2">
+              <div className="w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
+                  {vegetableProducts?.map((product, i) => (
+                    <ProductCard key={i + 1} product={product} />
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="flex pt-2">
+              <div className="w-full">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-6 gap-3 md:gap-3 lg:gap-3">
                   {/* {products2?.slice(117, 135).map((product, i) => (
                     <ProductCard key={i + 1} product={product} />
                   ))} */}
@@ -154,9 +190,11 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-    
-      popularProduct: products.slice(200,300),
-      products2:products.slice(300,600)
+      vegetableProducts:products.slice(0,100),
+      breadProducts:products.slice(150,200),
+      glocaryProduct:products.slice(201,250),
+      popularProduct: products.slice(251,300),
+      cleaningProduct:products.slice(301,445)
 
     },
     revalidate: 20,
