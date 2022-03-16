@@ -3,7 +3,7 @@ import Image from 'next/image'
 import profilePic from '../../public/logo/logo-color.png'
 const Loader = () => {
     return (
-        <div class="stage w-screen h-screen">
+        <div class="stage">
             <div class="wrapper">
                 <div class="slash"></div>
                 <div class="sides">
