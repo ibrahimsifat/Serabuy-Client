@@ -39,8 +39,7 @@ const Slider = ({ deviceType, products }) => {
             <Link href={`/product/${image.slug}`}  >
               <Image
                 key={image.slug}
-
-                className="cursor-pointer bg-white m-0 px-4 group-hover:scale-110 transition duration-150 ease-linear"
+                className="cursor-pointer py-3 bg-white m-0 px-4 group-hover:scale-110 transition duration-150 ease-linear"
                 width={230}
                 height={230}
 
