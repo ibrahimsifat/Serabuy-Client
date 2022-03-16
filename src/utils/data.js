@@ -123,36 +123,28 @@ const sliderData = [
     image: '/slider/slider-4.jpg',
   }
 ];
-const twoBanner1=[
+const twoBanner1 = [
   {
     id: 1,
-    title: 'Taste of',
-    subTitle: 'Fresh & Natural',
-    image: '/cta/drink-banner.jpg',
     url: '/search?category=energy-drinks',
+    image: '/cta/drink-banner.jpg',
   },
   {
-    id: 1,
-    title: 'Taste of',
-    subTitle: 'Fresh & Natural',
-    image: '/cta/pet-banner.jpg',
+    id: 2,
     url: '/search?category=cat-care',
+    image: '/cta/pet-banner.jpg',
   },
 ]
-const twoBanner2=[
+const twoBanner2 = [
   {
     id: 1,
-    title: 'Taste of',
-    subTitle: 'Fresh & Natural',
-    image: '/cta/cleaning-banner.jpg',
     url: '/search?category=energy-drinks',
+    image: '/cta/cleaning-banner.jpg',
   },
   {
-    id: 1,
-    title: 'Taste of',
-    subTitle: 'Fresh & Natural',
-    image: '/cta/babyCare-banner.jpg',
+    id: 2,
     url: '/search?category=cat-care',
+    image: '/cta/babyCare-banner.jpg',
   },
 ]
 

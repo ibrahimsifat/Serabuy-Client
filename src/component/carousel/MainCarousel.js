@@ -8,8 +8,8 @@ import { sliderData } from '@utils/data';
 
 const MainCarousel = () => {
   return (
-    <Carousel 
-    
+    <Carousel
+
       additionalTransfrom={0}
       autoPlay="false"
       autoPlaySpeed={4000}
