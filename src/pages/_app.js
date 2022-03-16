@@ -16,11 +16,9 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || null);
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false)
   Router.events.on('routeChangeStart', (url) => {
-    console.log('router is changing');
     setLoading(true)
   })
   Router.events.on('routeChangeComplete', (url) => {
-    console.log('router is changing id complete....');
     setLoading(false)
   })
   return (
