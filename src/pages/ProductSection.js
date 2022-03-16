@@ -4,8 +4,8 @@ import React from 'react';
 
 const ProductSection = ({ title, products, sliderProducts }) => {
     return (
-        <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10 py-2">
-            {title && <h2 className="text-xl lg:text-2xl pb-2 font-serif font-bold text-gray-800">
+        <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10 my-2">
+            {title && <h2 className="text-xl pb-1 lg:text-2xl  font-serif font-bold text-gray-800 uppercase">
                 {title}
             </h2>}
             <div className="flex">
@@ -18,7 +18,7 @@ const ProductSection = ({ title, products, sliderProducts }) => {
                 </div>
             </div>
             {/* meatSlider products */}
-            {sliderProducts && <div className="mt-6">
+            {sliderProducts && <div className=" my-3">
                 <Slider products={sliderProducts} />
             </div>}
             {/* meatSlider products */}

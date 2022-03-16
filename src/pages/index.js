@@ -24,7 +24,8 @@ const Home = ({
   meatProducts,
   drinkProducts,
   cosmeticProducts,
-  saucesProducts
+  saucesProducts,
+  popularSliderProducts
 }) => {
   // const { productData } = useFilter(products);
 
@@ -37,7 +38,7 @@ const Home = ({
         <div style={ProductBg} className="min-h-screen">
           <StickyCart />
           <div className="">
-            <div className="mx-auto py-t max-w-screen-2xl px-3 sm:px-10">
+            <div className="mx-auto  max-w-screen-2xl px-3 sm:px-10">
               <div className="flex w-full">
                 <div className="flex- lg:block w-full ">
                   <MainCarousel />
@@ -46,14 +47,14 @@ const Home = ({
             </div>
           </div>
 
-          <div style={{ ProductBg }} className="py-2">
+          <div style={{ ProductBg }} className="pt-3">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <HomeCategory />
             </div>
           </div>
 
           {/* firstSlideProducts */}
-          <div style={{ ProductBg }} className=" pt-2">
+          <div style={{ ProductBg }} className="mt-3 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <Slider products={firstSlideProducts} />
             </div>
@@ -62,12 +63,12 @@ const Home = ({
 
 
           {/* popular products */}
-          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={petProducts} />
+          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} />
           {/* popular products */}
 
 
           {/* promotional banner card */}
-          <div className="block py-2 ">
+          <div className="block pb-2">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
               <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 ">
                 <Card />
@@ -79,9 +80,11 @@ const Home = ({
           <ProductSection products={vegetableProducts} sliderProducts={meatProducts} />
           {/* vegetableProducts products */}
 
-
-          <SingleTwoCategory pictures={twoBanner1} />
-
+          <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-1">
+            <ul className="grid grid-cols-2 gap-3">
+              <SingleTwoCategory pictures={twoBanner1} />
+            </ul>
+          </div>
           {/* single two banner */}
 
           {/* drinkProducts products */}
@@ -89,9 +92,11 @@ const Home = ({
           {/* drinkProducts products */}
 
           {/* cleaningProduct banner's */}
-
-          <SingleTwoCategory pictures={twoBanner2} />
-
+          <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-1">
+            <ul className="grid grid-cols-2 gap-3">
+              <SingleTwoCategory pictures={twoBanner2} />
+            </ul>
+          </div>
           {/* cleaningProduct banner's */}
 
 
@@ -114,7 +119,8 @@ export const getStaticProps = async () => {
   return {
     props: {
       popularProduct: products.slice(251, 275),
-      firstProducts: products.slice(55, 67),
+      firstProducts: products.slice(41, 51),
+      popularSliderProducts: products.slice(61, 85),
       vegetableProducts: products.slice(20, 30),
       meatProducts: products.slice(100, 115),
       drinkProducts: products.slice(125, 135),

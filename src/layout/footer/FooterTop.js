@@ -4,7 +4,8 @@ import Image from 'next/image';
 
 const FooterTop = () => {
   return (
-    <div className="bg-indigo-100 bg-repeat bg-center overflow-hidden">
+    <div className="bg-indigo-100 bg-repeat bg-center overflow-hidden -mt-3 ">
+
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row lg:flex-row lg:items-center">
         <div className="flex-shrink-0 lg:w-2/5 md:w-3/6 py-10 lg:py-0">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3">
