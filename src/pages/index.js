@@ -63,7 +63,7 @@ const Home = ({
 
 
           {/* popular products */}
-          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} />
+          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} btnLink={'/search?Category=organic-food'} />
           {/* popular products */}
 
 

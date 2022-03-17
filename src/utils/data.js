@@ -98,14 +98,14 @@ const sliderData = [
     id: 1,
     title: 'The Best Quality Products Guaranteed!',
     info: 'Dramatically facilitate effective total linkage for go forward processes...',
-    url: '/search?Category=biscuits--cakes',
+    url: '/search?category=fresh-vegetable',
     image: '/slider/slider-1.jpg',
   },
   {
     id: 2,
     title: 'Best Different Type of Grocery Store',
     info: 'Quickly aggregate empowered networks after emerging products...',
-    url: '/search?Category=fish--meat',
+    url: '/search?category=organic-food',
     image: '/slider/slider-2.jpg',
   },
   {

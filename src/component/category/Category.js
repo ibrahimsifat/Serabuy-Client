@@ -21,14 +21,14 @@ const Category = () => {
   return (
     <div className="flex flex-col w-full h-full bg-white cursor-pointer scrollbar-hide">
       {categoryDrawerOpen && (
-        <div className="w-full flex justify-between items-center h-16 px-6 py-4 bg_green text-white border-b border-gray-100">
+        <div className="w-full flex justify-between items-center h-16 px-6 py-4 bg-gray-100 text-white border-b border-gray-100">
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex align-center">
             <Link href="/">
-              <a className="mr-10">
+              <a className="mr-10 mt-3">
                 <Image
-                  width={100}
-                  height={38}
-                  src="/logo/logo-light.svg"
+                  width={120}
+                  height={27}
+                  src="/logo/logo-color.png"
                   alt="logo"
                 />
               </a>
