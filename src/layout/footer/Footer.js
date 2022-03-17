@@ -105,16 +105,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href="#">
+                <Link href="/privacy-policy">
                   <a className="text-gray-600 inline-block w-full hover:text-green-500">
-                    Careers
+                    Privacy Policy
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href="#">
+                <Link href="/terms-and-conditions">
                   <a className="text-gray-600 inline-block w-full hover:text-green-500">
-                    Latest news
+                    Terms & Conditions
                   </a>
                 </Link>
               </li>

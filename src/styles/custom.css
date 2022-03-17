@@ -359,7 +359,6 @@ p:not(:last-of-type) {
 .wrapper {
   position: relative;
   color: #6FC428;
-  font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -904,3 +903,6 @@ p:not(:last-of-type) {
     transform: translateY(-101%);
   }
 }
+
+
+/* dropdown style */

@@ -9,7 +9,7 @@ const DefaultSeo = () => {
       openGraph={{
         type: 'website',
         locale: 'en_IE',
-        url: 'https://serabuy.com',
+        url: 'https://serabuy.com/',
         site_name:
           'Serabuy Grocery & Organic Food Store',
       }}

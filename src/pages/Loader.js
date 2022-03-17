@@ -4,7 +4,7 @@ import profilePic from '../../public/logo/logo-color.png'
 const Loader = () => {
     return (
         <div class="stage">
-            <div class="wrapper">
+            <div class="wrapper lg:text-6xl md:text-4xl sm:text-3xl">
                 <div class="slash"></div>
                 <div class="sides">
                     <div class="side"></div>

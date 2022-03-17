@@ -11,7 +11,7 @@ import FeatureCategory from '@component/category/FeatureCategory';
 const NavbarPromo = () => {
   return (
     <>
-      <div className="hidden lg:block xl:block bg_light border-b text-white">
+      <div className="hidden lg:block xl:block bg_light text-white">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-12 flex justify-between items-center">
           <div className="inline-flex">
             <Popover className="relative">
@@ -43,12 +43,12 @@ const NavbarPromo = () => {
                       >
                         <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-screen-xl	  bg-white">
                           <div className="rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full p-4">
-                          <FeatureCategory />
+                            <FeatureCategory />
                           </div>
                         </Popover.Panel>
                       </Transition>
                     </Popover>
-                    
+
                     <Link href="/about-us">
                       <a className="font-serif mx-4 py-2 text-sm font-medium text_hover">
                         About Us
@@ -60,9 +60,11 @@ const NavbarPromo = () => {
                       </a>
                     </Link>
 
-                    <Popover className="relative font-serif">
-                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium text_hover focus:outline-none">
-                        <span>Pages</span>
+
+
+                    {/* <Popover className="relative font-serif ">
+                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium text_hover focus:outline-none ">
+                        <span>vagitable</span>
                         <ChevronDownIcon
                           className="ml-1 h-3 w-3 group-text_hover"
                           aria-hidden="true"
@@ -77,30 +79,18 @@ const NavbarPromo = () => {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1"
                       >
-                        <Popover.Panel className="absolute z-10 -ml-1 mt-1 transform w-screen max-w-xs bg-white text-black">
-                          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-y-scroll flex-grow scrollbar-hide w-full h-full">
-                            <div className="relative grid gap-2 px-6 py-6">
-                              {pages.map((item) => (
-                                <span
-                                  key={item.title}
-                                  className="p-2 flex font-serif items-center rounded-md hover:bg-gray-50 w-full text_hover"
-                                >
-                                  <item.icon
-                                    className="flex-shrink-0 h-4 w-4 text-black"
-                                    aria-hidden="true"
-                                  />
-                                  <Link href={item.href}>
-                                    <a className="inline-flex items-center justify-between ml-2 text-sm font-medium w-full text_hover">
-                                      {item.title}
-                                    </a>
-                                  </Link>
-                                </span>
-                              ))}
-                            </div>
+                        <Popover.Panel className="fixed z-10 -ml-1 mt-1 left-0 transform w-screen h-44  bg-white text-black">
+                          <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 rounded-lg shadow-lg ring-black ring-opacity-5  flex-grow scrollbar-hide w-full h-full">
+                            hello
                           </div>
                         </Popover.Panel>
                       </Transition>
-                    </Popover>
+                    </Popover> */}
+
+
+
+
+
                     <Link href="/offer">
                       <a className="relative inline-flex items-center h-6 bg_green font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-white hover:text-green-400">
                         Offers
@@ -115,18 +105,7 @@ const NavbarPromo = () => {
               </div>
             </Popover>
           </div>
-          <div className="flex">
-            <Link href="/privacy-policy">
-              <a className="font-serif mx-4 py-2 text-sm font-medium text_hover">
-                Privacy Policy
-              </a>
-            </Link>
-            <Link href="/terms-and-conditions">
-              <a className="font-serif mx-4 py-2 text-sm font-medium text_hover">
-                Terms & Conditions
-              </a>
-            </Link>
-          </div>
+
         </div>
       </div>
     </>

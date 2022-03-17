@@ -22,9 +22,9 @@ const Navbar = () => {
   const { toggleCartDrawer } = useContext(SidebarContext);
   const { totalItems } = useCart();
   const router = useRouter();
-const navBerBgColor={
-  backgroundColor: '#131921'
-}
+  const navBerBgColor = {
+    backgroundColor: '#131921'
+  }
   const {
     state: { userInfo },
   } = useContext(UserContext);
@@ -56,9 +56,9 @@ const navBerBgColor={
 
       <div className=" sticky top-0 z-20 bg_dark  ">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
-          <div className="top-bar h-8  lg:h-16 flex items-center justify-between py-4 mx-auto">
+          <div className="top-bar h-14  lg:h-16 flex items-center justify-between py-4 mx-auto">
             <Link href="/">
-              <a className="mr-3 lg:mr-12 xl:mr-12 hidden md:hidden lg:block">
+              <a className="mr-3 lg:mr-12 xl:mr-12 mt-3">
                 <Image
                   width={150}
                   height={30}
@@ -72,22 +72,22 @@ const navBerBgColor={
                 <div className="flex flex-col mx-auto w-full">
                   <form
                     onSubmit={handleSubmit}
-                    className="relative pr-12 md:pr-14 bg-white overflow-hidden shadow-sm rounded-md w-full"
+                    className="relative pr-12 md:pr-14 bg-white overflow-hidden shadow-sm w-full rounded-md md:rounded-none"
                   >
                     <label className="flex items-center py-0.5">
                       <input
                         onChange={(e) => setSearchText(e.target.value)}
                         value={searchText}
-                        className="form-input w-full pl-5 appearance-none transition ease-in-out border text-input text-sm font-sans rounded-md min-h-7 h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
-                        placeholder="Search for products (e.g. fish, apple, oil)"
+                        className="form-input w-full md:pl-5 pl-2 appearance-none transition ease-in-out border text-input text-sm font-sans  min-h-6 h-7 md:h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
+                        placeholder="Search for your favorite grocery..."
                       />
                     </label>
                     <button
                       aria-label="Search"
                       type="submit"
-                      className="bg_green outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-12 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none"
+                      className="bg-gray-200 outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-8 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none"
                     >
-                      <IoSearchOutline className='text-white' />
+                      <IoSearchOutline className='text-black' />
                     </button>
                   </form>
                 </div>
@@ -105,7 +105,7 @@ const navBerBgColor={
                 onClick={toggleCartDrawer}
                 className="relative px-5 text-white text-2xl font-bold"
               >
-              { totalItems>=1&& <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
+                {totalItems >= 1 && <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
                   {totalItems}
                 </span>}
                 <FiShoppingCart className="w-6 h-6 drop-shadow-xl" />

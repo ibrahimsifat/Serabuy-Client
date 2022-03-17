@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 const APP_NAME =
   'Serabuy Organic Food Store';
 const APP_DESCRIPTION =
-  'This is Grocery & Organic Food Store ';
+  'Serabuy is your neighborhood organic grocer offering everything from organic produce to free-range eggs to health coaching and more.';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
