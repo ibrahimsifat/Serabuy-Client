@@ -1,6 +1,7 @@
 import Carousel from "react-multi-carousel";
 import Image from "next/image";
 import Link from "next/link";
+import { loadStripe } from "@stripe/stripe-js";
 
 const responsive = {
   desktop: {
@@ -11,7 +12,7 @@ const responsive = {
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    paritialVisibilityGutter: 180
+    paritialVisibilityGutter: 100
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -24,7 +25,7 @@ const responsive = {
 // Because this is an inframe, so the SSR mode doesn't not do well here.
 // It will work on real devices.
 const Slider = ({ deviceType, products }) => {
-
+  // console.log(products);
   return (
     <Carousel
 
@@ -34,6 +35,7 @@ const Slider = ({ deviceType, products }) => {
       responsive={responsive}
     >
       {products.map(image => {
+
         return (
           <div className='group'>
             <Link href={`/product/${image.slug}`}  >

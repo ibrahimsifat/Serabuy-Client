@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useCart } from 'react-use-cart';
 import { IoBagAddSharp, IoAdd, IoRemove } from 'react-icons/io5';
-
 import Price from '@component/common/Price';
 import Discount from '@component/common/Discount';
 import ProductModal from '@component/modal/ProductModal';

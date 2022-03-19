@@ -9,7 +9,7 @@ import CategoryServices from '@services/CategoryServices';
 const FeatureCategory = () => {
   const router = useRouter();
   const { data, error } = useAsync(() => CategoryServices.getAllCategory());
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {error ? (

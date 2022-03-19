@@ -7,7 +7,7 @@ const SingleTwoCategory = ({ pictures }) => {
     <>
       {pictures?.map((item, i) => (
         <li className="group" key={i + 1}>
-          <div className=" transform  block cursor-pointer ">
+          <div className=" transform block cursor-pointer ">
             <div className=" ">
               <Link href={item.url}>
                 <Image className=' duration-200 ease-linear transform group-hover:scale-105 rounded'

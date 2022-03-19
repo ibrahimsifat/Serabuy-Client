@@ -12,7 +12,9 @@ const ProductSection = ({ title, products, sliderProducts, btnLink }) => {
                 <div className='flex justify-between items-center pt-2 pb-3'>
                     <h2 className="text-xl lg:text-2xl  font-serif font-bold text-gray-800 uppercase ">{title}</h2>
 
-                    <button className='text-[#6be004] hover:text-white hover:bg-[#6be004] border-2 border-[#6be004] py-1 px-4 uppercase duration-300 rounded'>View All</button>
+                    <button className='text-[#6be004] hover:text-white hover:bg-[#6be004] border-2 border-[#6be004] py-1 px-4 uppercase duration-300 rounded'>View All
+
+                    </button>
 
                 </div>
             }

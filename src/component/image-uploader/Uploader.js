@@ -43,7 +43,7 @@ const Uploader = ({ setImageUrl, imageUrl }) => {
         const formData = new FormData();
         formData.append('file', file);
         formData.append('upload_preset', uploadPreset);
-        console.log(file)
+        // console.log(file)
         axios({
           url: uploadURL,
           method: 'POST',

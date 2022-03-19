@@ -63,7 +63,7 @@ const Home = ({
 
 
           {/* popular products */}
-          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} btnLink={'/search?Category=organic-food'} />
+          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} />
           {/* popular products */}
 
 
@@ -81,7 +81,7 @@ const Home = ({
           {/* vegetableProducts products */}
 
           <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-1">
-            <ul className="grid grid-cols-2 gap-3">
+            <ul className="md:grid grid-cols-2 gap-3">
               <SingleTwoCategory pictures={twoBanner1} />
             </ul>
           </div>
@@ -93,12 +93,11 @@ const Home = ({
 
           {/* cleaningProduct banner's */}
           <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 -mt-1">
-            <ul className="grid grid-cols-2 gap-3">
+            <ul className="md:grid grid-cols-2 gap-3">
               <SingleTwoCategory pictures={twoBanner2} />
             </ul>
           </div>
           {/* cleaningProduct banner's */}
-
 
           {/* cleaningProduct products */}
           <ProductSection products={cleaningProduct} sliderProducts={babyCareProducts} />

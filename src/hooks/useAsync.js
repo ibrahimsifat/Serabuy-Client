@@ -20,7 +20,7 @@ const useAsync = (asyncFunction) => {
       })
       .catch((err) => {
         if (!unmounted) {
-          console.log(err.message);
+          // console.log(err.message);
           setError(err.message);
           if (axios.isCancel(err)) {
             setError(err.message);

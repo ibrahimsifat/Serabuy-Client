@@ -67,7 +67,7 @@ const Navbar = () => {
                 />
               </a>
             </Link>
-            <div className="w-full transition-all duration-200 ease-in-out lg:flex lg:max-w-[520px] xl:max-w-[750px] 2xl:max-w-[900px] md:mx-12 lg:mx-4 xl:mx-0">
+            <div className="w-full transition-all duration-200 ease-in-out lg:flex lg:max-w-[500px] xl:max-w-[750px] 2xl:max-w-[900px] md:mx-5 lg:mx-4 xl:mx-0">
               <div className="w-full flex flex-col justify-center flex-shrink-0 relative z-30">
                 <div className="flex flex-col mx-auto w-full">
                   <form
@@ -92,7 +92,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:hidden md:items-center md:justify-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div className="hidden md:hidden md:items-center md:justify-center lg:flex absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {/* Profile dropdown */}
 
