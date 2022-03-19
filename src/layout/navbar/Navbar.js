@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import { useCart } from 'react-use-cart';
 import { IoSearchOutline } from 'react-icons/io5';
 import { FiShoppingCart, FiUser, FiBell } from 'react-icons/fi';
-
+import { IoMdArrowDropdown } from 'react-icons/io'
 //internal import
 import NavbarPromo from '@layout/navbar/NavbarPromo';
 import { UserContext } from '@context/UserContext';
@@ -43,10 +43,10 @@ const Navbar = () => {
   useEffect(() => {
     if (Cookies.get('userInfo')) {
       const user = JSON.parse(Cookies.get('userInfo'));
-      setImageUrl(user.image);
+      setImageUrl(user.name);
     }
   }, []);
-
+  // console.log(userInfo);
   return (
     <>
       <CartDrawer />
@@ -54,7 +54,7 @@ const Navbar = () => {
         <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       )}
 
-      <div className=" sticky top-0 z-20 bg_dark  ">
+      <div className=" sticky top-0  bg-green-600 nav_z_index">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-14  lg:h-16 flex items-center justify-between py-4 mx-auto">
             <Link href="/">
@@ -72,7 +72,7 @@ const Navbar = () => {
                 <div className="flex flex-col mx-auto w-full">
                   <form
                     onSubmit={handleSubmit}
-                    className="relative pr-12 md:pr-14 bg-white overflow-hidden shadow-sm w-full rounded-md md:rounded-none"
+                    className="relative pr-12 md:pr-14 bg-white overflow-hidden shadow-sm w-full rounded-md md:rounded"
                   >
                     <label className="flex items-center py-0.5">
                       <input
@@ -85,47 +85,29 @@ const Navbar = () => {
                     <button
                       aria-label="Search"
                       type="submit"
-                      className="bg-gray-200 outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-8 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none"
-                    >
+                      className="bg-gray-100 outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-8 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none">
                       <IoSearchOutline className='text-black' />
                     </button>
                   </form>
                 </div>
               </div>
             </div>
-            <div className="hidden md:hidden md:items-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/* <button
-                className="pr-5 text-white text-2xl font-bold"
-                aria-label="Alert"
-              >
-                <FiBell className="w-6 h-6 drop-shadow-xl" />
-              </button> */}
-              <button
-                aria-label="Total"
-                onClick={toggleCartDrawer}
-                className="relative px-5 text-white text-2xl font-bold"
-              >
-                {totalItems >= 1 && <span className="absolute z-10 top-0 right-0 inline-flex items-center justify-center p-1 h-5 w-5 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full">
-                  {totalItems}
-                </span>}
-                <FiShoppingCart className="w-6 h-6 drop-shadow-xl" />
-              </button>
+            <div className="hidden md:hidden md:items-center md:justify-center lg:flex xl:block absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
               {/* Profile dropdown */}
 
-              <button
-                className="pl-5 text-white text-2xl font-bold"
+              <button className=" text-white text-2xl font-bold  group"
                 aria-label="Login"
               >
-                {imageUrl || userInfo?.image ? (
+                {imageUrl || userInfo?.name ? (
                   <Link href="/user/dashboard">
-                    <a className="relative top-1 w-6 h-6">
-                      <Image
-                        width={29}
-                        height={29}
-                        src={imageUrl || userInfo?.image}
-                        alt="user"
-                        className="bg-white rounded-full"
-                      />
+                    <a className="relative  w-6 h-6 group-hover:text-gray-300 ">
+                      <span className='text-xs mr-2'>Hala</span>
+                      <span className='text-white text-xs group-hover:text-gray-300'>{userInfo?.name.split(' ')}</span>
+                      <div className="flex">
+                        <p className='text-sm ml-auto -mt-1' >My Account</p>
+                        <IoMdArrowDropdown className='-mt-1' />
+                      </div>
                     </a>
                   </Link>
                 ) : userInfo?.name ? (
@@ -135,11 +117,26 @@ const Navbar = () => {
                     </a>
                   </Link>
                 ) : (
-                  <span onClick={() => setModalOpen(!modalOpen)}>
-                    <FiUser className="w-6 h-6 drop-shadow-xl" />
+                  <span className='flex justify-center items-center ' onClick={() => setModalOpen(!modalOpen)}>
+                    <span className='text-sm mr-1'>Sign In</span>
+                    <FiUser className="w-5 h-5 drop-shadow-xl" />
                   </span>
                 )}
               </button>
+
+              <span className='text-[#bebebe] px-2 '>|</span>
+              <button
+                aria-label="Total"
+                onClick={toggleCartDrawer}
+                className="relative pr-5 text-white text-2xl font-bold"
+              >
+                {totalItems >= 1 && <span className="absolute z-10 top-2 right-0 inline-flex items-center justify-center  h-4 w-4 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full ">
+                  {totalItems}
+                </span>}
+                <span className='text-sm mr-1'>Cart</span>
+                <FiShoppingCart className="w-4 h-4 drop-shadow-xl inline " />
+              </button>
+
             </div>
           </div>
         </div>

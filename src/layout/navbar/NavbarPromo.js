@@ -11,8 +11,8 @@ import FeatureCategory from '@component/category/FeatureCategory';
 const NavbarPromo = () => {
   return (
     <>
-      <div className="hidden lg:block xl:block bg_light text-white">
-        <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-12 flex justify-between items-center">
+      <div className="hidden lg:block xl:block bg-white shadow z-50	">
+        <div className="max-w-screen-2xl mx-auto px-3 sm:px-10 h-10 flex justify-between items-center">
           <div className="inline-flex">
             <Popover className="relative">
               <div className="max-w-7xl mx-auto ">
@@ -22,12 +22,12 @@ const NavbarPromo = () => {
                     className="md:flex space-x-10 items-center"
                   >
                     <Popover className="relative font-serif">
-                      <Popover.Button className="group inline-flex items-center py-2 text_hover focus:outline-none">
+                      <Popover.Button className="group inline-flex items-center py-2   focus:outline-none">
                         <span className="font-serif text-sm font-medium">
                           Categories
                         </span>
                         <ChevronDownIcon
-                          className="ml-1 h-3 w-3 group-text_hover"
+                          className="ml-1 h-3 w-3 group- "
                           aria-hidden="true"
                         />
                       </Popover.Button>
@@ -50,12 +50,12 @@ const NavbarPromo = () => {
                     </Popover>
 
                     <Link href="/about-us">
-                      <a className="font-serif mx-4 py-2 text-sm font-medium text_hover">
+                      <a className="font-serif mx-4 py-2 text-sm font-medium  ">
                         About Us
                       </a>
                     </Link>
                     <Link href="/contact-us">
-                      <a className="font-serif mx-4 py-2 text-sm font-medium text_hover">
+                      <a className="font-serif mx-4 py-2 text-sm font-medium  ">
                         Contact Us
                       </a>
                     </Link>
@@ -63,10 +63,10 @@ const NavbarPromo = () => {
 
 
                     {/* <Popover className="relative font-serif ">
-                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium text_hover focus:outline-none ">
+                      <Popover.Button className="group inline-flex items-center py-2 text-sm font-medium   focus:outline-none ">
                         <span>vagitable</span>
                         <ChevronDownIcon
-                          className="ml-1 h-3 w-3 group-text_hover"
+                          className="ml-1 h-3 w-3 group- "
                           aria-hidden="true"
                         />
                       </Popover.Button>
@@ -92,11 +92,11 @@ const NavbarPromo = () => {
 
 
                     <Link href="/offer">
-                      <a className="relative inline-flex items-center h-6 bg_green font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-white hover:text-green-400">
+                      <a className="relative inline-flex items-center h-6 bg-green-500 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-white hover:bg-green-600">
                         Offers
                         <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
-                          <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg_green opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg_green"></span>
+                          <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-500 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                         </div>
                       </a>
                     </Link>

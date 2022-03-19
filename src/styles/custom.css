@@ -336,7 +336,9 @@ p:not(:last-of-type) {
 .bg_light {
     background-color: #313C53;
 }
-
+.nav_z_index{
+  z-index: 2000;
+}
 .icon-font {
     font-size: 20px;
 }

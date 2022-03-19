@@ -35,7 +35,7 @@ const Cart = () => {
       <span className="align-middle font-medium font-serif">
         Proceed To Checkout
       </span>
-      <span className="rounded-lg font-bold font-serif py-2 px-3 bg-white text-green-600">
+      <span className="rounded-lg font-bold font-serif py-1 px-3 text-white border">
         ${cartTotal.toFixed(2)}
       </span>
     </button>
