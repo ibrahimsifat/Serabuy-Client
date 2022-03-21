@@ -1,19 +1,20 @@
-import { useContext, useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
-import Link from 'next/link';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
-import { useCart } from 'react-use-cart';
-import { IoSearchOutline } from 'react-icons/io5';
-import { FiShoppingCart, FiUser, FiBell } from 'react-icons/fi';
-import { IoMdArrowDropdown } from 'react-icons/io'
+import CartDrawer from '@component/drawer/CartDrawer';
+import LoginModal from '@component/modal/LoginModal';
+import { SidebarContext } from '@context/SidebarContext';
+import { UserContext } from '@context/UserContext';
 //internal import
 import NavbarPromo from '@layout/navbar/NavbarPromo';
-import { UserContext } from '@context/UserContext';
-import LoginModal from '@component/modal/LoginModal';
-import CartDrawer from '@component/drawer/CartDrawer';
-import { SidebarContext } from '@context/SidebarContext';
+import Cookies from 'js-cookie';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useContext, useEffect, useState } from 'react';
+import { FiShoppingCart, FiUser } from 'react-icons/fi';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoSearchOutline } from 'react-icons/io5';
+import { useCart } from 'react-use-cart';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Navbar = () => {
   const [imageUrl, setImageUrl] = useState('');
@@ -92,6 +93,13 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+
+          <div className="">
+            <LanguageSwitcher/>
+          </div>
+
+
+
             <div className="hidden md:hidden md:items-center md:justify-center lg:flex absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {/* Profile dropdown */}

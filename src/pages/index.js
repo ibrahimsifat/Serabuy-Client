@@ -6,14 +6,29 @@ import HomeCategory from "@component/category/HomeCategory";
 import SingleTwoCategory from "@component/category/SingleTwoCategory";
 // import useFilter from '@hooks/useFilter';
 import Card from "@component/cta-card/Card";
-import ProductCard from "@component/product/ProductCard";
 import Layout from "@layout/Layout";
 // import FeatureCategory from '@component/category/FeatureCategory';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from "@layout/slider/Slider";
 import ProductServices from "@services/ProductServices";
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import nextI18NextConfig from '../../next-i18next.config.js';
 import { twoBanner1, twoBanner2 } from "../utils/data";
 import ProductSection from "./ProductSection";
+
+// export const getStaticProps = async ({ locale }) => ({
+  //   props: {
+    //     ...(await serverSideTranslations(
+      //       locale,
+      //       ['common',],
+      //       nextI18NextConfig
+      //     )),
+      //   },
+ 
+// })
+
+
 const Home = ({
   popularProduct: firstSlideProducts,
   vegetableProducts,
@@ -28,7 +43,7 @@ const Home = ({
   popularSliderProducts
 }) => {
   // const { productData } = useFilter(products);
-
+     const { t } = useTranslation('common');
   const ProductBg = {
     backgroundColor: "#EAEDED",
   };
@@ -50,6 +65,7 @@ const Home = ({
           <div style={{ ProductBg }} className="pt-3">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <HomeCategory />
+              <h1 className='s'>{t('hello')}</h1>
             </div>
           </div>
 
@@ -112,11 +128,12 @@ const Home = ({
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const products = await ProductServices.getAllProducts();
 
   return {
     props: {
+      
       popularProduct: products.slice(251, 275),
       firstProducts: products.slice(41, 51),
       popularSliderProducts: products.slice(61, 85),
@@ -128,6 +145,11 @@ export const getStaticProps = async () => {
       babyCareProducts: products.slice(435, 446),
       cosmeticProducts: products.slice(420, 435),
       saucesProducts: products.slice(201, 250),
+      ...(await serverSideTranslations(
+        locale,
+        ['common','navber'],
+        nextI18NextConfig
+      )),
     },
     revalidate: 20,
   };

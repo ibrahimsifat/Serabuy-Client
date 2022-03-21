@@ -1,17 +1,19 @@
-import '@styles/custom.css';
-import 'react-multi-carousel/lib/styles.css';
-import { CartProvider } from 'react-use-cart';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import Router from 'next/router'
+import DefaultSeo from '@component/common/DefaultSeo';
+import { SidebarProvider } from '@context/SidebarContext';
 //internal import
 import { UserProvider } from '@context/UserContext';
-import { SidebarProvider } from '@context/SidebarContext';
-import DefaultSeo from '@component/common/DefaultSeo';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import '@styles/custom.css';
+import { appWithTranslation } from 'next-i18next';
+import Head from 'next/head';
+import Router from 'next/router';
+import NProgress from 'nprogress';
 import { useState } from 'react';
+import 'react-multi-carousel/lib/styles.css';
+import { CartProvider } from 'react-use-cart';
+import nextI18NextConfig from '../../next-i18next.config';
 import Loader from './Loader';
-import Head from 'next/head'
-import NProgress from 'nprogress'
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || null);
 
 
@@ -46,4 +48,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp, nextI18NextConfig);
