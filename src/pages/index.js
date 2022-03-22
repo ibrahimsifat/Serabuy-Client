@@ -6,14 +6,18 @@ import HomeCategory from "@component/category/HomeCategory";
 import SingleTwoCategory from "@component/category/SingleTwoCategory";
 // import useFilter from '@hooks/useFilter';
 import Card from "@component/cta-card/Card";
-import ProductCard from "@component/product/ProductCard";
 import Layout from "@layout/Layout";
 // import FeatureCategory from '@component/category/FeatureCategory';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from "@layout/slider/Slider";
 import ProductServices from "@services/ProductServices";
+import Head from 'next/head';
 import { twoBanner1, twoBanner2 } from "../utils/data";
 import ProductSection from "./ProductSection";
+const APP_NAME =
+  'Serabuy Organic Food Store';
+const APP_DESCRIPTION =
+  'Serabuy is your neighborhood organic grocer offering everything from organic produce to free-range eggs to health coaching and more.';
 const Home = ({
   popularProduct: firstSlideProducts,
   vegetableProducts,
@@ -34,6 +38,14 @@ const Home = ({
   };
   return (
     <>
+
+    <Head>
+    <meta name="description" content={APP_DESCRIPTION}/>
+<meta property="og:title" content={APP_NAME}/>
+<meta property="og:description" content={APP_DESCRIPTION}/>
+<meta property="og:url" content="https://serabuy.com/"/>
+<meta property="og:type" content="Organic Food Store"/>
+    </Head>
       <Layout>
         <div style={ProductBg} className="min-h-screen">
           <StickyCart />
