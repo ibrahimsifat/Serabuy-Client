@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import Carousel from 'react-multi-carousel';
-
 //internal import
 import { sliderData } from '@utils/data';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+
 
 const MainCarousel = () => {
   return (
@@ -14,7 +14,7 @@ const MainCarousel = () => {
       autoPlay="false"
       autoPlaySpeed={4000}
       centerMode={false}
-      className=""
+      className="carousel-with-custom-dots"
       containerClass=""
       dotListClass=""
       infinite
