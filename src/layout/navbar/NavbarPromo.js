@@ -1,12 +1,25 @@
 import FeatureCategory from '@component/category/FeatureCategory';
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/outline';
+<<<<<<< HEAD
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
 const NavbarPromo = () => {
   const { t } = useTranslation('navber');
+=======
+import useTranslation from 'next-translate/useTranslation';
+import Link from 'next/link';
+import { Fragment } from 'react';
+
+
+
+
+
+const NavbarPromo = () => {
+  const { t } = useTranslation('common',)
+>>>>>>> otherme
   return (
     <>
       <div className="hidden lg:block xl:block bg-white shadow z-50	">
@@ -22,7 +35,11 @@ const NavbarPromo = () => {
                     <Popover className="relative font-serif">
                       <Popover.Button className="group inline-flex items-center py-2   focus:outline-none">
                         <span className="font-serif text-sm font-medium">
+<<<<<<< HEAD
                           <h1 className='s'>{t('category_text')}</h1>
+=======
+                          {t('category_text')}
+>>>>>>> otherme
                         </span>
                         <ChevronDownIcon
                           className="ml-1 h-3 w-3 group- "
@@ -49,12 +66,20 @@ const NavbarPromo = () => {
 
                     <Link href="/about-us">
                       <a className="font-serif mx-4 py-2 text-sm font-medium  ">
+<<<<<<< HEAD
                          {t('About Us')}
+=======
+                      {t('About Us')}
+>>>>>>> otherme
                       </a>
                     </Link>
                     <Link href="/contact-us">
                       <a className="font-serif mx-4 py-2 text-sm font-medium  ">
+<<<<<<< HEAD
                          {t('Contact Us')}
+=======
+                      {t('Contact Us')}
+>>>>>>> otherme
                       </a>
                     </Link>
 
@@ -91,7 +116,11 @@ const NavbarPromo = () => {
 
                     <Link href="/offer">
                       <a className="relative inline-flex items-center h-6 bg-green-500 font-serif ml-4 py-0 px-2 rounded text-sm font-medium text-white hover:bg-green-600">
+<<<<<<< HEAD
                              {t('Offers')}
+=======
+                        {t('Offers')}
+>>>>>>> otherme
                         <div className="absolute flex w-2 h-2 left-auto -right-1 -top-1">
                           <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-red-500 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>

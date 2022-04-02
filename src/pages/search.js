@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-
+import Category from '@component/category/Category';
+import ProductCard from '@component/product/ProductCard';
+import useFilter from '@hooks/useFilter';
 //internal import
 import Layout from '@layout/Layout';
-import useFilter from '@hooks/useFilter';
-import Category from '@component/category/Category';
 import ProductServices from '@services/ProductServices';
-import ProductCard from '@component/product/ProductCard';
+import Image from 'next/image';
+import React, { useState } from 'react';
+
 
 const Search = ({ products }) => {
   const [visibleProduct, setVisibleProduct] = useState(15);
   const { productData, setSortedField } = useFilter(products);
 
   return (
+    <>
+
     <Layout title="Search" description="This is search page">
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
         <div className="flex py-10 lg:py-12">
@@ -83,6 +85,7 @@ const Search = ({ products }) => {
         </div>
       </div>
     </Layout>
+    </>
   );
 };
 

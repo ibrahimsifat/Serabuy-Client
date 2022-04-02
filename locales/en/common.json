@@ -1,0 +1,26 @@
+{
+
+  "home":"home",
+  "about": "About",
+  "contact":"Contact",
+  "nav_bangla":"বাংলা",
+  "nav_eng":"English"  ,
+  "nav_arabic":"عربي",
+  "nav_products":"Products",
+  "Language":"Language",
+  "products_section_title":"This is Products Section",
+  "Cosmetic Products":"Cosmetic Products",
+  "Popular Products":"Popular Products",
+  "about_text": "This is about page and we are testing metalanguage",
+  "category_text": "Categories",
+  "contact_text": "This is contact Page for Contact",
+  "Get Your":"Get Your Daily Needs From Our Serabuy Store",
+  "There_are":"There are many kinds of products you will find in our shop, Choose your daily necessary product from our Serabuy shop and get some special offer.",
+  "About Us":"About Us",
+  "Contact Us":"Contact Us",
+  "Offers":"Offers",
+  "Sign_In":"Sign In",
+  "Cart":"Cart",
+  "My_Account":"My Account",
+  "Hala":"Hello"
+}

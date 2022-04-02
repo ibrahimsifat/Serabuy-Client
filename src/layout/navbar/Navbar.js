@@ -5,6 +5,11 @@ import { UserContext } from '@context/UserContext';
 //internal import
 import NavbarPromo from '@layout/navbar/NavbarPromo';
 import Cookies from 'js-cookie';
+<<<<<<< HEAD
+=======
+// translation
+import useTranslation from 'next-translate/useTranslation';
+>>>>>>> otherme
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,8 +20,12 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { IoSearchOutline } from 'react-icons/io5';
 import { useCart } from 'react-use-cart';
 import LanguageSwitcher from './LanguageSwitcher';
+<<<<<<< HEAD
 
+=======
+>>>>>>> otherme
 const Navbar = () => {
+  const { t } = useTranslation('common','navber')
   const [imageUrl, setImageUrl] = useState('');
   const [searchText, setSearchText] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
@@ -93,6 +102,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
           <div className="">
             <LanguageSwitcher/>
@@ -100,6 +110,9 @@ const Navbar = () => {
 
 
 
+=======
+            <LanguageSwitcher/>
+>>>>>>> otherme
             <div className="hidden md:hidden md:items-center md:justify-center lg:flex absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {/* Profile dropdown */}
@@ -110,10 +123,10 @@ const Navbar = () => {
                 {imageUrl || userInfo?.name ? (
                   <Link href="/user/dashboard">
                     <a className="relative  w-6 h-6 group-hover:text-gray-300 ">
-                      <span className='text-xs mr-2'>Hala</span>
+                      <span className='text-xs mr-2'>{t('Hala')}</span>
                       <span className='text-white text-xs group-hover:text-gray-300'>{userInfo?.name.split(' ')}</span>
                       <div className="flex">
-                        <p className='text-sm ml-auto -mt-1' >My Account</p>
+                        <p className='text-sm ml-auto -mt-1' >{t('My_Account')}</p>
                         <IoMdArrowDropdown className='-mt-1' />
                       </div>
                     </a>
@@ -126,7 +139,7 @@ const Navbar = () => {
                   </Link>
                 ) : (
                   <span className='flex justify-center items-center ' onClick={() => setModalOpen(!modalOpen)}>
-                    <span className='text-sm mr-1'>Sign In</span>
+                    <span className='text-sm mr-1'>{t('Sign_In')}</span>
                     <FiUser className="w-5 h-5 drop-shadow-xl" />
                   </span>
                 )}
@@ -136,12 +149,12 @@ const Navbar = () => {
               <button
                 aria-label="Total"
                 onClick={toggleCartDrawer}
-                className="relative pr-5 text-white text-2xl font-bold"
+                className="relative pr-5 text-white text-2xl font-bold -mt-1"
               >
                 {totalItems >= 1 && <span className="absolute z-10 top-2 right-0 inline-flex items-center justify-center  h-4 w-4 text-xs font-medium leading-none text-red-100 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full ">
                   {totalItems}
                 </span>}
-                <span className='text-sm mr-1'>Cart</span>
+                <span className='text-sm mr-1'>{t('Cart')}</span>
                 <FiShoppingCart className="w-4 h-4 drop-shadow-xl inline " />
               </button>
 
