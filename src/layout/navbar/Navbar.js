@@ -5,11 +5,8 @@ import { UserContext } from '@context/UserContext';
 //internal import
 import NavbarPromo from '@layout/navbar/NavbarPromo';
 import Cookies from 'js-cookie';
-<<<<<<< HEAD
-=======
 // translation
 import useTranslation from 'next-translate/useTranslation';
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,10 +17,6 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { IoSearchOutline } from 'react-icons/io5';
 import { useCart } from 'react-use-cart';
 import LanguageSwitcher from './LanguageSwitcher';
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
 const Navbar = () => {
   const { t } = useTranslation('common','navber')
   const [imageUrl, setImageUrl] = useState('');
@@ -102,17 +95,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-
-          <div className="">
             <LanguageSwitcher/>
-          </div>
-
-
-
-=======
-            <LanguageSwitcher/>
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
             <div className="hidden md:hidden md:items-center md:justify-center lg:flex absolute inset-y-0 right-0 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {/* Profile dropdown */}

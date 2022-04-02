@@ -11,26 +11,6 @@ import Layout from "@layout/Layout";
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from "@layout/slider/Slider";
 import ProductServices from "@services/ProductServices";
-<<<<<<< HEAD
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import nextI18NextConfig from '../../next-i18next.config.js';
-import { twoBanner1, twoBanner2 } from "../utils/data";
-import ProductSection from "./ProductSection";
-
-// export const getStaticProps = async ({ locale }) => ({
-  //   props: {
-    //     ...(await serverSideTranslations(
-      //       locale,
-      //       ['common',],
-      //       nextI18NextConfig
-      //     )),
-      //   },
- 
-// })
-
-
-=======
 import Head from 'next/head';
 import { twoBanner1, twoBanner2 } from "../utils/data";
 import ProductSection from "./ProductSection";
@@ -38,7 +18,6 @@ const APP_NAME =
   'Serabuy Organic Food Store';
 const APP_DESCRIPTION =
   'Serabuy is your neighborhood organic grocer offering everything from organic produce to free-range eggs to health coaching and more.';
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
 const Home = ({
   popularProduct: firstSlideProducts,
   vegetableProducts,
@@ -53,7 +32,7 @@ const Home = ({
   popularSliderProducts
 }) => {
   // const { productData } = useFilter(products);
-     const { t } = useTranslation('common');
+
   const ProductBg = {
     backgroundColor: "#EAEDED",
   };
@@ -83,7 +62,6 @@ const Home = ({
           <div style={{ ProductBg }} className="pt-3">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <HomeCategory />
-              <h1 className='s'>{t('hello')}</h1>
             </div>
           </div>
 
@@ -146,12 +124,11 @@ const Home = ({
   );
 };
 
-export const getStaticProps = async ({ locale }) => {
+export const getStaticProps = async () => {
   const products = await ProductServices.getAllProducts();
 
   return {
     props: {
-      
       popularProduct: products.slice(251, 275),
       firstProducts: products.slice(41, 51),
       popularSliderProducts: products.slice(61, 85),
@@ -163,11 +140,6 @@ export const getStaticProps = async ({ locale }) => {
       babyCareProducts: products.slice(435, 446),
       cosmeticProducts: products.slice(420, 435),
       saucesProducts: products.slice(201, 250),
-      ...(await serverSideTranslations(
-        locale,
-        ['common','navber'],
-        nextI18NextConfig
-      )),
     },
     revalidate: 20,
   };

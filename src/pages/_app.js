@@ -5,22 +5,12 @@ import { UserProvider } from '@context/UserContext';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import '@styles/custom.css';
-<<<<<<< HEAD
-import { appWithTranslation } from 'next-i18next';
-import Head from 'next/head';
-import Router from 'next/router';
-=======
 import Head from 'next/head';
 import Router, { useRouter } from 'next/router';
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
 import NProgress from 'nprogress';
 import { useState } from 'react';
 import 'react-multi-carousel/lib/styles.css';
 import { CartProvider } from 'react-use-cart';
-<<<<<<< HEAD
-import nextI18NextConfig from '../../next-i18next.config';
-=======
->>>>>>> 6f4e2826b05d51fbf3b76c85514e28a0689c6a82
 import Loader from './Loader';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY || null);
 const APP_NAME =
@@ -67,4 +57,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(MyApp, nextI18NextConfig);
+export default MyApp;
