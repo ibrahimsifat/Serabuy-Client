@@ -124,7 +124,7 @@ const ProductCard = ({ product }) => {
                   onClick={() => generateCartItem(product)}
                   disabled={product.quantity < 1}
                   aria-label="cart"
-                  className="h-5 w-5 flex items-center justify-center   rounded text_green hover:green-500 hover:text-green-500 transition-all absolute top-36 right-5"
+                  className="h-5 w-5 flex items-center justify-center   rounded text_green hover:green-500 hover:text-green-500 transition-all absolute top-36 ltr:right-5 rtl:left-5"
                 >
                   {' '}
                   <span className="text-xl border hover:border-green-500 p-2 rounded-full bg-white">

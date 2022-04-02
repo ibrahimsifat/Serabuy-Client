@@ -14,7 +14,7 @@
   "about_text": "This is about page and we are testing metalanguage",
   "category_text": "Categories",
   "contact_text": "This is contact Page for Contact",
-  "Get Your":"Get Your Daily Needs From Our Serabuy Store",
+  "Get_Your":"Get Your Daily Needs From Our Serabuy Store",
   "There_are":"There are many kinds of products you will find in our shop, Choose your daily necessary product from our Serabuy shop and get some special offer.",
   "About Us":"About Us",
   "Contact Us":"Contact Us",
@@ -22,5 +22,15 @@
   "Sign_In":"Sign In",
   "Cart":"Cart",
   "My_Account":"My Account",
-  "Hala":"Hello"
+  "Hala":"Hello",
+  "Total":"Total",
+  "items_Found":"Items Found",
+  "notFoundProduct":" Sorry, we can not find this product 😞",
+  "Sort_By_Price":"Sort By Price",
+  "Low_to_High":"Low to High",
+  "High_to_Low":"High to Low",
+  "Follow_Us":"Follow Us",
+  "searchPlaceHolder":"Find your favorite groceries..."
+
+
 }

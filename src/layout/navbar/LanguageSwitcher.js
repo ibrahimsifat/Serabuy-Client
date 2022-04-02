@@ -11,9 +11,9 @@ const LanguageSwitcher = () => {
     const { locale, locales, defaultLocale, asPath } = useRouter();
     const { t } = useTranslation('common')
     return (
-        <div class="group inline-block">
+        <div class="group inline-block md:rtl:mr-2">
         <button
-          class="outline-none focus:outline-none  px-2 font-bold  bg-white   flex items-center w-32"
+          class="outline-none focus:outline-none  px-2 font-bold     flex items-center w-32"
         >
           {/* <span class="pr-1 font-semibold flex-1">{t('Language')}</span> */}
           {
@@ -23,14 +23,14 @@ const LanguageSwitcher = () => {
              href={asPath}
              locale="en"
            >
-           <li class="rounded-sm py-1  flex justify-start cursor-pointer items-center">
+           <li class="rounded-sm py-1 text-white flex justify-start cursor-pointer items-center">
          <Image
            src={English_Flag}
            alt='flag'
            width="30px"
            height="25px"
            /> 
-           <span className='mx-2 '>English</span>
+           <span className='mx-1 '>English</span>
            
            </li>
            </Link>:locale === "ar"?
@@ -39,14 +39,14 @@ const LanguageSwitcher = () => {
             href={asPath}
             locale="ar"
           >
-          <li class="rounded-sm  py-1  flex justify-start cursor-pointer items-center">
+          <li class="rounded-sm  py-1 text-white flex justify-start cursor-pointer items-center">
         <Image
           src={Arabic_Flag}
           alt='flag'
           width="30px"
           height="25px"
           /> 
-          <span className='mx-2 '>عربي</span>
+          <span className='mx-1 '>عربي</span>
           
           </li>
           </Link>:
@@ -55,14 +55,14 @@ const LanguageSwitcher = () => {
             href={asPath}
             locale="bn"
           >
-          <li class="rounded-sm  py-1 flex justify-start cursor-pointer items-center">
+          <li class="rounded-sm  py-1 flex text-white justify-start cursor-pointer items-center">
         <Image
           src={Bangla_Flag}
           alt='flag'
           width="30px"
           height="25px"
           /> 
-          <span className='mx-2 '>বাংলা</span>
+          <span className='mx-1 '>বাংলা</span>
           
           </li>
           </Link>

@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-
 //internal import
 import { ctaCardData } from '@utils/data';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+
 
 const Card = () => {
   return (
@@ -11,7 +11,7 @@ const Card = () => {
       {ctaCardData.map((item) => (
         <div
           key={item.id}
-          className="mx-auto w-full relative overflow-hidden transition ease-out duration-400 delay-150 transform border-2 border-white "
+          className="mx-auto w-full relative overflow-hidden transition ease-out duration-400 delay-150 transform border-2 border-white carousel-with-custom-dots"
         >
           <Link href={item.url}>
             <a className="block border2 shadow-md">

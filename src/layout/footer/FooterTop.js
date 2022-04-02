@@ -1,28 +1,27 @@
-import React from 'react';
-import Link from 'next/link';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
-
+import Link from 'next/link';
+import React from 'react';
 const FooterTop = () => {
+  const { t } = useTranslation('common')
   return (
     <div className="bg-indigo-100 bg-repeat bg-center overflow-hidden -mt-3 ">
 
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-10 flex flex-col md:flex-row lg:flex-row lg:items-center">
         <div className="flex-shrink-0 lg:w-2/5 md:w-3/6 py-10 lg:py-0">
           <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-serif mb-3">
-            Get Your Daily Needs From Our Serabuy Store
+            {t('Get_Your')}
           </h3>
           <p className="text-base opacity-90 leading-7">
-            There are many products you will find our shop, Choose your daily
-            necessary product from our Serabuy shop and get some special
-            offer.
+            {t('There_are')}
           </p>
           <div className="mt-8">
             <Link href="https://www.apple.com/app-store/">
-              <a className="mr-3" target="_blank" rel="noreferrer">
+              <a className="ltr:mr-3 rtl:ml-3" target="_blank" rel="noreferrer">
                 <Image
                   width={170}
                   height={50}
-                  className="mr-2 rounded"
+                  className="mr-2  rounded"
                   src="/app/app-store.svg"
                   alt="app store"
                 />

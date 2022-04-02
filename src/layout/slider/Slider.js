@@ -1,7 +1,6 @@
-import Carousel from "react-multi-carousel";
 import Image from "next/image";
 import Link from "next/link";
-import { loadStripe } from "@stripe/stripe-js";
+import Carousel from "react-multi-carousel";
 
 const responsive = {
   desktop: {
@@ -28,7 +27,7 @@ const Slider = ({ deviceType, products }) => {
   // console.log(products);
   return (
     <Carousel
-
+className="carousel-with-custom-dots"
       partialVisible
       deviceType={deviceType}
       itemClass="image-item"

@@ -1,13 +1,16 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import { IoMdMail } from "react-icons/io";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 //internal import
 import { UserContext } from '@context/UserContext';
+import useTranslation from 'next-translate/useTranslation';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useContext } from 'react';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
+  const { t } = useTranslation('common')
+
   const {
     state: { userInfo },
   } = useContext(UserContext);
@@ -28,22 +31,20 @@ const Footer = () => {
               </a>
             </Link>
             <p className="leading-7 font-sans text-base text-gray-600 mt-3">
-              There are many popular products you will find our shop, Choose
-              your daily necessary product from our Serabuy shop and get some
-              special offer.
+             {t('There_are')}
             </p>
 
-            <div className="mt-6">
-              <span className="text-base leading-7 font-medium block mb-2 pb-0.5">
-                Follow Us
+            <div className="mt-6  ">
+              <span className="text-base font-medium block mb-2 pb-0.5">
+                {t('Follow_Us')}
               </span>
               <ul className="text-sm flex">
-                <li className="flex items-center mr-3 transition ease-in-out duration-500">
-                  <Link href="https://www.facebook.com/profile.php?id=100015218562560" target='_blank'>
-                    <button title='Follow Us' id="facebook" className="bg-white  sticky duration-500 border-2 border-blue-600 fixed  w-9 transform hover:-translate-y-2   h-9 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 flex justify-center items-center">
-                      <FaFacebookF className='icon-font' />
-                    </button>
-                  </Link>
+              <li className="flex items-center mr-3 transition ease-in-out duration-500">
+               <Link href="https://www.facebook.com/profile.php?id=100015218562560" target='_blank'>
+                  <button title='Follow Us' id="facebook"className="bg-white  sticky duration-500 border-2 border-blue-600   w-9 transform hover:-translate-y-2   h-9 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 flex justify-center items-center">
+                  <FaFacebookF className='icon-font'/>
+            </button>  
+            </Link>     
                 </li>
                 <li className="flex items-center  mr-3 transition ease-in-out duration-500">
                   <Link href="mailto:ibsifat900@gmail.com" target='_blank'>
@@ -85,6 +86,8 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+
+          
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2">
             <h3 className="text-lg lg:leading-7 font-medium mb-4 sm:mb-5 lg:mb-6 pb-0.5">
               Company

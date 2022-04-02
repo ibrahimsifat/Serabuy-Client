@@ -4,14 +4,15 @@ import useFilter from '@hooks/useFilter';
 //internal import
 import Layout from '@layout/Layout';
 import ProductServices from '@services/ProductServices';
+// translation
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import React, { useState } from 'react';
-
 
 const Search = ({ products }) => {
   const [visibleProduct, setVisibleProduct] = useState(15);
   const { productData, setSortedField } = useFilter(products);
-
+  const { t } = useTranslation('common')
   return (
     <>
 
@@ -22,7 +23,7 @@ const Search = ({ products }) => {
             <div className="flex-shrink-0  pr-4 xl:pr-6 hidden lg:block w-3/12">
               <div className="sticky top-32">
                 <h2 className="font-serif text-lg pb-2 font-medium">
-                  Categories
+                 {t('category_text')}
                 </h2>
                 <Category />
               </div>
@@ -38,15 +39,15 @@ const Search = ({ products }) => {
                     height={380}
                   />
                   <h2 className="text-lg md:text-xl lg:text-2xl xl:text-2xl text-center mt-2 font-medium font-serif text-gray-600">
-                    Sorry, we can not find this product 😞
+                   {t('notFoundProduct')}
                   </h2>
                 </div>
               ) : (
                 <div className="flex justify-between pb-3">
                   <h6 className="text-sm font-serif">
-                    Total{' '}
+                    {t('Total')}{' '}
                     <span className="font-bold">{productData.length}</span>{' '}
-                    items Found
+                    {t('items_Found')}
                   </h6>
                   <span className="text-sm font-serif">
                     <select
@@ -54,13 +55,13 @@ const Search = ({ products }) => {
                       className="py-0 text-sm font-serif font-medium block w-full rounded border-0 bg-white pr-10 cursor-pointer focus:ring-0"
                     >
                       <option className="px-3" value="All" defaultValue hidden>
-                        Sort By Price
+                        {t('Sort_By_Price')}
                       </option>
                       <option className="px-3" value="Low">
-                        Low to High
+                        {t('Low_to_High')}
                       </option>
                       <option className="px-3" value="High">
-                        High to Low
+                        {t('High_to_Low')}
                       </option>
                     </select>
                   </span>
