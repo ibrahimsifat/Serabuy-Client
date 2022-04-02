@@ -1,5 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 
 //internal import
@@ -9,7 +9,7 @@ const CardSlider = ({ sliderData }) => {
     return (
         <Carousel
 
-            additionalTransfrom={0}
+            additionalTransform={0}
             autoPlay="false"
             autoPlaySpeed={4000}
             centerMode={false}

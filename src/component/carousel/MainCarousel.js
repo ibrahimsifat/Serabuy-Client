@@ -1,5 +1,6 @@
 //internal import
-import { sliderData } from '@utils/data';
+import { ArabicSliderData, BanglaSliderData, EnglishSliderData } from '@utils/data';
+import Locals from '@utils/Locals';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -7,10 +8,13 @@ import Carousel from 'react-multi-carousel';
 
 
 const MainCarousel = () => {
+  const {IsArabic, IsBangla,IsEnglish}=Locals()
+  console.log(IsArabic());
+  const whichSlider=IsArabic()&&ArabicSliderData || IsEnglish()&&EnglishSliderData||IsBangla() &&BanglaSliderData
   return (
     <Carousel
 
-      additionalTransfrom={0}
+      additionalTransform={0}
       autoPlay="false"
       autoPlaySpeed={4000}
       centerMode={false}
@@ -52,7 +56,7 @@ const MainCarousel = () => {
       slidesToSlide={1}
       swipeable
     >
-      {sliderData.map((item, i) => (
+      {whichSlider.map((item, i) => (
         <Link href={item.url}><div className="h-full relative overflow-hidden z-10" key={i + 1}>
 
 
@@ -61,7 +65,7 @@ const MainCarousel = () => {
             <Image
               layout="responsive"
               width={950}
-              height={350}
+              height={250}
               src={item.image}
               alt={item.title}
               priority

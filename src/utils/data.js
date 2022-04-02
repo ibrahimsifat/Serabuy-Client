@@ -1,25 +1,18 @@
 import {
-  // FiUser,
-  FiGift,
-  FiAlertCircle,
-  FiHelpCircle,
-  FiTruck,
-  FiPhoneCall,
-  FiCreditCard,
-  FiMail,
-  FiMapPin,
+  FiAlertCircle, FiCreditCard, FiGift, FiHelpCircle, FiMail,
+  FiMapPin, FiPhoneCall, FiTruck
 } from 'react-icons/fi';
 import {
   HiOutlineDocumentText,
   HiOutlinePhoneIncoming,
   HiOutlineShieldCheck,
-  HiOutlineUserGroup,
+  HiOutlineUserGroup
 } from 'react-icons/hi';
 import {
   IoBagCheckOutline,
   IoGridOutline,
   IoListOutline,
-  IoSettingsOutline,
+  IoSettingsOutline
 } from 'react-icons/io5';
 
 const pages = [
@@ -93,34 +86,57 @@ const userSidebar = [
   },
 ];
 
-const sliderData = [
+const ArabicSliderData = [
   {
     id: 1,
-    title: 'The Best Quality Products Guaranteed!',
-    info: 'Dramatically facilitate effective total linkage for go forward processes...',
     url: '/search?category=fresh-vegetable',
-    image: '/slider/slider-1.jpg',
+    image: '/slider/Arabic-banner-1.jpg',
   },
   {
     id: 2,
-    title: 'Best Different Type of Grocery Store',
-    info: 'Quickly aggregate empowered networks after emerging products...',
     url: '/search?category=organic-food',
-    image: '/slider/slider-2.jpg',
+    image: '/slider/Arabic-banner-2.jpg',
   },
   {
     id: 3,
-    title: 'Quality Freshness Guaranteed!',
-    info: 'Intrinsicly fashion performance based products rather than accurate benefits...',
     url: '/search?category=fresh-vegetable',
-    image: '/slider/slider-3.jpg',
+    image: '/slider/Arabic-banner-3.jpg',
+  }
+];
+const BanglaSliderData = [
+  {
+    id: 1,
+    url: '/search?category=fresh-vegetable',
+    image: '/slider/Bangla-banner-1.jpg',
   },
   {
-    id: 4,
-    title: 'Super Server week!',
-    info: 'Intrinsicly fashion performance based products rather than accurate benefits...',
+    id: 2,
+    url: '/search?category=organic-food',
+    image: '/slider/Bangla-banner-2.jpg',
+  },
+  {
+    id: 3,
     url: '/search?category=fresh-vegetable',
-    image: '/slider/slider-4.jpg',
+    image: '/slider/Bangla-banner-3.jpg',
+  }
+];
+
+
+const EnglishSliderData = [
+  {
+    id: 1,
+    url: '/search?category=fresh-vegetable',
+    image: '/slider/English-Banner-1.jpg',
+  },
+  {
+    id: 2,
+    url: '/search?category=organic-food',
+    image: '/slider/English-Banner-2.jpg',
+  },
+  {
+    id: 3,
+    url: '/search?category=fresh-vegetable',
+    image: '/slider/English-Banner-3.jpg',
   }
 ];
 const twoBanner1 = [
@@ -297,9 +313,11 @@ const contactData = [
 ];
 
 export {
+  ArabicSliderData,
+  BanglaSliderData,
+  EnglishSliderData,
   pages,
   userSidebar,
-  sliderData,
   ctaCardData,
   featurePromo,
   contactData,
@@ -307,3 +325,4 @@ export {
   twoBanner1,
   twoBanner2
 };
+
