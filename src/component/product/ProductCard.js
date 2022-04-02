@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import { useCart } from 'react-use-cart';
-import { IoBagAddSharp, IoAdd, IoRemove } from 'react-icons/io5';
-import Price from '@component/common/Price';
 import Discount from '@component/common/Discount';
+import Price from '@component/common/Price';
 import ProductModal from '@component/modal/ProductModal';
+import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import { AiFillEye } from "react-icons/ai";
+import { IoAdd, IoBagAddSharp, IoRemove } from 'react-icons/io5';
+import { useCart } from 'react-use-cart';
 const ProductCard = ({ product }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const { items, addItem, updateItemQuantity, inCart } = useCart();
@@ -21,6 +22,14 @@ const ProductCard = ({ product }) => {
 
   return (
     <>
+    <Head>
+
+  <meta name="description" content={`Learn more about ${product.title}`} />
+  <meta property="og:title" content={`${ product.title } - My Clothing Store`} />
+  <meta property="og:description" content={`Learn more about ${product.title}`} />
+  <meta property="og:url" content={`https://www.serabuy.com/product/${product.slug}`} />
+  <meta property="og:type" content="website" />
+</Head>
       <ProductModal
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}

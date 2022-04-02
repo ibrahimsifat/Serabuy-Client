@@ -1,7 +1,16 @@
+import Discount from '@component/common/Discount';
+import Price from '@component/common/Price';
+import Stock from '@component/common/Stock';
+import Tags from '@component/common/Tags';
+import ProductCard from '@component/product/ProductCard';
+import Card from '@component/slug-card/Card';
+//internal import
+import Layout from '@layout/Layout';
+import ProductServices from '@services/ProductServices';
+import { notifySuccess } from '@utils/toast';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useCart } from 'react-use-cart';
 import { FiChevronRight } from 'react-icons/fi';
 import {
   FacebookIcon,
@@ -13,19 +22,10 @@ import {
   TwitterIcon,
   TwitterShareButton,
   WhatsappIcon,
-  WhatsappShareButton,
+  WhatsappShareButton
 } from 'react-share';
+import { useCart } from 'react-use-cart';
 
-//internal import
-import Layout from '@layout/Layout';
-import Tags from '@component/common/Tags';
-import Stock from '@component/common/Stock';
-import Price from '@component/common/Price';
-import { notifySuccess } from '@utils/toast';
-import Card from '@component/slug-card/Card';
-import Discount from '@component/common/Discount';
-import ProductServices from '@services/ProductServices';
-import ProductCard from '@component/product/ProductCard';
 
 const ProductScreen = ({ product, relatedProduct }) => {
  
@@ -45,7 +45,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
     addItem(newItem);
     notifySuccess(`Added "${product.title}" To Cart!`);
   };
-console.log(product);
+
   return (
     <Layout title={product.title} description={product.description}>
       <div className="px-0 py-10 lg:py-10">
