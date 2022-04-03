@@ -6,17 +6,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    paritialVisibilityGutter: 256
+    paritialVisibilityGutter: 220
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    paritialVisibilityGutter: 100
+    paritialVisibilityGutter: 230
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 264, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 200
+    paritialVisibilityGutter: 170
   }
 };
 
@@ -40,7 +40,7 @@ className="carousel-with-custom-dots"
             <Link href={`/product/${image.slug}`}  >
               <Image
                 key={image.slug}
-                className="cursor-pointer py-3 bg-white m-0 px-4 group-hover:scale-110 transition duration-150 ease-linear"
+                className="cursor-pointer py-3 bg-white m-0 px group-hover:scale-110 transition duration-150 ease-linear"
                 width={230}
                 height={230}
 

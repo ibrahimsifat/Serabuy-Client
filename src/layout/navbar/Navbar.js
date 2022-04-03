@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-14  lg:h-16 flex items-center justify-between py-4 mx-auto">
             <Link href="/">
-              <a className="mr-3 lg:ltr:mr-12  lg:rtl:ml-12 mt-3">
+              <a className="sm:mr-3 mr-1 lg:ltr:mr-12  lg:rtl:ml-12 mt-3 sm:block hidden">
                 <Image
                   width={150}
                   height={30}
@@ -82,15 +82,15 @@ const Navbar = () => {
                       <input
                         onChange={(e) => setSearchText(e.target.value)}
                         value={searchText}
-                        className="form-input w-full md:pl-5 pl-2 appearance-none transition ease-in-out border text-input text-sm font-sans  min-h-6 h-7 md:h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
+                        className="form-input w-full md:pl-5 pl-2 appearance-none transition ease-in-out border text-input text-sm font-sans  min-h-4 h-6 md:h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
                         placeholder={t('searchPlaceHolder')}
                       />
                     </label>
                     <button
                       aria-label="Search"
                       type="submit"
-                      className="bg-gray-100 outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-8 md:w-14 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none">
-                      <IoSearchOutline className='text-black' />
+                      className="bg-gray-100 outline-none text-xl text-gray-400 absolute top-0 right-0 end-0 w-6 md:w-14 p-1 h-full flex items-center justify-center transition duration-200 ease-in-out hover:text-heading focus:outline-none">
+                      <IoSearchOutline className='text-black s' />
                     </button>
                   </form>
                 </div>

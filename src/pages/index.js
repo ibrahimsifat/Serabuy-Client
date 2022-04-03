@@ -61,7 +61,7 @@ const Home = ({
             </div>
           </div>
 
-          <div style={{ ProductBg }} className="pt-3">
+          <div style={{ ProductBg }} className="md:pt-3 pt-1">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <HomeCategory />
             </div>
@@ -73,7 +73,7 @@ const Home = ({
             </ul>
           </div>
           {/* firstSlideProducts */}
-          <div style={{ ProductBg }} className="mt-1 ">
+          <div style={{ ProductBg }} className="md:mt-3 mt-1 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <Slider products={firstSlideProducts} />
             </div>
@@ -136,7 +136,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      popularProduct: products.slice(251, 275),
+      popularProduct: products.slice(255, 275),
       firstProducts: products.slice(41, 51),
       popularSliderProducts: products.slice(61, 85),
       vegetableProducts: products.slice(20, 30),

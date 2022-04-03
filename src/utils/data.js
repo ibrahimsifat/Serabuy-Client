@@ -252,7 +252,7 @@ const EnglishCategoryData = [
 const ArabicCategoryData = [
   {
     id: 1,
-    image: '/Arabic-cta/fruitveg-min.jpg',
+    image: '/cta/Arabic-fruitveg-min.jpg',
     url: '/search?category=fresh-vegetable',
   },
   {
@@ -343,10 +343,6 @@ const BanglaCategoryData = [
     url: '/search?category=cosmetics',
   },
 ];
-
-
-
-
 
 const featurePromo = [
   {

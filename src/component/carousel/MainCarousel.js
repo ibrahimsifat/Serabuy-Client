@@ -37,7 +37,7 @@ const MainCarousel = () => {
         },
         mobile: {
           breakpoint: {
-            max: 464,
+            max: 664,
             min: 0,
           },
           items: 1,

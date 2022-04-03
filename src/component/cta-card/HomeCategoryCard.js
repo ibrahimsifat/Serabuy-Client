@@ -11,7 +11,7 @@ const HomeCategoryCard = ({ctaCardData}) => {
       {ctaCardData.map((item) => (
         <div
           key={item.id}
-          className="mx-auto w-full relative overflow-hidden transition ease-out duration-400 delay-150 transform border-2 border-white carousel-with-custom-dots"
+          className="mx-auto w-full relative overflow-hidden transition ease-out duration-400 delay-150 transform border-2 border-white carousel-with-custom-dots m-1 sm:m-0"
         >
           <Link href={item.url}>
             <a className="block border2 shadow-md">

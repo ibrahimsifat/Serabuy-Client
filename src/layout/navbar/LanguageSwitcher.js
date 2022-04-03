@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
     return (
         <div class="group inline-block md:rtl:mr-2">
         <button
-          class="outline-none focus:outline-none  px-2 font-bold     flex items-center w-32"
+          class="outline-none focus:outline-none  px-2 font-bold     flex items-center md:w-28 w-14"
         >
           {/* <span class="pr-1 font-semibold flex-1">{t('Language')}</span> */}
           {
@@ -28,9 +28,9 @@ const LanguageSwitcher = () => {
            src={English_Flag}
            alt='flag'
            width="30px"
-           height="25px"
+           height="30px"
            /> 
-           <span className='mx-1 '>English</span>
+           <span className='md:mx-1 hidden md:block '>English</span>
            
            </li>
            </Link>:locale === "ar"?
@@ -44,9 +44,9 @@ const LanguageSwitcher = () => {
           src={Arabic_Flag}
           alt='flag'
           width="30px"
-          height="25px"
+          height="30px"
           /> 
-          <span className='mx-1 '>عربي</span>
+          <span className='md:mx-1 hidden md:block '>عربي</span>
           
           </li>
           </Link>:
@@ -60,9 +60,9 @@ const LanguageSwitcher = () => {
           src={Bangla_Flag}
           alt='flag'
           width="30px"
-          height="25px"
+          height="30px"
           /> 
-          <span className='mx-1 '>বাংলা</span>
+          <span className=' md:mx-1 hidden md:block '>বাংলা</span>
           
           </li>
           </Link>
@@ -71,7 +71,7 @@ const LanguageSwitcher = () => {
         </button>
         <ul
           class="bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute 
-        transition duration-150 ease-in-out origin-top w-32 font-bold"
+        transition duration-150 ease-in-out origin-top md:w-28 w-14 font-bold"
         >
             { locale === "en"||
             <Link
@@ -84,9 +84,9 @@ const LanguageSwitcher = () => {
           src={English_Flag}
           alt='flag'
           width="30px"
-          height="25px"
+          height="30px"
           /> 
-          <span className='mx-2 '>English</span>
+          <span className='mx-2 hidden md:block '>English</span>
           
           </li>
           </Link>
@@ -101,9 +101,9 @@ const LanguageSwitcher = () => {
           src={Arabic_Flag}
           alt='flag'
           width="30px"
-          height="25px"
+          height="30px"
           /> 
-          <span className='mx-2 '>عربي</span>
+          <span className='mx-2 hidden md:block '>عربي</span>
           
           </li>
           </Link>
@@ -120,9 +120,9 @@ const LanguageSwitcher = () => {
           src={Bangla_Flag}
           alt='flag'
           width="30px"
-          height="25px"
+          height="30px"
           /> 
-          <span className='mx-2 '>বাংলা</span>
+          <span className='mx-2 hidden md:block '>বাংলা</span>
           
           </li>
           </Link>

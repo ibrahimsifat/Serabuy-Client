@@ -11,7 +11,7 @@ const HomeCategory = () => {
  
     return (
         <>
-          <ul className="grid grid-cols-2 gap-3 z-50 md:grid-cols-3 lg:grid-cols-3 ">
+          <ul className="grid grid-cols-2 md:gap-3 gap-1 z-50 md:grid-cols-3 lg:grid-cols-3 ">
           {whichSlider?.map((item, i) => (
             <li className="group" key={i + 1}>
               <div className=" transform  block cursor-pointer ">
