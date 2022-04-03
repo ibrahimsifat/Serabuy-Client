@@ -1,15 +1,18 @@
-import React from 'react';
-import {categoryData} from '../../utils/data'
+import Locals from '@utils/Locals';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { ArabicCategoryData, BanglaCategoryData, EnglishCategoryData } from '../../utils/data';
 
 
 const HomeCategory = () => {
+  const {IsArabic, IsBangla,IsEnglish}=Locals()
+  const whichSlider=IsArabic()&&ArabicCategoryData || IsEnglish()&&EnglishCategoryData||IsBangla() &&BanglaCategoryData
  
     return (
         <>
           <ul className="grid grid-cols-2 gap-3 z-50 md:grid-cols-3 lg:grid-cols-3 ">
-          {categoryData?.map((item, i) => (
+          {whichSlider?.map((item, i) => (
             <li className="group" key={i + 1}>
               <div className=" transform  block cursor-pointer ">
                 <div className="flex flex-col justify-center items-center transition ">

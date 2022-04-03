@@ -6,13 +6,15 @@ import HomeCategory from "@component/category/HomeCategory";
 import SingleTwoCategory from "@component/category/SingleTwoCategory";
 // import useFilter from '@hooks/useFilter';
 import Card from "@component/cta-card/Card";
+import HomeCategoryCard from "@component/cta-card/HomeCategoryCard";
 import Layout from "@layout/Layout";
 // import FeatureCategory from '@component/category/FeatureCategory';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from "@layout/slider/Slider";
 import ProductServices from "@services/ProductServices";
+import { ctaCardData } from '@utils/data';
 import Head from 'next/head';
-import { twoBanner1, twoBanner2 } from "../utils/data";
+import { twoBanner1, twoBanner2, twoBannerFirst } from "../utils/data";
 import ProductSection from "./ProductSection";
 const APP_NAME =
   'Serabuy Organic Food Store';
@@ -64,16 +66,21 @@ const Home = ({
               <HomeCategory />
             </div>
           </div>
-
+ {/* single two banner */}
+ <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 mt-3">
+            <ul className="md:grid grid-cols-2 gap-3">
+              <HomeCategoryCard ctaCardData={twoBannerFirst} />
+            </ul>
+          </div>
           {/* firstSlideProducts */}
-          <div style={{ ProductBg }} className="mt-3 ">
+          <div style={{ ProductBg }} className="mt-1 ">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
               <Slider products={firstSlideProducts} />
             </div>
           </div>
           {/* firstSlideProducts */}
 
-
+         
           {/* popular products */}
           <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} />
           {/* popular products */}
@@ -82,8 +89,8 @@ const Home = ({
           {/* promotional banner card */}
           <div className="block pb-2">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
-              <div className="grid gap-3 grid-cols-1 2xl:gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 ">
-                <Card />
+              <div className="grid gap-3 grid-cols-1 2xl:gap-6  md:grid-cols-2 ">
+                <Card ctaCardData={ctaCardData}/>
               </div>
             </div>
           </div>

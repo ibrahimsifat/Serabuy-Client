@@ -1,11 +1,11 @@
 //internal import
-import { ctaCardData } from '@utils/data';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 
-const Card = () => {
+const HomeCategoryCard = ({ctaCardData}) => {
   return (
     <>
       {ctaCardData.map((item) => (
@@ -25,14 +25,14 @@ const Card = () => {
               />
               <div className="absolute top-0 left-0 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
                 <div className="pl-4 pr-12 sm:pl-10 sm:pr-16">
-                  <h2 className="font-serif text-base sm:text-lg md:text-lg lg:text-lg font-semibold text-gray-800">
-                    {item.title} <br />
-                    <span className="text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold text_green">
+                  <h2 className="text-lg sm:text-2xl md:text-2xl lg:text-2xl font-bold text_green">
+                    {item.title} 
+                    <p className="font-serif  sm:text-lg md:text-lg lg:text-lg font-medium -mt-1 text-gray-800">
                       {item.subTitle}
-                    </span>
+                    </p>
                   </h2>
-                  <p className="text-sm font-sans">Weekend discount offer</p>
-                  <button className="hidden sm:block lg:block text-xs leading-6 font-serif font-medium mt-5 px-4 py-1 bg-gray-50 text-center rounded-full hover:text-white bg_hover">
+                  <p className="text-sm font-sans text-red-400 mt-2">Weekend discount offer</p>
+                  <button className="hidden sm:block lg:block text-xs border leading-6 font-serif font-medium mt-1 px-4 py-1 bg-gray-300 text-center rounded hover:text-white bg_hover">
                     Shop Now
                   </button>
                 </div>
@@ -45,4 +45,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default HomeCategoryCard;
