@@ -10,8 +10,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Open Sans', 'sans-serif'],
-      serif: ['Inter', 'sans-serif'],
+      sans: ['Roboto', 'Cairo'],
+      serif: ['Inter', 'Cairo'],
+      // arabic: ['Cairo', 'sans-serif'],
+      
     },
     extend: {
       colors: {

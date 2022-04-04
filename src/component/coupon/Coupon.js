@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import dayjs from 'dayjs';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-
+import OfferTimer from '@component/coupon/OfferTimer';
 //internal import
 import useAsync from '@hooks/useAsync';
 import CouponServices from '@services/CouponServices';
-import OfferTimer from '@component/coupon/OfferTimer';
+import dayjs from 'dayjs';
+import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Coupon = () => {
+  const { t } = useTranslation('offer')
   const [copiedCode, setCopiedCode] = useState('');
   const [copied, setCopied] = useState(false);
 
@@ -29,7 +30,7 @@ const Coupon = () => {
         data?.map((coupon, i) => (
           <div
             key={i + 1}
-            className="coupon block md:flex lg:flex md:justify-between lg:justify-between items-center bg-white rounded-md shadow-sm"
+            className="coupon block md:flex lg:flex md:justify-between lg:justify-between items-center bg-white rounded-md shadow-sm carousel-with-custom-dots"
           >
             <div className="tengah p-6 flex items-center justify-items-start">
               <figure>
@@ -77,7 +78,7 @@ const Coupon = () => {
                   <span className="text-lg md:text-xl lg:text-2xl leading-12 text-red-500 font-extrabold">
                     {coupon.discountPercentage}%
                   </span>{' '}
-                  Off
+                  {t("Off")}
                 </p>
               </div>
             </div>
@@ -86,15 +87,15 @@ const Coupon = () => {
                 <div className="w-full">
                   <div className="block">
                     <div className="font-serif font-medium flex items-center mb-1">
-                      <span>Coupon</span>
+                      <span>{t("Coupon")}</span>
                       <div className="ml-2">
                         {dayjs().isAfter(dayjs(coupon.endTime)) ? (
                           <span className="text-red-600 inline-block">
-                            Inactive
+                            {t("Inactive")}
                           </span>
                         ) : (
                           <span className="text-green-600 inline-block">
-                            Active
+                            {t("Active")}
                           </span>
                         )}
                       </div>
@@ -108,7 +109,7 @@ const Coupon = () => {
                         <button className="block w-full">
                           {copied && copiedCode === coupon.couponCode ? (
                             <span className="text-green-600 text-base leading-7 font-semibold">
-                              Copied!
+                              {t("Copied")}
                             </span>
                           ) : (
                             <span className="uppercase font-serif font-semibold text-base leading-7 text-green-600">
@@ -120,7 +121,7 @@ const Coupon = () => {
                     </div>
                   </div>
                   <p className="text-xs leading-5 text-gray-500 mt-2">
-                    * This coupon code apply when you shopping more then{' '}
+                    * {t("this_coupon")}{' '}
                     <span className="font-medium">${coupon.minimumAmount}</span>{' '}
                   </p>
                 </div>

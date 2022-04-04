@@ -4,6 +4,8 @@
   "pages": {
     "*": ["common"],
     "/404": ["error"],
-    "/": ["home"]
+    "/offer": ["offer"],
+    "/contact-us": ["contactUs"],
+    "/about-us": ["aboutUs"]
   }
 }

@@ -4,18 +4,18 @@ import MainCarousel from "@component/carousel/MainCarousel";
 import StickyCart from "@component/cart/StickyCart";
 import HomeCategory from "@component/category/HomeCategory";
 import SingleTwoCategory from "@component/category/SingleTwoCategory";
-// import useFilter from '@hooks/useFilter';
-import Card from "@component/cta-card/Card";
 import HomeCategoryCard from "@component/cta-card/HomeCategoryCard";
 import Layout from "@layout/Layout";
 // import FeatureCategory from '@component/category/FeatureCategory';
 // import FeatureCard from '@component/feature-card/FeatureCard';
 import Slider from "@layout/slider/Slider";
 import ProductServices from "@services/ProductServices";
-import { ctaCardData } from '@utils/data';
+import Locals from "@utils/Locals";
+import useTranslation from 'next-translate/useTranslation';
 import Head from 'next/head';
-import { twoBanner1, twoBanner2, twoBannerFirst } from "../utils/data";
+import { ARctaCardData, ARtwoBannerFirst, BNctaCardData, BNtwoBannerFirst, ENctaCardData, ENtwoBannerFirst, twoBanner1, twoBanner2 } from "../utils/data";
 import ProductSection from "./ProductSection";
+
 const APP_NAME =
   'Serabuy Organic Food Store';
 const APP_DESCRIPTION =
@@ -34,7 +34,10 @@ const Home = ({
   popularSliderProducts
 }) => {
   // const { productData } = useFilter(products);
-
+  const { t } = useTranslation('common')
+  const {IsArabic, IsBangla,IsEnglish}=Locals()
+  const twoBannerFirst= IsArabic ()&&ARtwoBannerFirst || IsEnglish()&&ENtwoBannerFirst||IsBangla() &&BNtwoBannerFirst
+  const ctaCardData= IsArabic ()&&ARctaCardData || IsEnglish()&&ENctaCardData||IsBangla() &&BNctaCardData
   const ProductBg = {
     backgroundColor: "#EAEDED",
   };
@@ -82,7 +85,7 @@ const Home = ({
 
          
           {/* popular products */}
-          <ProductSection products={firstProducts} title={'Popular Products'} sliderProducts={popularSliderProducts} />
+          <ProductSection products={firstProducts} title={t('Popular Products')} sliderProducts={popularSliderProducts} />
           {/* popular products */}
 
 
@@ -90,7 +93,7 @@ const Home = ({
           <div className="block pb-2">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
               <div className="grid gap-3 grid-cols-1 2xl:gap-6  md:grid-cols-2 ">
-                <Card ctaCardData={ctaCardData}/>
+                <HomeCategoryCard ctaCardData={ctaCardData}/>
               </div>
             </div>
           </div>
@@ -123,7 +126,7 @@ const Home = ({
           {/* cleaningProduct products */}
 
           {/* cosmeticProducts products */}
-          <ProductSection products={cosmeticProducts} sliderProducts={saucesProducts} title={'Cosmetic Products'} />
+          <ProductSection products={cosmeticProducts} sliderProducts={saucesProducts} title={t('Cosmetic Products')} />
           {/* cosmeticProducts products */}
         </div>
       </Layout>

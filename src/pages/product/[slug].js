@@ -192,7 +192,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full xl:w-5/12 lg:w-6/12 md:w-5/12">
+                  <div className="w-full rtl:hidden xl:w-5/12 lg:w-6/12 md:w-5/12">
                     <div className="mt-6 md:mt-0 lg:mt-0 bg-gray-50 border border-gray-100 p-4 lg:p-8 rounded-lg">
                       <Card />
                     </div>

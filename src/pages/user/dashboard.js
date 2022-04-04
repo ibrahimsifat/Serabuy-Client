@@ -1,22 +1,27 @@
+import Card from '@component/order-card/Card';
+import { UserContext } from '@context/UserContext';
+import useAsync from '@hooks/useAsync';
+import useFilter from '@hooks/useFilter';
+//internal import
+import Layout from '@layout/Layout';
+import RecentOrder from '@pages/user/recent-order';
+import OrderServices from '@services/OrderServices';
+import { ARuserSidebar, BNuserSidebar, ENuserSidebar } from '@utils/data';
+import Locals from '@utils/Locals';
 import Cookies from 'js-cookie';
+import useTranslation from 'next-translate/useTranslation';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect } from 'react';
-import { IoLockOpenOutline } from 'react-icons/io5';
 import { FiCheck, FiRefreshCw, FiShoppingCart, FiTruck } from 'react-icons/fi';
-
-//internal import
-import Layout from '@layout/Layout';
-import useAsync from '@hooks/useAsync';
-import useFilter from '@hooks/useFilter';
-import { userSidebar } from '@utils/data';
-import Card from '@component/order-card/Card';
-import { UserContext } from '@context/UserContext';
-import OrderServices from '@services/OrderServices';
-import RecentOrder from '@pages/user/recent-order';
+import { IoLockOpenOutline } from 'react-icons/io5';
 
 const Dashboard = ({ title, description, children }) => {
+  const { t } = useTranslation('common')
+  const {IsArabic, IsBangla,IsEnglish}=Locals()
+  console.log(IsArabic());
+  const userSidebar=IsArabic()&&ARuserSidebar || IsEnglish()&&ENuserSidebar||IsBangla() &&BNuserSidebar
   const router = useRouter();
   const {
     dispatch,
@@ -45,7 +50,7 @@ const Dashboard = ({ title, description, children }) => {
       title={title ? title : 'Dashboard'}
       description={description ? description : 'This is User Dashboard'}
     >
-      <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
+      <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 carousel-with-custom-dots">
         <div className="py-10 lg:py-12 flex flex-col lg:flex-row w-full">
           <div className="flex-shrink-0 w-full lg:w-80 mr-7 lg:mr-10  xl:mr-10 ">
             <div className="bg-white p-4 sm:p-5 lg:p-8 rounded-md sticky top-32">
@@ -73,7 +78,7 @@ const Dashboard = ({ title, description, children }) => {
                   onClick={handleLogOut}
                   className="inline-flex items-center justify-between text-sm font-medium w-full hover:text-green-600"
                 >
-                  Logout
+                  {t("Logout")}
                 </button>
               </span>
             </div>
@@ -82,7 +87,7 @@ const Dashboard = ({ title, description, children }) => {
             {!children && (
               <div className="overflow-hidden">
                 <h2 className="text-xl font-serif font-semibold mb-5">
-                  Dashboard
+                  {t("Dashboard")}
                 </h2>
                 <div className="grid gap-4 mb-8 md:grid-cols-2 xl:grid-cols-4">
                   <Card

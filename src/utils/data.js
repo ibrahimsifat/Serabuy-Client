@@ -63,28 +63,7 @@ const pages = [
   },
 ];
 
-const userSidebar = [
-  {
-    title: 'Dashboard',
-    href: '/user/dashboard',
-    icon: IoGridOutline,
-  },
-  {
-    title: 'My Orders',
-    href: '/user/my-orders',
-    icon: IoListOutline,
-  },
-  {
-    title: 'Update Profile',
-    href: '/user/update-profile',
-    icon: IoSettingsOutline,
-  },
-  {
-    title: 'Change Password',
-    href: '/user/change-password',
-    icon: HiOutlineDocumentText,
-  },
-];
+
 /**?
  * Home First Banner Data
  */
@@ -141,21 +120,68 @@ const EnglishSliderData = [
     image: '/slider/English-Banner-3-min.jpg',
   }
 ];
-const twoBannerFirst = [
-  {
-    id: 1,
-    title: 'Fresh Vegetable',
-    subTitle: 'Every Day',
-    url: '/search?category=energy-drinks',
-    image: '/banner-1.jpg',
-  },
+const ENtwoBannerFirst = [ 
   {
     id: 2,
     title: 'Taste of nature',
     subTitle: 'Organic Food',
     url: '/search?category=cat-care',
     image: '/banner-2.jpg',
+    btnTitle:'Shop Now',
+    ExtraSubtile:'Weekend discount offer'
   },
+  {
+    id: 1,
+    title: 'Fresh Vegetable',
+    subTitle: 'Every Day',
+    url: '/search?category=energy-drinks',
+    image: '/banner-1.jpg',
+    btnTitle:'Shop Now',
+    ExtraSubtile:'Weekend discount offer'
+  }
+ 
+]
+const ARtwoBannerFirst = [ 
+  {
+    id: 2,
+    title: 'طعم الطبيعة',
+    subTitle: 'طعام عضوي',
+    url: '/search?category=cat-care',
+    image: '/banner-2.jpg',
+    btnTitle:'تسوق',
+    ExtraSubtile:'عرض خصم عطلة نهاية الأسبوع'
+  },
+  {
+    id: 1,
+    title: 'خضروات طازجة',
+    subTitle: 'كل يوم',
+    url: '/search?category=energy-drinks',
+    image: '/banner-1.jpg',
+    btnTitle:'تسوق',
+    ExtraSubtile:'عرض خصم عطلة نهاية الأسبوع'
+  }
+ 
+]
+const BNtwoBannerFirst = [ 
+  {
+    id: 2,
+    title: 'প্রকৃতির স্বাদ',
+    subTitle: 'অর্গানিক ফুড',
+    url: '/search?category=cat-care',
+    image: '/banner-2.jpg',
+    btnTitle:'কিনুন',
+    ExtraSubtile:'সপ্তাহান্তে ডিসকাউন্ট অফার'
+  },
+  {
+    id: 1,
+    title: 'তাজা সবজি',
+    subTitle: 'প্রতিদিন',
+    url: '/search?category=energy-drinks',
+    image: '/banner-1.jpg',
+    btnTitle:'কিনুন',
+    ExtraSubtile:'সপ্তাহান্তে ডিসকাউন্ট অফার'
+  }
+ 
 ]
 
 const twoBanner1 = [
@@ -182,13 +208,15 @@ const twoBanner2 = [
     image: '/cta/babyCare-banner-min.jpg',
   },
 ]
-const ctaCardData = [
+const ENctaCardData = [
   {
     id: 1,
     title: 'Taste of',
     subTitle: 'Fresh & Natural',
     image: '/cta/cta-bg-1-min.jpg',
     url: '/search?category=fresh-vegetable',
+    btnTitle:'Shop Now',
+    ExtraSubtile:'Weekend discount offer'
   },
   {
     id: 2,
@@ -196,8 +224,55 @@ const ctaCardData = [
     subTitle: 'Fish & Meat',
     image: '/cta/cta-bg-2-min.jpg',
     url: '/search?Category=fish--meat',
+    btnTitle:'Shop Now',
+    ExtraSubtile:'Weekend discount offer'
   }
 ];
+const ARctaCardData = [
+  {
+    id: 1,
+    title: 'المذاق',
+    subTitle: 'طازجة وطبيعية',
+    image: '/cta/cta-bg-1-min.jpg',
+    url: '/search?category=fresh-vegetable',
+    btnTitle:'تسوق',
+    ExtraSubtile:'عرض خصم عطلة نهاية الأسبوع'
+  },
+  {
+    id: 2,
+    title: 'المذاق',
+    subTitle: 'لحم سمك',
+    image: '/cta/cta-bg-2-min.jpg',
+    url: '/search?Category=fish--meat',
+    btnTitle:'تسوق',
+    ExtraSubtile:'عرض خصم عطلة نهاية الأسبوع'
+  }
+];
+const BNctaCardData = [
+  {
+    id: 1,
+    title: 'স্বাদের',
+    subTitle: 'তাজা এবং প্রাকৃতিক',
+    image: '/cta/cta-bg-1-min.jpg',
+    url: '/search?category=fresh-vegetable',
+    btnTitle:'কিনুন',
+    ExtraSubtile:'সপ্তাহান্তে ডিসকাউন্ট অফার'
+  },
+  {
+    id: 2,
+    title: 'স্বাদের',
+    subTitle: 'মাছ মাংস',
+    image: '/cta/cta-bg-2-min.jpg',
+    url: '/search?Category=fish--meat',
+    btnTitle:'কিনুন',
+    ExtraSubtile:'সপ্তাহান্তে ডিসকাউন্ট অফার'
+  }
+];
+
+
+
+
+
 /**?
  * Home First category Data
  */
@@ -375,11 +450,11 @@ const featurePromo = [
   },
 ];
 
-const contactData = [
+const ENcontactData = [
   {
     id: 1,
     title: 'Email Us',
-    info: 'Interactively grow empowered for process-centric total linkage.',
+    info: 'Feel free to contact us.',
     icon: FiMail,
     contact: 'ibsifat900@gmail.com',
     className: 'bg-green-100',
@@ -387,7 +462,7 @@ const contactData = [
   {
     id: 2,
     title: 'Call Us',
-    info: 'Distinctively disseminate focused solutions clicks-and-mortar ministate.',
+    info: 'Feel free to contact us.',
     icon: FiPhoneCall,
     contact: '0558845503',
     className: 'bg-yellow-100',
@@ -395,12 +470,390 @@ const contactData = [
   {
     id: 3,
     title: 'Location',
-    info: 'Al-Balad, 561-4535 Nulla LA, Saudi Arabia 96522',
+    info: 'Al-Balad, Jeddah, Saudi Arabia 22333',
     icon: FiMapPin,
     contact: '',
     className: 'bg-indigo-100',
   },
 ];
+const ARcontactData = [
+  {
+    id: 1,
+    title: 'راسلنا عبر البريد الإلكتروني',
+    info: 'لا تتردد في الاتصال بنا.',
+    icon: FiMail,
+    contact: 'ibsifat900@gmail.com',
+    className: 'bg-green-100',
+  },
+  {
+    id: 2,
+    title: 'إتصل بنا',
+    info: 'لا تتردد في الاتصال بنا.',
+    icon: FiPhoneCall,
+    contact: '0558845503',
+    className: 'bg-yellow-100',
+  },
+  {
+    id: 3,
+    title: 'موقع',
+    info: 'البلاد, جدة سعودي عربية ٢٢٣٣٣',
+    icon: FiMapPin,
+    contact: '',
+    className: 'bg-indigo-100',
+  },
+];
+const BNcontactData = [
+  {
+    id: 1,
+    title: 'আমাদের ইমেইল করুন',
+    info: 'আমাদের সাথে যোগাযোগ করুন মুক্ত মনে',
+    icon: FiMail,
+    contact: 'ibsifat900@gmail.com',
+    className: 'bg-green-100',
+  },
+  {
+    id: 2,
+    title: 'আমাদের কল করুন',
+    info: 'আমাদের সাথে যোগাযোগ করুন মুক্ত মনে',
+    icon: FiPhoneCall,
+    contact: '0558845503',
+    className: 'bg-yellow-100',
+  },
+  {
+    id: 3,
+    title: 'অবস্থান',
+    info: 'আলবিলাদ, জেদ্দা, সৌদি আরব 22333',
+    icon: FiMapPin,
+    contact: '',
+    className: 'bg-indigo-100',
+  },
+];
+
+/**
+ * user Dashboard data
+ */
+ const ENuserSidebar = [
+  {
+    title: 'Dashboard',
+    href: '/user/dashboard',
+    icon: IoGridOutline,
+  },
+  {
+    title: 'My Orders',
+    href: '/user/my-orders',
+    icon: IoListOutline,
+  },
+  {
+    title: 'Update Profile',
+    href: '/user/update-profile',
+    icon: IoSettingsOutline,
+  },
+  {
+    title: 'Change Password',
+    href: '/user/change-password',
+    icon: HiOutlineDocumentText,
+  },
+];
+ const ARuserSidebar = [
+  {
+    title: 'لوحة القيادة',
+    href: '/user/dashboard',
+    icon: IoGridOutline,
+  },
+  {
+    title: 'أوامري',
+    href: '/user/my-orders',
+    icon: IoListOutline,
+  },
+  {
+    title: 'تحديث الملف الشخصي',
+    href: '/user/update-profile',
+    icon: IoSettingsOutline,
+  },
+  {
+    title: 'تغيير كلمة المرور',
+    href: '/user/change-password',
+    icon: HiOutlineDocumentText,
+  },
+];
+ const BNuserSidebar = [
+  {
+    title: 'ড্যাশবোর্ড',
+    href: '/user/dashboard',
+    icon: IoGridOutline,
+  },
+  {
+    title: 'আমার নির্দেশনা',
+    href: '/user/my-orders',
+    icon: IoListOutline,
+  },
+  {
+    title: 'আপডেট প্রোফাইল',
+    href: '/user/update-profile',
+    icon: IoSettingsOutline,
+  },
+  {
+    title: 'পাসওয়ার্ড বদলান',
+    href: '/user/change-password',
+    icon: HiOutlineDocumentText,
+  },
+];
+
+
+/**
+ * Footer Components
+ */
+
+ const ENCompanyFooter=[
+  {
+    id: 1,
+    title: 'About',
+    url: '/about-us',
+  },
+  {
+    id: 1,
+    title: 'Contact US',
+    url: '/contact-us',
+  },
+  {
+    id: 1,
+    title: 'Privacy Policy',
+    url: '/privacy-policy',
+  },
+  {
+    id: 1,
+    title: 'Terms & Conditions',
+    url: '/Terms-and-Conditions',
+  },
+  {
+    id: 1,
+    title: 'Latest Discount',
+    url: '/offer',
+  }
+]
+ const ARCompanyFooter=[
+  {
+    id: 1,
+    title: 'معلومات عنا',
+    url: '/about-us',
+  },
+  {
+    id: 1,
+    title: 'اتصل بنا',
+    url: '/contact-us',
+  },
+  {
+    id: 1,
+    title: 'سياسة خاصة',
+    url: '/privacy-policy',
+  },
+  {
+    id: 1,
+    title: 'البنود و الظروف',
+    url: '/Terms-and-Conditions',
+  },
+  {
+    id: 1,
+    title: 'أحدث خصم',
+    url: '/offer',
+  }
+]
+ const BNCompanyFooter=[
+  {
+    id: 1,
+    title: 'আমাদের সম্পর্কে',
+    url: '/about-us',
+  },
+  {
+    id: 1,
+    title: 'যোগাযোগ করুন',
+    url: '/contact-us',
+  },
+  {
+    id: 1,
+    title: 'গোপনীয়তা নীতি',
+    url: '/privacy-policy',
+  },
+  {
+    id: 1,
+    title: 'শর্তাবলী',
+    url: '/Terms-and-Conditions',
+  },
+  {
+    id: 1,
+    title: 'সর্বশেষ ছাড়',
+    url: '/offer',
+  }
+]
+
+
+const ENTopCategory=[
+  {
+    id: 1,
+    title: 'Fish & Meat',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'Soft Drinks',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'Baby Care',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'Beauty & Health',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'Fruits & Vegetable',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+const ARTopCategory=[
+  {
+    id: 1,
+    title: 'لحم سمك',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'لحم سمك',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'عناية الطفل',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'الصحة والجمال',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'فواكه وخضروات',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+const BNTopCategory=[
+  {
+    id: 1,
+    title: 'মাছ মাংস',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'কোমল পানীয়',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'বেবি কেয়ার',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'সৌন্দর্য ও স্বাস্থ্য',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'ফল ও সবজি',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+
+const ENMyAccountFooter=[
+  {
+    id: 1,
+    title: 'Dashboard',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'My Orders',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'Recent Orders',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'Updated Profile',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'Change Password',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+const ARMyAccountFooter=[
+  {
+    id: 1,
+    title: 'لوحة المراقبة',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'أوامري',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'الطلبيات الأخيرة',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'ملف تعريف محدث',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'تغيير كلمة السر',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+const BNMyAccountFooter=[
+  {
+    id: 1,
+    title: 'ড্যাশবোর্ড',
+    url: '/search?Category=fish--meat',
+  },
+  {
+    id: 1,
+    title: 'আমার নির্দেশনা',
+    url: '/search?Category=drinks',
+  },
+  {
+    id: 1,
+    title: 'সাম্প্রতিক আদেশ',
+    url: '/search?Category=baby-care',
+  },
+  {
+    id: 1,
+    title: 'আপডেট প্রোফাইল',
+    url: '/search?Category=beauty--health',
+  },
+  {
+    id: 1,
+    title: 'পাসওয়ার্ড বদলান',
+    url: '/search?Category=fruits--vegetable',
+  }
+]
+
+
+
+
 
 export {
   ArabicSliderData,
@@ -409,13 +862,30 @@ export {
   EnglishCategoryData,
   ArabicCategoryData,
   BanglaCategoryData,
-  twoBannerFirst,
+  ENtwoBannerFirst,
+  ARtwoBannerFirst,
+  BNtwoBannerFirst,
+  ARctaCardData,
+  ENctaCardData,
+  BNctaCardData,
   pages,
-  userSidebar,
-  ctaCardData,
+  ARuserSidebar,
+  ENuserSidebar,
+  BNuserSidebar,
   featurePromo,
-  contactData,
+  ENcontactData,
+  ARcontactData,
+  BNcontactData,
   twoBanner1,
-  twoBanner2
+  twoBanner2,
+  ENTopCategory,
+  ARTopCategory,
+  BNTopCategory,
+  ENMyAccountFooter,
+  ARMyAccountFooter,
+  BNMyAccountFooter,
+  ENCompanyFooter,
+  ARCompanyFooter,
+  BNCompanyFooter
 };
 

@@ -1,5 +1,4 @@
 //internal import
-
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -31,9 +30,9 @@ const HomeCategoryCard = ({ctaCardData}) => {
                       {item.subTitle}
                     </p>
                   </h2>
-                  <p className="text-sm font-sans text-red-400 mt-2">Weekend discount offer</p>
+                  <p className="text-sm font-sans text-red-400 mt-2">{item.ExtraSubtile}</p>
                   <button className="hidden sm:block lg:block text-xs border leading-6 font-serif font-medium mt-1 px-4 py-1 bg-gray-300 text-center rounded hover:text-white bg_hover">
-                    Shop Now
+                  {item.btnTitle}
                   </button>
                 </div>
               </div>

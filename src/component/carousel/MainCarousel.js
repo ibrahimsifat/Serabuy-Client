@@ -9,7 +9,7 @@ import Carousel from 'react-multi-carousel';
 
 const MainCarousel = () => {
   const {IsArabic, IsBangla,IsEnglish}=Locals()
-  console.log(IsArabic());
+  // console.log(IsArabic());
   const whichSlider=IsArabic()&&ArabicSliderData || IsEnglish()&&EnglishSliderData||IsBangla() &&BanglaSliderData
   return (
     <Carousel

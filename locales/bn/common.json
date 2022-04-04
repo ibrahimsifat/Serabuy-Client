@@ -28,6 +28,21 @@
   "Low_to_High":"কম থেকে বেশি",
   "High_to_Low":"উচ্চ থেকে নিম্ন",
   "Follow_Us":"আমাদের অনুসরণ করুন",
-  "searchPlaceHolder":"আপনার প্রিয় মুদিখানা খুঁজুন..."
+  "searchPlaceHolder":"আপনার প্রিয় মুদিখানা খুঁজুন...",
+  "Shop_Now":"কিনুন",
+  "View_All":"সব দেখুন",
+  "Company":"প্রতিষ্ঠান",
+  "Top_Category":"শীর্ষ বিভাগ",
+  "All_rights":"© 2022 serabuy. সব অধিকার সংরক্ষিত",
+  "Logout":"লগআউট",
+"Dashboard":"ড্যাশবোর্ড",
+"Recent_Order":"সাম্প্রতিক অর্ডার",
+"no_order":"আপনি এখনও অর্ডার করেননি!",
+"ID":"আইডি",
+"Status":"স্ট্যাটাস",
+"Method":"প্রণালী",
+"OrderTime":"অর্ডার টাইম"
+
+
 
 }

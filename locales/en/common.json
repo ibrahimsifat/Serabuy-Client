@@ -1,6 +1,4 @@
-{
-
-  "home":"home",
+{  "home":"home",
   "about": "About",
   "contact":"Contact",
   "nav_bangla":"বাংলা",
@@ -30,7 +28,19 @@
   "Low_to_High":"Low to High",
   "High_to_Low":"High to Low",
   "Follow_Us":"Follow Us",
-  "searchPlaceHolder":"Find your favorite groceries..."
-
+  "searchPlaceHolder":"Find your favorite groceries...",
+  "Shop_Now":"Shop Now",
+  "View_All":"View all",
+  "Company":"Company",
+  "Top_Category":"Top Category",
+  "All_rights":"© 2022 serabuy. All Rights Reserved",
+"Logout":"Logout",
+"Dashboard":"Dashboard",
+"Recent_Order":"Recent Order",
+"no_order":"You Have no order Yet!",
+"ID":"ID",
+"Status":"Status",
+"Method":"Method",
+"OrderTime":"OrderTime"
 
 }

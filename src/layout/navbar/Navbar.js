@@ -57,7 +57,7 @@ const Navbar = () => {
         <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       )}
 
-      <div className=" sticky top-0  bg-green-600 nav_z_index">
+      <div className=" sticky top-0  bg-green-600 nav_z_index font-arabic">
         <div className="max-w-screen-2xl mx-auto px-3 sm:px-10">
           <div className="top-bar h-14  lg:h-16 flex items-center justify-between py-4 mx-auto">
             <Link href="/">
@@ -82,7 +82,7 @@ const Navbar = () => {
                       <input
                         onChange={(e) => setSearchText(e.target.value)}
                         value={searchText}
-                        className="form-input w-full md:pl-5 pl-2 appearance-none transition ease-in-out border text-input text-sm font-sans  min-h-4 h-6 md:h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
+                        className="form-input w-full md:pl-5 pl-2 appearance-none transition ease-in-out border text-input text-sm font-arabic  min-h-4 h-6 md:h-8 duration-200 bg-white focus:ring-0 outline-none border-none focus:outline-none placeholder-gray-500 placeholder-opacity-75"
                         placeholder={t('searchPlaceHolder')}
                       />
                     </label>
@@ -108,7 +108,7 @@ const Navbar = () => {
                   <Link href="/user/dashboard">
                     <a className="relative  w-6 h-6 group-hover:text-gray-300 ">
                       <span className='text-xs ltr:mr-2 '>{t('Hala')}</span>
-                      <span className='text-white text-xs group-hover:text-gray-300 rtl:mr-1'>{userInfo?.name.split(' ')}</span>
+                      <span className='text-white text-xs font-sans group-hover:text-gray-300 rtl:mr-1'>{userInfo?.name.split(' ')}</span>
                       <div className="flex">
                         <p className='text-sm ml-auto -mt-1' >{t('My_Account')}</p>
                         <IoMdArrowDropdown className='-mt-1' />
@@ -117,7 +117,7 @@ const Navbar = () => {
                   </Link>
                 ) : userInfo?.name ? (
                   <Link href="/user/dashboard">
-                    <a className="leading-none font-bold font-serif block">
+                    <a className="leading-none font-bold font-arabic block">
                       {userInfo?.name[0]}
                     </a>
                   </Link>

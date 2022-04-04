@@ -26,6 +26,19 @@
   "Low_to_High":"من الاسفل الى الاعلى",
   "High_to_Low":"من الأعلى إلى الأقل",
   "Follow_Us":"تابعنا",
-  "searchPlaceHolder":"ابحث عن البقالة المفضلة لديك ..."
+  "searchPlaceHolder":"ابحث عن البقالة المفضلة لديك ...",
+  "Shop_Now":"تسوق الآن",
+  "View_All":"مشاهدة الكل",
+  "Company":"شركة",
+  "Top_Category":"أعلى فئة",
+  "All_rights":"© 2022 serabuy. كل الحقوق محفوظة",
+  "Logout":"تسجيل خروج",
+  "Dashboard":"لوحة القيادة",
+"no_order":"لا يوجد لديك طلب حتى الآن!",
+"Recent_Order":"النظام الجديد",
+"ID":"هوية شخصية",
+"Status":"الحالة",
+"Method":"طريقة",
+"OrderTime":"وقت الطلب"
 
 }

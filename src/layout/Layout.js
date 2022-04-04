@@ -1,13 +1,14 @@
-import Head from 'next/head';
-import { ToastContainer } from 'react-toastify';
-
-//internal import
-import Navbar from '@layout/navbar/Navbar';
 import Footer from '@layout/footer/Footer';
 import FooterTop from '@layout/footer/FooterTop';
 import MobileFooter from '@layout/footer/MobileFooter';
+//internal import
+import Navbar from '@layout/navbar/Navbar';
+import useTranslation from 'next-translate/useTranslation';
+import Head from 'next/head';
+import { ToastContainer } from 'react-toastify';
 
 const Layout = ({ title, description, children }) => {
+  const { t } = useTranslation('offer')
   return (
     <>
       <ToastContainer />

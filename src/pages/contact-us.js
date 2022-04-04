@@ -1,17 +1,24 @@
-import React from 'react';
-import Image from 'next/image';
-import { useForm } from 'react-hook-form';
-
+import Error from '@component/form/Error';
+import InputArea from '@component/form/InputArea';
+import Label from '@component/form/Label';
+import PageHeader from '@component/header/PageHeader';
 //internal import
 import Layout from '@layout/Layout';
-import Label from '@component/form/Label';
-import Error from '@component/form/Error';
-import { contactData } from '@utils/data';
+import {
+  ARcontactData,
+  BNcontactData, ENcontactData
+} from '@utils/data';
+import Locals from '@utils/Locals';
 import { notifySuccess } from '@utils/toast';
-import InputArea from '@component/form/InputArea';
-import PageHeader from '@component/header/PageHeader';
-
+import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 const ContactUs = () => {
+  const {IsArabic, IsBangla,IsEnglish}=Locals()
+  // console.log(IsArabic());
+  const contactData=IsArabic()&&ARcontactData || IsEnglish()&&ENcontactData||IsBangla() &&BNcontactData
+  const { t } = useTranslation('contactUs')
   const {
     register,
     handleSubmit,
@@ -28,7 +35,7 @@ const ContactUs = () => {
 
   return (
     <Layout title="Contact Us" description="This is contact us page">
-      <PageHeader title="Contact Us" />
+      <PageHeader title={t("Contact_Us")} />
 
       <div className="bg-white">
         <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
@@ -68,12 +75,10 @@ const ContactUs = () => {
               >
                 <div className="mb-12">
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold font-serif mb-3">
-                    For any support just send your query
+                    {t("For_support")}
                   </h3>
                   <p className="text-base opacity-90 leading-7">
-                    Collaboratively promote client-focused convergence vis-a-vis
-                    customer directed alignments via plagiarize strategic users
-                    and standardized infrastructures.
+                    {t("Collaboratively")}
                   </p>
                 </div>
 
@@ -82,20 +87,20 @@ const ContactUs = () => {
                     <div className="w-full md:w-1/2 ">
                       <InputArea
                         register={register}
-                        label="Your Name"
+                        label={t("Your_Name")}
                         name="name"
                         type="text"
-                        placeholder="Inter Your Name"
+                        placeholder={t("Inter_Name")}
                       />
                       <Error errorName={errors.name} />
                     </div>
-                    <div className="w-full md:w-1/2 md:ml-2.5 lg:ml-5 mt-2 md:mt-0">
+                    <div className="w-full md:w-1/2 md:ltr:ml-2.5 md:rtl:mr-2.5 lg:ml-5 mt-2 md:mt-0">
                       <InputArea
                         register={register}
-                        label="Your Email"
+                        label={t("Your_Email")}
                         name="email"
                         type="email"
-                        placeholder="Inter Your Email"
+                        placeholder={t("Inter_Email")}
                       />
                       <Error errorName={errors.email} />
                     </div>
@@ -103,15 +108,15 @@ const ContactUs = () => {
                   <div className="relative">
                     <InputArea
                       register={register}
-                      label="Subject"
+                      label={t("Subject")}
                       name="subject"
                       type="text"
-                      placeholder="Inter Your Subject"
+                      placeholder={t("Inter_Subject")}
                     />
                     <Error errorName={errors.subject} />
                   </div>
                   <div className="relative mb-4">
-                    <Label label="Message" />
+                    <Label label={t("Message")} />
                     <textarea
                       {...register('message', {
                         required: `Message is required!`,
@@ -121,7 +126,7 @@ const ContactUs = () => {
                       autoComplete="off"
                       spellCheck="false"
                       rows="4"
-                      placeholder="Write your message here"
+                      placeholder={t("Write_message")}
                     ></textarea>
                     <Error errorName={errors.message} />
                   </div>
@@ -130,7 +135,7 @@ const ContactUs = () => {
                       data-variant="flat"
                       className="md:text-sm leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg_green text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 hover:text-white hover:bg-green-600 h-12 mt-1 text-sm lg:text-base w-full sm:w-auto"
                     >
-                      Send Message
+                      {t("Send_Message")}
                     </button>
                   </div>
                 </div>

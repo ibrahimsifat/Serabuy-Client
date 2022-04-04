@@ -1,14 +1,15 @@
-import React from 'react';
-import { IoBagHandle } from 'react-icons/io5';
-
+import OrderHistory from '@component/order/OrderHistory';
+import Loading from '@component/preloader/Loading';
 //internal import
 import useAsync from '@hooks/useAsync';
 import OrderServices from '@services/OrderServices';
-import Loading from '@component/preloader/Loading';
-import OrderHistory from '@component/order/OrderHistory';
+import useTranslation from 'next-translate/useTranslation';
+import React from 'react';
+import { IoBagHandle } from 'react-icons/io5';
 
 const RecentOrder = () => {
   const { data, error, loading } = useAsync(OrderServices.getOrderByUser);
+  const { t } = useTranslation('common')
 
   return (
     <>
@@ -26,13 +27,13 @@ const RecentOrder = () => {
                 <IoBagHandle />
               </span>
               <h2 className="font-medium text-md my-4 text-gray-600">
-                You Have no order Yet!
+              {t("no_order")}
               </h2>
             </div>
           ) : (
             <div className="flex flex-col">
               <h3 className="text-lg font-serif font-medium mb-5">
-                Recent Order
+                {t("Recent_Order")}
               </h3>
               <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="align-middle inline-block border border-gray-100 rounded-md min-w-full pb-2 sm:px-6 lg:px-8">
@@ -44,32 +45,32 @@ const RecentOrder = () => {
                             scope="col"
                             className="text-left text-xs font-serif font-semibold px-6 py-2 text-gray-700 uppercase tracking-wider"
                           >
-                            ID
+                            {t("ID")}
                           </th>
                           <th
                             scope="col"
                             className="text-center text-xs font-serif font-semibold px-6 py-2 text-gray-700 uppercase tracking-wider"
                           >
-                            OrderTime
+                            {t("OrderTime")}
                           </th>
 
                           <th
                             scope="col"
                             className="text-center text-xs font-serif font-semibold px-6 py-2 text-gray-700 uppercase tracking-wider"
                           >
-                            Method
+                            {t("Method")}
                           </th>
                           <th
                             scope="col"
                             className="text-center text-xs font-serif font-semibold px-6 py-2 text-gray-700 uppercase tracking-wider"
                           >
-                            Status
+                            {t("Status")}
                           </th>
                           <th
                             scope="col"
                             className="text-center text-xs font-serif font-semibold px-6 py-2 text-gray-700 uppercase tracking-wider"
                           >
-                            Total
+                            {t("Total")}
                           </th>
                         </tr>
                       </thead>
