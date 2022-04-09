@@ -9,7 +9,7 @@ const ProductSection = ({ title, products, sliderProducts, btnLink }) => {
         <div className="  mx-auto max-w-screen-2xl px-3 sm:px-10 my-2">
             {title &&
 
-                <div className='flex justify-between items-center pt-2 pb-3'>
+                <div className='flex justify-between items-center pt-2 pb-3  '>
                     <h2 className="text-xl lg:text-2xl  font-serif font-bold text-gray-800 uppercase ">{title}</h2>
 
                     <button className='text-[#6be004] text-sm md:text-md hover:text-white hover:bg-[#6be004] border-2 border-[#6be004] py-1 md:px-4 px-1 uppercase duration-300 font-bold rounded' >{t("View_All")}

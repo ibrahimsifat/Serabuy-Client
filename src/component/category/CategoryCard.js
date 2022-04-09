@@ -1,16 +1,13 @@
-import React, { useContext, useState } from 'react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import {
-  IoChevronForwardOutline,
-  IoChevronDownOutline,
-  IoRemoveSharp,
-} from 'react-icons/io5';
-
 //internal import
 import { SidebarContext } from '@context/SidebarContext';
+import Locals from '@utils/Locals';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import React, { useContext, useState } from 'react';
+import { IoChevronBackOutline, IoChevronDownOutline, IoChevronForwardOutline, IoRemoveSharp } from 'react-icons/io5';
 
 const CategoryCard = ({ title, icon, nested }) => {
+  const { IsArabic } = Locals()
   const [show, setShow] = useState(false);
   const showCategory = () => setShow(!show);
   const router = useRouter();
@@ -35,17 +32,17 @@ const CategoryCard = ({ title, icon, nested }) => {
         role="button"
       >
         <Image
-        
+
           src={icon}
           width={18}
           height={18}
           alt={title}
           aria-hidden="true"
         />
-        <div className="inline-flex items-center justify-between ml-3 text-sm font-medium w-full hover:text-green-600 text-black">
+        <div className="inline-flex items-center justify-between ml-3 text-sm font-medium w-full hover:text-green-600 text-black rtl:mr-2">
           {title}
           <span className="transition duration-700 ease-in-out inline-flex loading-none items-end text-gray-400">
-            {show ? <IoChevronDownOutline /> : <IoChevronForwardOutline />}
+            {show ? <IoChevronDownOutline /> : IsArabic ? <IoChevronBackOutline /> : <IoChevronForwardOutline />}
           </span>
         </div>
       </a>

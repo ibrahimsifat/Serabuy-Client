@@ -27,7 +27,7 @@ const Slider = ({ deviceType, products }) => {
   // console.log(products);
   return (
     <Carousel
-className="carousel-with-custom-dots"
+      className="carousel-with-custom-dots bg-indigo-100"
       partialVisible
       deviceType={deviceType}
       itemClass="image-item"

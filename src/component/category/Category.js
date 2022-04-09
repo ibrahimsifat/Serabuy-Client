@@ -1,22 +1,29 @@
-import { useContext } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { IoClose } from 'react-icons/io5';
-
-//internal import
-import { pages } from '@utils/data';
-import useAsync from '@hooks/useAsync';
+import CategoryCard from '@component/category/CategoryCard';
 import Loading from '@component/preloader/Loading';
 import { SidebarContext } from '@context/SidebarContext';
+import useAsync from '@hooks/useAsync';
 import CategoryServices from '@services/CategoryServices';
-import CategoryCard from '@component/category/CategoryCard';
+//internal import
+import { pages } from '@utils/data';
+import Locals from '@utils/Locals';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useContext } from 'react';
+import { IoClose } from 'react-icons/io5';
+
 
 const Category = () => {
+
   const { categoryDrawerOpen, closeCategoryDrawer } =
     useContext(SidebarContext);
   const { data, loading, error } = useAsync(() =>
     CategoryServices.getAllCategory()
   );
+  // console.log(data);
+
+  // for translation 
+  const { IsArabic, IsBangla, IsEnglish } = Locals()
+  // const categoryTitle = IsArabic() && category.parentAR || IsEnglish() && category.parent || IsBangla() && category.parentBN
 
   return (
     <div className="flex flex-col w-full h-full bg-white cursor-pointer scrollbar-hide">
@@ -43,7 +50,7 @@ const Category = () => {
           </button>
         </div>
       )}
-      <div className="overflow-y-scroll scrollbar-hide w-full max-h-full">
+      <div className="overflow-y-scroll scrollbar-hide w-full max-h-full ">
         {categoryDrawerOpen && (
           <h2 className="font-semibold font-serif text-lg m-0 text-heading flex align-center border-b px-8 py-3">
             All Categories
@@ -60,7 +67,7 @@ const Category = () => {
             {data?.map((category) => (
               <CategoryCard
                 key={category._id}
-                title={category.parent}
+                title={IsArabic() && category.parentAR || IsEnglish() && category.parent || IsBangla() && category.parentBN}
                 icon={category.icon}
                 nested={category.children}
               />

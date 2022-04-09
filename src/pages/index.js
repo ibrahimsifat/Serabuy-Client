@@ -35,22 +35,22 @@ const Home = ({
 }) => {
   // const { productData } = useFilter(products);
   const { t } = useTranslation('common')
-  const {IsArabic, IsBangla,IsEnglish}=Locals()
-  const twoBannerFirst= IsArabic ()&&ARtwoBannerFirst || IsEnglish()&&ENtwoBannerFirst||IsBangla() &&BNtwoBannerFirst
-  const ctaCardData= IsArabic ()&&ARctaCardData || IsEnglish()&&ENctaCardData||IsBangla() &&BNctaCardData
+  const { IsArabic, IsBangla, IsEnglish } = Locals()
+  const twoBannerFirst = IsArabic() && ARtwoBannerFirst || IsEnglish() && ENtwoBannerFirst || IsBangla() && BNtwoBannerFirst
+  const ctaCardData = IsArabic() && ARctaCardData || IsEnglish() && ENctaCardData || IsBangla() && BNctaCardData
   const ProductBg = {
-    backgroundColor: "#EAEDED",
+    backgroundColor: "#f7f8fc",
   };
   return (
     <>
 
-    <Head>
-    <meta name="description" content={APP_DESCRIPTION}/>
-<meta property="og:title" content={APP_NAME}/>
-<meta property="og:description" content={APP_DESCRIPTION}/>
-<meta property="og:url" content="https://serabuy.com/"/>
-<meta property="og:type" content="Organic Food Store"/>
-    </Head>
+      <Head>
+        <meta name="description" content={APP_DESCRIPTION} />
+        <meta property="og:title" content={APP_NAME} />
+        <meta property="og:description" content={APP_DESCRIPTION} />
+        <meta property="og:url" content="https://serabuy.com/" />
+        <meta property="og:type" content="Organic Food Store" />
+      </Head>
       <Layout>
         <div style={ProductBg} className="min-h-screen">
           <StickyCart />
@@ -69,8 +69,8 @@ const Home = ({
               <HomeCategory />
             </div>
           </div>
- {/* single two banner */}
- <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 mt-3">
+          {/* single two banner */}
+          <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 mt-3">
             <ul className="md:grid grid-cols-2 gap-3">
               <HomeCategoryCard ctaCardData={twoBannerFirst} />
             </ul>
@@ -83,7 +83,7 @@ const Home = ({
           </div>
           {/* firstSlideProducts */}
 
-         
+
           {/* popular products */}
           <ProductSection products={firstProducts} title={t('Popular Products')} sliderProducts={popularSliderProducts} />
           {/* popular products */}
@@ -93,7 +93,7 @@ const Home = ({
           <div className="block pb-2">
             <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 ">
               <div className="grid gap-3 grid-cols-1 2xl:gap-6  md:grid-cols-2 ">
-                <HomeCategoryCard ctaCardData={ctaCardData}/>
+                <HomeCategoryCard ctaCardData={ctaCardData} />
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      popularProduct: products.slice(255, 275),
+      popularProduct: products.slice(263, 280),
       firstProducts: products.slice(41, 51),
       popularSliderProducts: products.slice(61, 85),
       vegetableProducts: products.slice(20, 30),
