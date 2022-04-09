@@ -34,8 +34,8 @@ const ProductScreen = ({ product, relatedProduct }) => {
   // const {,titleAR}=product;
   const { t } = useTranslation('common')
   const { IsArabic, IsBangla, IsEnglish } = Locals()
-  let LangTitle = IsArabic() && product.titleAR || IsEnglish() && product.title || IsBangla() && product?.titleBN
-  let LangDescription = IsArabic() && product.descriptionAR || IsEnglish() && product.description || IsBangla() && product?.descriptionBN
+  // let LangTitle = IsArabic() && product.titleAR || IsEnglish() && product.title || IsBangla() && product?.titleBN
+  // let LangDescription = IsArabic() && product.descriptionAR || IsEnglish() && product.description || IsBangla() && product?.descriptionBN
 
   const router = useRouter();
   const { addItem, totalItems } = useCart();
@@ -89,7 +89,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                 <FiChevronRight />{' '}
               </li>
               <li className="text-sm px-1 transition duration-200 ease-in line-clamp-1">
-                {LangTitle}
+                {product.title}
               </li>
             </ol>
           </div>
@@ -111,7 +111,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                   <div className="w-full md:w-7/12 md:pr-4 lg:pr-4 xl:pr-12">
                     <div className="mb-6">
                       <h1 className="leading-7 text-lg md:text-xl lg:text-2xl mb-1 font-semibold font-serif text-gray-800">
-                        {LangTitle}
+                        {IsArabic() && product.titleAR || IsEnglish() && product.title || IsBangla() && product?.titleBN}
                       </h1>
                       <p className="uppercase font-serif font-medium text-gray-500 text-sm">
                         SKU :{' '}
@@ -126,7 +126,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                     </div>
                     <div>
                       <p className="text-sm leading-6 text-gray-500 md:leading-7 line-clamp-6">
-                        {LangDescription}
+                        {IsArabic() && product.descriptionAR || IsEnglish() && product.description || IsBangla() && product?.descriptionBN}
                       </p>
                       <button
                         onClick={handleAddItem}
