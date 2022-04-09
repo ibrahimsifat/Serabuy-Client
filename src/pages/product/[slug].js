@@ -7,7 +7,9 @@ import Card from '@component/slug-card/Card';
 //internal import
 import Layout from '@layout/Layout';
 import ProductServices from '@services/ProductServices';
+import Locals from '@utils/Locals';
 import { notifySuccess } from '@utils/toast';
+import useTranslation from 'next-translate/useTranslation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -26,8 +28,14 @@ import {
 } from 'react-share';
 import { useCart } from 'react-use-cart';
 
-
 const ProductScreen = ({ product, relatedProduct }) => {
+
+  // for translation
+  // const {,titleAR}=product;
+  const { t } = useTranslation('common')
+  const { IsArabic, IsBangla, IsEnglish } = Locals()
+  let LangTitle = IsArabic() && product.titleAR || IsEnglish() && product.title || IsBangla() && product?.titleBN
+  let LangDescription = IsArabic() && product.descriptionAR || IsEnglish() && product.description || IsBangla() && product?.descriptionBN
 
   const router = useRouter();
   const { addItem, totalItems } = useCart();
@@ -81,7 +89,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                 <FiChevronRight />{' '}
               </li>
               <li className="text-sm px-1 transition duration-200 ease-in line-clamp-1">
-                {product.title}
+                {LangTitle}
               </li>
             </ol>
           </div>
@@ -103,7 +111,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
                   <div className="w-full md:w-7/12 md:pr-4 lg:pr-4 xl:pr-12">
                     <div className="mb-6">
                       <h1 className="leading-7 text-lg md:text-xl lg:text-2xl mb-1 font-semibold font-serif text-gray-800">
-                        {product.title}
+                        {LangTitle}
                       </h1>
                       <p className="uppercase font-serif font-medium text-gray-500 text-sm">
                         SKU :{' '}
@@ -118,19 +126,19 @@ const ProductScreen = ({ product, relatedProduct }) => {
                     </div>
                     <div>
                       <p className="text-sm leading-6 text-gray-500 md:leading-7 line-clamp-6">
-                        {product.description}
+                        {LangDescription}
                       </p>
                       <button
                         onClick={handleAddItem}
                         disabled={product.quantity === totalItems}
                         className="leading-4 inline-flex items-center cursor-pointer transition ease-in-out duration-300 font-semibold text-center justify-center border-0 border-transparent rounded-md placeholder-white focus-visible:outline-none focus:outline-none bg_green text-white px-5 md:px-6 lg:px-8 py-3 md:py-3.5 lg:py-3 mt-6 hover:text-white hover:bg-green-600 h-12 text-sm lg:text-base w-full sm:w-auto"
                       >
-                        Add to Cart
+                        {t("Add_to_Cart")}
                       </button>
 
                       <div className="flex flex-col mt-4">
                         <span className="font-serif font-semibold py-1 text-sm d-block">
-                          <span className="text-gray-700">Category:</span>{' '}
+                          <span className="text-gray-700">{t("Category")}:</span>{' '}
                           <span className="text-gray-500">
                             {product.children}
                           </span>
@@ -141,59 +149,58 @@ const ProductScreen = ({ product, relatedProduct }) => {
                       {/* social share */}
                       <div className="mt-8">
                         <h3 className="text-base font-semibold mb-1 font-serif">
-                          Share your social network
+                          {t("Share_network")}
                         </h3>
                         <p className="font-sans text-sm text-gray-500">
-                          For get lots of traffic from social network share this
-                          product
+                          {t("For_this_product")}
                         </p>
                         <ul className="flex mt-4">
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
+                          <span className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <FacebookShareButton
                               url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <FacebookIcon size={32} round />
                             </FacebookShareButton>
-                          </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
+                          </span>
+                          <span className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <TwitterShareButton
                               url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <TwitterIcon size={32} round />
                             </TwitterShareButton>
-                          </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
+                          </span>
+                          <span className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <RedditShareButton
                               url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <RedditIcon size={32} round />
                             </RedditShareButton>
-                          </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
+                          </span>
+                          <span className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <WhatsappShareButton
                               url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <WhatsappIcon size={32} round />
                             </WhatsappShareButton>
-                          </li>
-                          <li className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
+                          </span>
+                          <span className="flex items-center text-center border border-gray-100 rounded-full hover:bg_green  mr-2 transition ease-in-out duration-500">
                             <LinkedinShareButton
                               url={`https://serabuy.com/product/${router.query.slug}`}
                               quote="Serabuy"
                             >
                               <LinkedinIcon size={32} round />
                             </LinkedinShareButton>
-                          </li>
+                          </span>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div className="w-full rtl:hidden xl:w-5/12 lg:w-6/12 md:w-5/12">
-                    <div className="mt-6 md:mt-0 lg:mt-0 bg-gray-50 border border-gray-100 p-4 lg:p-8 rounded-lg">
+                  <div className="w-full xl:w-5/12 lg:w-6/12 md:w-5/12">
+                    <div className="mt-6 md:mt-0 lg:mt-0 border-2 bg-green-50 border-green-200 p-4 lg:p-8 rounded">
                       <Card />
                     </div>
                   </div>
@@ -205,7 +212,7 @@ const ProductScreen = ({ product, relatedProduct }) => {
           {/* related products */}
           <div className="pt-10 lg:pt-20 lg:pb-10">
             <h3 className="leading-7 text-lg lg:text-xl mb-3 font-semibold font-serif hover:text-gray-600">
-              Related Products
+              {t("Related_Products")}
             </h3>
             <div className="flex">
               <div className="w-full">
