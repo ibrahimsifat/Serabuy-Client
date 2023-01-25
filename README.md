@@ -2,9 +2,6 @@ Site name : Serabuy - Grocery & Organic Food Store
 
 Introduction:
 
-This is a e-commerce template built with Next.js and Tailwindcss with rest api. This template backend is built 
-with  node, express, mongoose schema validation and use mongodb for  database.
-
 
 Tech and Packages use in this project:
 
